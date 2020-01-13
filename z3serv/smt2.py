@@ -16,6 +16,7 @@ class SMT2(object):
 
     def check(self, smt2_formula, context=None):
         s = Solver()
+        print(((context if context else self.context) + smt2_formula)) 
         s.add(parse_smt2_string((context if context else self.context) + smt2_formula))
         return str(s.check())
 

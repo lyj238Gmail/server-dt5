@@ -1,0 +1,489 @@
+4,0,n_mutualEx,(declare-datatypes () ((state I T C E)))
+(declare-const n  (Array  Int  state))
+(declare-fun x () Bool)
+SET_SMT2_CONTEXT is running
+(declare-datatypes () ((state I T C E)))
+(declare-const n  (Array  Int  state))
+(declare-fun x () Bool)
+
+:  None
+8,1,n_mutualEx,const clientNUMS : 2;
+type state : enum{I, T, C, E};
+
+     client: 1..clientNUMS;
+
+var n : array [client] of state;
+
+    x : boolean; 
+    
+ruleset i : client do
+rule "Try" n[i] = I ==> begin
+      n[i] := T;endrule; 
+
+rule "Crit"
+      n[i] = T& x = true ==>begin
+      n[i] := C; x := false; endrule;
+
+rule "Exit"
+      n[i] = C ==>begin
+      n[i] := E;endrule;
+      
+ 
+rule "Idle"
+      n[i] = E ==> begin n[i] := I;
+      x := true;endrule;
+endruleset;
+
+startstate
+begin
+ for i: client do
+    n[i] := I; 
+  endfor;
+  x := true;
+endstartstate;
+
+ruleset i:client; j: client do
+invariant "coherence"
+  i != j -> (n[i] = C -> n[j] != C);
+endruleset;
+SET_MU_CONTEXT is running
+DtModuleData1:start!
+/media/lyj238/796220dd-ac96-47e3-a7d5-79a394a4e2af/server-dt4/murphistore/temp.m
+[]
+DtModuleData1:ok!
+server start!
+
+:  true
+5,2,n_mutualEx,(assert (not (= (select n 1) I)))
+(declare-datatypes () ((state I T C E)))
+(declare-const n  (Array  Int  state))
+(declare-fun x () Bool)
+(assert (not (= (select n 1) I)))
+
+:  sat
+5,3,n_mutualEx,(assert (= (select n 1) I))
+(declare-datatypes () ((state I T C E)))
+(declare-const n  (Array  Int  state))
+(declare-fun x () Bool)
+(assert (= (select n 1) I))
+
+:  sat
+5,4,n_mutualEx,(assert (not (= (select n 2) I)))
+(declare-datatypes () ((state I T C E)))
+(declare-const n  (Array  Int  state))
+(declare-fun x () Bool)
+(assert (not (= (select n 2) I)))
+
+:  sat
+5,5,n_mutualEx,(assert (= (select n 2) I))
+(declare-datatypes () ((state I T C E)))
+(declare-const n  (Array  Int  state))
+(declare-fun x () Bool)
+(assert (= (select n 2) I))
+
+:  sat
+5,6,n_mutualEx,(assert (not (= (select n 1) T)))
+(declare-datatypes () ((state I T C E)))
+(declare-const n  (Array  Int  state))
+(declare-fun x () Bool)
+(assert (not (= (select n 1) T)))
+
+:  sat
+5,7,n_mutualEx,(assert (= (select n 1) T))
+(declare-datatypes () ((state I T C E)))
+(declare-const n  (Array  Int  state))
+(declare-fun x () Bool)
+(assert (= (select n 1) T))
+
+:  sat
+5,8,n_mutualEx,(assert (not (= x true)))
+(declare-datatypes () ((state I T C E)))
+(declare-const n  (Array  Int  state))
+(declare-fun x () Bool)
+(assert (not (= x true)))
+
+:  sat
+5,9,n_mutualEx,(assert (= x true))
+(declare-datatypes () ((state I T C E)))
+(declare-const n  (Array  Int  state))
+(declare-fun x () Bool)
+(assert (= x true))
+
+:  sat
+5,10,n_mutualEx,(assert (not (= (select n 1) T)))
+(declare-datatypes () ((state I T C E)))
+(declare-const n  (Array  Int  state))
+(declare-fun x () Bool)
+(assert (not (= (select n 1) T)))
+
+:  sat
+5,11,n_mutualEx,(assert (= (select n 1) T))
+(declare-datatypes () ((state I T C E)))
+(declare-const n  (Array  Int  state))
+(declare-fun x () Bool)
+(assert (= (select n 1) T))
+
+:  sat
+5,12,n_mutualEx,(assert (not (= x true)))
+(declare-datatypes () ((state I T C E)))
+(declare-const n  (Array  Int  state))
+(declare-fun x () Bool)
+(assert (not (= x true)))
+
+:  sat
+5,13,n_mutualEx,(assert (= x true))
+(declare-datatypes () ((state I T C E)))
+(declare-const n  (Array  Int  state))
+(declare-fun x () Bool)
+(assert (= x true))
+
+:  sat
+5,14,n_mutualEx,(assert (not (= (select n 2) T)))
+(declare-datatypes () ((state I T C E)))
+(declare-const n  (Array  Int  state))
+(declare-fun x () Bool)
+(assert (not (= (select n 2) T)))
+
+:  sat
+5,15,n_mutualEx,(assert (= (select n 2) T))
+(declare-datatypes () ((state I T C E)))
+(declare-const n  (Array  Int  state))
+(declare-fun x () Bool)
+(assert (= (select n 2) T))
+
+:  sat
+5,16,n_mutualEx,(assert (not (= x true)))
+(declare-datatypes () ((state I T C E)))
+(declare-const n  (Array  Int  state))
+(declare-fun x () Bool)
+(assert (not (= x true)))
+
+:  sat
+5,17,n_mutualEx,(assert (= x true))
+(declare-datatypes () ((state I T C E)))
+(declare-const n  (Array  Int  state))
+(declare-fun x () Bool)
+(assert (= x true))
+
+:  sat
+5,18,n_mutualEx,(assert (not (= (select n 2) T)))
+(declare-datatypes () ((state I T C E)))
+(declare-const n  (Array  Int  state))
+(declare-fun x () Bool)
+(assert (not (= (select n 2) T)))
+
+:  sat
+5,19,n_mutualEx,(assert (= (select n 2) T))
+(declare-datatypes () ((state I T C E)))
+(declare-const n  (Array  Int  state))
+(declare-fun x () Bool)
+(assert (= (select n 2) T))
+
+:  sat
+5,20,n_mutualEx,(assert (not (= x true)))
+(declare-datatypes () ((state I T C E)))
+(declare-const n  (Array  Int  state))
+(declare-fun x () Bool)
+(assert (not (= x true)))
+
+:  sat
+5,21,n_mutualEx,(assert (= x true))
+(declare-datatypes () ((state I T C E)))
+(declare-const n  (Array  Int  state))
+(declare-fun x () Bool)
+(assert (= x true))
+
+:  sat
+5,22,n_mutualEx,(assert (not (= (select n 1) C)))
+(declare-datatypes () ((state I T C E)))
+(declare-const n  (Array  Int  state))
+(declare-fun x () Bool)
+(assert (not (= (select n 1) C)))
+
+:  sat
+5,23,n_mutualEx,(assert (= (select n 1) C))
+(declare-datatypes () ((state I T C E)))
+(declare-const n  (Array  Int  state))
+(declare-fun x () Bool)
+(assert (= (select n 1) C))
+
+:  sat
+5,24,n_mutualEx,(assert (not (= (select n 2) C)))
+(declare-datatypes () ((state I T C E)))
+(declare-const n  (Array  Int  state))
+(declare-fun x () Bool)
+(assert (not (= (select n 2) C)))
+
+:  sat
+5,25,n_mutualEx,(assert (= (select n 2) C))
+(declare-datatypes () ((state I T C E)))
+(declare-const n  (Array  Int  state))
+(declare-fun x () Bool)
+(assert (= (select n 2) C))
+
+:  sat
+5,26,n_mutualEx,(assert (not (= (select n 1) E)))
+(declare-datatypes () ((state I T C E)))
+(declare-const n  (Array  Int  state))
+(declare-fun x () Bool)
+(assert (not (= (select n 1) E)))
+
+:  sat
+5,27,n_mutualEx,(assert (= (select n 1) E))
+(declare-datatypes () ((state I T C E)))
+(declare-const n  (Array  Int  state))
+(declare-fun x () Bool)
+(assert (= (select n 1) E))
+
+:  sat
+5,28,n_mutualEx,(assert (not (= (select n 1) E)))
+(declare-datatypes () ((state I T C E)))
+(declare-const n  (Array  Int  state))
+(declare-fun x () Bool)
+(assert (not (= (select n 1) E)))
+
+:  sat
+5,29,n_mutualEx,(assert (= (select n 1) E))
+(declare-datatypes () ((state I T C E)))
+(declare-const n  (Array  Int  state))
+(declare-fun x () Bool)
+(assert (= (select n 1) E))
+
+:  sat
+5,30,n_mutualEx,(assert (not (= (select n 2) E)))
+(declare-datatypes () ((state I T C E)))
+(declare-const n  (Array  Int  state))
+(declare-fun x () Bool)
+(assert (not (= (select n 2) E)))
+
+:  sat
+5,31,n_mutualEx,(assert (= (select n 2) E))
+(declare-datatypes () ((state I T C E)))
+(declare-const n  (Array  Int  state))
+(declare-fun x () Bool)
+(assert (= (select n 2) E))
+
+:  sat
+5,32,n_mutualEx,(assert (not (= (select n 2) E)))
+(declare-datatypes () ((state I T C E)))
+(declare-const n  (Array  Int  state))
+(declare-fun x () Bool)
+(assert (not (= (select n 2) E)))
+
+:  sat
+5,33,n_mutualEx,(assert (= (select n 2) E))
+(declare-datatypes () ((state I T C E)))
+(declare-const n  (Array  Int  state))
+(declare-fun x () Bool)
+(assert (= (select n 2) E))
+
+:  sat
+1,34,n_mutualEx,MODULE main
+VAR
+n[1] : {i, t, c, e};
+n[2] : {i, t, c, e};
+x : boolean;
+
+--------------------
+
+n_Try__1 : process Proc__n_Try__1(n[1]);
+
+n_Try__2 : process Proc__n_Try__2(n[2]);
+
+n_Crit__1 : process Proc__n_Crit__1(n[1], x);
+
+n_Crit__2 : process Proc__n_Crit__2(n[2], x);
+
+n_Exit__1 : process Proc__n_Exit__1(n[1]);
+
+n_Exit__2 : process Proc__n_Exit__2(n[2]);
+
+n_Idle__1 : process Proc__n_Idle__1(n[1], x);
+
+n_Idle__2 : process Proc__n_Idle__2(n[2], x);
+
+--------------------
+
+ASSIGN
+init(n[1]) := case
+TRUE : i;
+esac;
+init(n[2]) := case
+TRUE : i;
+esac;
+init(x) := case
+TRUE : TRUE;
+esac;
+
+--------------------
+
+
+
+--------------------
+
+MODULE Proc__n_Try__1(n__1)
+ASSIGN
+next(n__1) := case
+(n__1 = i) : t;
+TRUE : n__1;
+esac;
+
+---------
+
+MODULE Proc__n_Try__2(n__2)
+ASSIGN
+next(n__2) := case
+(n__2 = i) : t;
+TRUE : n__2;
+esac;
+
+---------
+
+MODULE Proc__n_Crit__1(n__1, x)
+ASSIGN
+next(n__1) := case
+((n__1 = t) & (x = TRUE)) : c;
+TRUE : n__1;
+esac;
+next(x) := case
+((n__1 = t) & (x = TRUE)) : FALSE;
+TRUE : x;
+esac;
+
+---------
+
+MODULE Proc__n_Crit__2(n__2, x)
+ASSIGN
+next(n__2) := case
+((n__2 = t) & (x = TRUE)) : c;
+TRUE : n__2;
+esac;
+next(x) := case
+((n__2 = t) & (x = TRUE)) : FALSE;
+TRUE : x;
+esac;
+
+---------
+
+MODULE Proc__n_Exit__1(n__1)
+ASSIGN
+next(n__1) := case
+(n__1 = c) : e;
+TRUE : n__1;
+esac;
+
+---------
+
+MODULE Proc__n_Exit__2(n__2)
+ASSIGN
+next(n__2) := case
+(n__2 = c) : e;
+TRUE : n__2;
+esac;
+
+---------
+
+MODULE Proc__n_Idle__1(n__1, x)
+ASSIGN
+next(n__1) := case
+(n__1 = e) : i;
+TRUE : n__1;
+esac;
+next(x) := case
+(n__1 = e) : TRUE;
+TRUE : x;
+esac;
+
+---------
+
+MODULE Proc__n_Idle__2(n__2, x)
+ASSIGN
+next(n__2) := case
+(n__2 = e) : i;
+TRUE : n__2;
+esac;
+next(x) := case
+(n__2 = e) : TRUE;
+TRUE : x;
+esac;,:  None
+2,35,n_mutualExQUERY_REACHABLE is running
+:  8
+5,36,n_mutualEx,(assert (not (=> (not (= 1 1)) (=> (= (select n 1) C) (not (= (select n 1) C))))))
+
+(declare-datatypes () ((state I T C E)))
+(declare-const n  (Array  Int  state))
+(declare-fun x () Bool)
+(assert (not (=> (not (= 1 1)) (=> (= (select n 1) C) (not (= (select n 1) C))))))
+
+
+:  unsat
+5,37,n_mutualEx,(assert (not (=> (not (= 2 1)) (=> (= (select n 2) C) (not (= (select n 1) C))))))
+
+(declare-datatypes () ((state I T C E)))
+(declare-const n  (Array  Int  state))
+(declare-fun x () Bool)
+(assert (not (=> (not (= 2 1)) (=> (= (select n 2) C) (not (= (select n 1) C))))))
+
+
+:  sat
+5,38,n_mutualEx,(assert (not (=> (not (= 1 2)) (=> (= (select n 1) C) (not (= (select n 2) C))))))
+
+(declare-datatypes () ((state I T C E)))
+(declare-const n  (Array  Int  state))
+(declare-fun x () Bool)
+(assert (not (=> (not (= 1 2)) (=> (= (select n 1) C) (not (= (select n 2) C))))))
+
+
+:  sat
+5,39,n_mutualEx,(assert (not (=> (not (= 2 2)) (=> (= (select n 2) C) (not (= (select n 2) C))))))
+
+(declare-datatypes () ((state I T C E)))
+(declare-const n  (Array  Int  state))
+(declare-fun x () Bool)
+(assert (not (=> (not (= 2 2)) (=> (= (select n 2) C) (not (= (select n 2) C))))))
+
+
+:  unsat
+5,40,n_mutualEx,(assert (not (not (not (=> (not (= 1 2)) (=> (= (select n 1) C) (not (= (select n 2) C))))))))
+
+(declare-datatypes () ((state I T C E)))
+(declare-const n  (Array  Int  state))
+(declare-fun x () Bool)
+(assert (not (not (not (=> (not (= 1 2)) (=> (= (select n 1) C) (not (= (select n 2) C))))))))
+
+
+:  sat
+15,41,n_mutualEx,(assert (not (=> (not (= 1 2)) (=> (= (select n 1) C) (not (= (select n 2) C))))))
+
+(declare-datatypes () ((state I T C E)))
+(declare-const n  (Array  Int  state))
+(declare-fun x () Bool)
+(assert (not (=> (not (= 1 2)) (=> (= (select n 1) C) (not (= (select n 2) C))))))
+
+
+sat,[n = [2 -> C, 1 -> C, else -> C],
+ k!28 = [2 -> C, 1 -> C, else -> C]]
+:  sat,[n = [2 -> C, 1 -> C, else -> C],
+ k!29 = [2 -> C, 1 -> C, else -> C]]
+15,42,n_mutualEx,(assert (not (=> (not (= 1 2)) (=> (= (select n 1) C) (not (= (select n 2) C))))))
+
+(declare-datatypes () ((state I T C E)))
+(declare-const n  (Array  Int  state))
+(declare-fun x () Bool)
+(assert (not (=> (not (= 1 2)) (=> (= (select n 1) C) (not (= (select n 2) C))))))
+
+
+sat,[n = [2 -> C, 1 -> C, else -> C],
+ k!31 = [2 -> C, 1 -> C, else -> C]]
+:  sat,[n = [2 -> C, 1 -> C, else -> C],
+ k!32 = [2 -> C, 1 -> C, else -> C]]
+3,43,n_mutualEx,(!((n[1] = c)))checking(!((n[1] = c)))
+sca:
+(!((n[1] = c)))
+(assert (and ( = (n 1) i) ( = (n 1) c)))
+(declare-datatypes () ((state i t c e)))
+(declare-const n  (array  Int  state))
+(declare-fun x () Bool)
+(assert (and ( = (n 1) i) ( = (n 1) c)))
+(error "line 2 column 19: unknown sort 'array'")
+(error "line 4 column 21: unknown function/constant n")

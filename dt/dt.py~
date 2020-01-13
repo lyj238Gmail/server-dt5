@@ -587,7 +587,7 @@ def z3checker(inv,path_file_name,z3,path_content_dict):
 	for member in path_list:
 		member_temp = member.replace('undefined','3')
 		stm_test = transDTAndQInv(member_temp,inv)
-		#print stm_test
+		print stm_test
 		res = z3.check(stm_test)
 		if res == 'sat':
 			return 'sat'

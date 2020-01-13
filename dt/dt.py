@@ -610,8 +610,11 @@ def transDTAndQInv(dt_path,qinv):
 	result = '(assert (and ' + dt_result + ' ' + q_result +'))'
 	return result
 
+#2020.1.13修改新规则，将 n[1] => (select n 1) ,原转换为n[1] => (n 1)
 #目标(assert (not (=> (and (= (n 5) C) (= (n 3) C)) (and (= (n 3) C) (= (n 5) C))))):  unsat
 #针对决策树路径的中缀转前缀
+#旧
+'''
 def transForDTPath(dt_path): #用于处理来自于决策树的不变式，例如"(x = TRUE & n[1] != C & n[1] != E & n[2] != C & n[2] != E)"
 	member_list = []
 	strsplit = dt_path[1:-1].split('&')
@@ -641,10 +644,6 @@ def transForDTPath(dt_path): #用于处理来自于决策树的不变式，例�
 				part2 = parameter_list[1]
 			newform = '(not ' + '(' + ' ' + '=' + ' ' + part1 + ' ' + part2 + ')' + ')'
 			member_list.append(newform)
-		'''
-		else:
-			print 'error no = or !='
-		'''
 	result = ''
 	if len(member_list) == 1:
 		result = member_list[0]
@@ -655,6 +654,49 @@ def transForDTPath(dt_path): #用于处理来自于决策树的不变式，例�
 			else:
 				result = '(' + 'and ' + result + ' ' + member + ')'
 	return result
+'''
+#新-2020.1.13
+def transForDTPath(dt_path): #用于处理来自于决策树的不变式，例如"(x = TRUE & n[1] != C & n[1] != E & n[2] != C & n[2] != E)"
+	member_list = []
+	strsplit = dt_path[1:-1].split('&')
+	for member in strsplit:
+		member_temp = member.strip()
+		if '=' in member_temp and '!=' not in member_temp: #表达式为 a = b的形式
+			parameter_list = member_temp.split(' = ')
+			if '[' in parameter_list[0]:
+				part1 = '(' + changeForm(parameter_list[0]) + ')'
+			else:
+				part1 = parameter_list[0]
+			if '[' in parameter_list[1]:
+				part2 = '(' + changeForm(parameter_list[1]) + ')'
+			else:
+				part2 = parameter_list[1]
+			newform = '(' + ' ' + '=' + ' ' + part1 + ' ' + part2 + ')'
+			member_list.append(newform)
+		elif '!=' in member_temp: #表达式为 a != b的形式
+			parameter_list = member_temp.split(' != ')
+			if '[' in parameter_list[0]:
+				part1 = '(' + changeForm(parameter_list[0]) + ')'
+			else:
+				part1 = parameter_list[0]
+			if '[' in parameter_list[1]:
+				part2 = '(' + changeForm(parameter_list[1]) + ')'
+			else:
+				part2 = parameter_list[1]
+			newform = '(not ' + '(' + ' ' + '=' + ' ' + part1 + ' ' + part2 + ')' + ')'
+			member_list.append(newform)
+	result = ''
+	if len(member_list) == 1:
+		result = member_list[0]
+	else:
+		for member in member_list:
+			if result == '':
+				result = member
+			else:
+				result = '(' + 'and ' + result + ' ' + member + ')'
+	return result
+
+
 
 #针对查询不变式的中缀转前缀，方法为将查询不变式的形式转换为决策树不变式的形式，即（A & B & C），其中A、B、C用‘ = ’或‘ ！= ’连接
 def transForQInv(qinv):#用于处理查询的inv
@@ -711,7 +753,9 @@ def checkDict(candidate_inv,candidate_dict):
 		candidate_result = ''
 	return candidate_mark,candidate_result
 
-#用于中缀转前缀将‘[]’中的值一尺去
+#2020.1.13修改，用于将n[1] => (select n 1)，原n[1] => (n 1)
+#用于中缀转前缀将‘[]’中的值移出去
+'''
 def changeForm(str_target):
 	result = str_target
 	if '[' in str_target:
@@ -723,6 +767,21 @@ def changeForm(str_target):
 		if '[' in result:
 			result = changeForm(result)
 	return  result
+'''	
+def changeForm(str_target):
+	result = str_target
+	if '[' in str_target:
+		for i in range(len(str_target)):
+			if str_target[i] == '[':
+				value = str_target[i + 1]
+				result = 'select ' + str_target[:i] + str_target[i+3:] + ' ' + value
+				break
+		if '[' in result:
+			result = changeForm(result)
+	return  result	
+	
+	
+	
 #决策树方法实现（包含预处理2），该函数用于拆分候选不变式，主要实现在	DtModule函数中
 def candidateInvChecker(candidate_inv,z3,title,data_set,path_dict,candidate_dict,path_content_dict,sca_flag):
 	#拆分含有‘|’的候选不变式
@@ -757,6 +816,12 @@ def test():
 		res = convert(candidate_inv.lower())
 		print(res)
 
+
+def test2():
+		dt_path = '(cache.state[2] = C)'
+		res = transForDTPath(dt_path)
+		print(res)
+
 if __name__ == "__main__":
 	'''
 	candidate_inv = ''
@@ -773,4 +838,4 @@ if __name__ == "__main__":
 	#print (changeForm(test))
 	print (transDTAndQInv())
 	'''
-	test()
+	test2()

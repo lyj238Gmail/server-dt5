@@ -1,0 +1,9 @@
+Cache[NODE_1].State,Cache[NODE_1].Data,Cache[NODE_2].State,Cache[NODE_2].Data,Chan1[NODE_1].Cmd,Chan1[NODE_2].Cmd,Chan2[NODE_1].Cmd,Chan2[NODE_1].Data,Chan2[NODE_2].Cmd,Chan2[NODE_2].Data,Chan3[NODE_1].Cmd,Chan3[NODE_1].Data,Chan3[NODE_2].Cmd,Chan3[NODE_2].Data,InvSet[NODE_1],InvSet[NODE_2],ShrSet[NODE_1],ShrSet[NODE_2],ExGntd,CurCmd,CurPtr,MemData,AuxData
+I,Undefined,I,Undefined,Empty,Empty,Empty,Undefined,Empty,Undefined,Empty,Undefined,Empty,Undefined,FALSE,FALSE,FALSE,FALSE,FALSE,Empty,Undefined,DATA_1,DATA_1
+I,Undefined,I,Undefined,Empty,ReqS,Empty,Undefined,Empty,Undefined,Empty,Undefined,Empty,Undefined,FALSE,FALSE,FALSE,FALSE,FALSE,Empty,Undefined,DATA_1,DATA_1
+I,Undefined,I,Undefined,Empty,ReqE,Empty,Undefined,Empty,Undefined,Empty,Undefined,Empty,Undefined,FALSE,FALSE,FALSE,FALSE,FALSE,Empty,Undefined,DATA_1,DATA_1
+I,Undefined,I,Undefined,ReqS,ReqS,Empty,Undefined,Empty,Undefined,Empty,Undefined,Empty,Undefined,FALSE,FALSE,FALSE,FALSE,FALSE,Empty,Undefined,DATA_1,DATA_1
+I,Undefined,I,Undefined,ReqS,ReqE,Empty,Undefined,Empty,Undefined,Empty,Undefined,Empty,Undefined,FALSE,FALSE,FALSE,FALSE,FALSE,Empty,Undefined,DATA_1,DATA_1
+I,Undefined,I,Undefined,Empty,Empty,Empty,Undefined,Empty,Undefined,Empty,Undefined,Empty,Undefined,FALSE,FALSE,FALSE,FALSE,FALSE,ReqS,NODE_1,DATA_1,DATA_1
+I,Undefined,I,Undefined,ReqE,ReqE,Empty,Undefined,Empty,Undefined,Empty,Undefined,Empty,Undefined,FALSE,FALSE,FALSE,FALSE,FALSE,Empty,Undefined,DATA_1,DATA_1
+I,Undefined,I,Undefined,Empty,Empty,Empty,Undefined,Empty,Undefined,Empty,Undefined,Empty,Undefined,FALSE,FALSE,FALSE,FALSE,FALSE,ReqE,NODE_1,DATA_1,DATA_1

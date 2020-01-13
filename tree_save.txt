@@ -1,0 +1,20 @@
+(dp0
+S'n[NODE_2].st'
+p1
+(dp2
+S'I'
+p3
+g3
+sS'C'
+p4
+S'I | T'
+p5
+sS'E'
+p6
+S'I | T'
+p7
+sS'T'
+p8
+S'I | T'
+p9
+ss.

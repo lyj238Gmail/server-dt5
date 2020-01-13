@@ -1,0 +1,3506 @@
+SET_SMT2_CONTEXT is running
+(declare-datatypes () ((state I T C E)))(declare-fun n (Int) state)
+(declare-fun x () Bool)
+SET_MU_CONTEXT is running
+DtModuleData1:start!
+/home/ctf/201905/server-dt4/murphistore/temp.m
+client
+['client_']
+DtModuleData1:ok!
+server start!
+
+SET_SMT2_CONTEXT is running
+(declare-datatypes () ((state I T C E)))(declare-fun n (Int) state)
+(declare-fun x () Bool)
+SET_MU_CONTEXT is running
+DtModuleData1:start!
+/home/ctf/201905/server-dt4/murphistore/temp.m
+client
+['client_']
+DtModuleData1:ok!
+server start!
+
+QUERY_REACHABLE is running
+checking(!((n[1] = c)))
+sca:
+(!((n[1] = c)))
+(!((n[2] = c)))
+not inv: (!((n[1] = c)))
+
+checking(!((n[1] = t)))
+sca:
+(!((n[1] = t)))
+(!((n[2] = t)))
+not inv: (!((n[1] = t)))
+
+checking(!((x = TRUE)))
+sca:
+(!((x = true)))
+not inv: (!((x = TRUE)))
+
+checking(!((n[1] = c) & (n[2] = t)))
+sca:
+(!((n[1] = c) & (n[2] = t)))
+(!((n[2] = c) & (n[1] = t)))
+not inv: (!((n[1] = c) & (n[2] = t)))
+
+checking(!((n[1] = c) & (x = TRUE)))
+sca:
+(!((n[1] = c) & (x = true)))
+(!((n[2] = c) & (x = true)))
+inv: (!((n[1] = c) & (x = TRUE)))
+
+checking(!((n[2] = c) & (n[1] = t)))
+sca:
+(!((n[2] = c) & (n[1] = t)))
+(!((n[1] = c) & (n[2] = t)))
+not inv: (!((n[2] = c) & (n[1] = t)))
+
+checking(!((n[1] = e)))
+sca:
+(!((n[1] = e)))
+(!((n[2] = e)))
+not inv: (!((n[1] = e)))
+
+checking(!((n[2] = c) & (n[1] = e)))
+sca:
+(!((n[2] = c) & (n[1] = e)))
+(!((n[1] = c) & (n[2] = e)))
+inv: (!((n[2] = c) & (n[1] = e)))
+
+checking(!((n[2] = e) & (n[1] = t)))
+sca:
+(!((n[2] = e) & (n[1] = t)))
+(!((n[1] = e) & (n[2] = t)))
+not inv: (!((n[2] = e) & (n[1] = t)))
+
+checking(!((n[1] = e) & (x = TRUE)))
+sca:
+(!((n[1] = e) & (x = true)))
+(!((n[2] = e) & (x = true)))
+inv: (!((n[1] = e) & (x = TRUE)))
+
+checking(!((n[1] = c) & (n[2] = c)))
+sca:
+(!((n[1] = c) & (n[2] = c)))
+(!((n[2] = c) & (n[1] = c)))
+inv: (!((n[1] = c) & (n[2] = c)))
+
+checking(!((x = TRUE) & (n[1] = c)))
+inv: (!((x = TRUE) & (n[1] = c)))
+
+checking(!((n[2] = e) & (n[1] = e)))
+sca:
+(!((n[2] = e) & (n[1] = e)))
+(!((n[1] = e) & (n[2] = e)))
+inv: (!((n[2] = e) & (n[1] = e)))
+
+checking(!((n[1] = e) & (n[2] = c)))
+inv: (!((n[1] = e) & (n[2] = c)))
+
+checking(!((n[2] = e) & (n[1] = c)))
+sca:
+(!((n[2] = e) & (n[1] = c)))
+(!((n[1] = e) & (n[2] = c)))
+inv: (!((n[2] = e) & (n[1] = c)))
+
+SET_SMT2_CONTEXT is running
+(declare-datatypes () ((state I T C E)))(declare-fun n (Int) state)
+(declare-fun x () Bool)
+SET_MU_CONTEXT is running
+复用协议：n_mutualEx
+QUERY_REACHABLE is running
+checking(!((n[1] = c)))
+not inv: (!((n[1] = c)))
+
+checking(!((n[1] = t)))
+not inv: (!((n[1] = t)))
+
+checking(!((x = TRUE)))
+not inv: (!((x = TRUE)))
+
+checking(!((n[1] = c) & (n[2] = t)))
+not inv: (!((n[1] = c) & (n[2] = t)))
+
+checking(!((n[1] = c) & (x = TRUE)))
+inv: (!((n[1] = c) & (x = TRUE)))
+
+checking(!((n[2] = c) & (n[1] = t)))
+not inv: (!((n[2] = c) & (n[1] = t)))
+
+checking(!((n[1] = e)))
+not inv: (!((n[1] = e)))
+
+checking(!((n[2] = c) & (n[1] = e)))
+inv: (!((n[2] = c) & (n[1] = e)))
+
+checking(!((n[2] = e) & (n[1] = t)))
+not inv: (!((n[2] = e) & (n[1] = t)))
+
+checking(!((n[1] = e) & (x = TRUE)))
+inv: (!((n[1] = e) & (x = TRUE)))
+
+checking(!((n[1] = c) & (n[2] = c)))
+inv: (!((n[1] = c) & (n[2] = c)))
+
+checking(!((x = TRUE) & (n[1] = c)))
+inv: (!((x = TRUE) & (n[1] = c)))
+
+checking(!((n[2] = e) & (n[1] = e)))
+inv: (!((n[2] = e) & (n[1] = e)))
+
+checking(!((n[1] = e) & (n[2] = c)))
+inv: (!((n[1] = e) & (n[2] = c)))
+
+checking(!((n[2] = e) & (n[1] = c)))
+inv: (!((n[2] = e) & (n[1] = c)))
+
+SET_SMT2_CONTEXT is running
+(declare-datatypes () ((CACHE_STATE I S E)))
+(declare-datatypes () ((MSG_CMD Empty ReqS ReqE Inv InvAck GntS GntE)))(declare-fun Cache.State (Int) CACHE_STATE)
+(declare-fun Cache.Data (Int) Int)
+(declare-fun Chan1.Cmd (Int) MSG_CMD)
+(declare-fun Chan1.Data (Int) Int)
+(declare-fun Chan2.Cmd (Int) MSG_CMD)
+(declare-fun Chan2.Data (Int) Int)
+(declare-fun Chan3.Cmd (Int) MSG_CMD)
+(declare-fun Chan3.Data (Int) Int)
+(declare-fun ShrSet (Int) Bool)
+(declare-fun InvSet (Int) Bool)
+(declare-fun ExGntd () Bool)
+(declare-fun CurCmd () MSG_CMD)
+(declare-fun CurPtr () Int)
+(declare-fun MemData () Int)
+(declare-fun AuxData () Int)
+SET_MU_CONTEXT is running
+DtModuleData1:start!
+/home/ctf/201905/server-dt4/murphistore/temp.m
+NODE
+DATA
+['NODE_', 'DATA_']
+DtModuleData1:ok!
+server start!
+
+QUERY_REACHABLE is running
+checking(!((Cache[1].State = e)))
+sca:
+(!((cache[1].state = e)))
+(!((cache[2].state = e)))
+not inv: (!((Cache[1].State = e)))
+
+checking(!((Chan2[1].Cmd = gnte)))
+sca:
+(!((chan2[1].cmd = gnte)))
+(!((chan2[2].cmd = gnte)))
+not inv: (!((Chan2[1].Cmd = gnte)))
+
+checking(!((Cache[2].State = e) & (Chan2[1].Cmd = gnte)))
+sca:
+(!((cache[2].state = e) & (chan2[1].cmd = gnte)))
+(!((cache[1].state = e) & (chan2[2].cmd = gnte)))
+inv: (!((Cache[2].State = e) & (Chan2[1].Cmd = gnte)))
+
+checking(!((Cache[1].State = e) & (Chan2[2].Cmd = gnte)))
+sca:
+(!((cache[1].state = e) & (chan2[2].cmd = gnte)))
+(!((cache[2].state = e) & (chan2[1].cmd = gnte)))
+inv: (!((Cache[1].State = e) & (Chan2[2].Cmd = gnte)))
+
+checking(!((!(Chan3[1].Data = AuxData))))
+sca:
+(!((!(chan3[1].data = auxdata))))
+(!((!(chan3[2].data = auxdata))))
+not inv: (!((!(Chan3[1].Data = AuxData))))
+
+checking(!((ExGntd = TRUE)))
+sca:
+(!((exgntd = true)))
+not inv: (!((ExGntd = TRUE)))
+
+checking(!((Chan3[1].Cmd = invack)))
+sca:
+(!((chan3[1].cmd = invack)))
+(!((chan3[2].cmd = invack)))
+not inv: (!((Chan3[1].Cmd = invack)))
+
+checking(!((!(CurCmd = empty))))
+sca:
+(!((!(curcmd = empty))))
+not inv: (!((!(CurCmd = empty))))
+
+checking(!((!(Chan3[1].Data = AuxData)) & (ExGntd = TRUE)))
+sca:
+(!((!(chan3[1].data = auxdata)) & (exgntd = true)))
+(!((!(chan3[2].data = auxdata)) & (exgntd = true)))
+not inv: (!((!(Chan3[1].Data = AuxData)) & (ExGntd = TRUE)))
+
+checking(!((!(Chan3[1].Data = AuxData)) & (Chan3[1].Cmd = invack)))
+sca:
+(!((!(chan3[1].data = auxdata)) & (chan3[1].cmd = invack)))
+(!((!(chan3[2].data = auxdata)) & (chan3[2].cmd = invack)))
+not inv: (!((!(Chan3[1].Data = AuxData)) & (Chan3[1].Cmd = invack)))
+
+checking(!((!(Chan3[1].Data = AuxData)) & (!(CurCmd = empty))))
+sca:
+(!((!(chan3[1].data = auxdata)) & (!(curcmd = empty))))
+(!((!(chan3[2].data = auxdata)) & (!(curcmd = empty))))
+not inv: (!((!(Chan3[1].Data = AuxData)) & (!(CurCmd = empty))))
+
+checking(!((ExGntd = TRUE) & (Chan3[1].Cmd = invack)))
+sca:
+(!((exgntd = true) & (chan3[1].cmd = invack)))
+(!((exgntd = true) & (chan3[2].cmd = invack)))
+not inv: (!((ExGntd = TRUE) & (Chan3[1].Cmd = invack)))
+
+checking(!((ExGntd = TRUE) & (!(CurCmd = empty))))
+sca:
+(!((exgntd = true) & (!(curcmd = empty))))
+not inv: (!((ExGntd = TRUE) & (!(CurCmd = empty))))
+
+checking(!((Chan3[1].Cmd = invack) & (!(CurCmd = empty))))
+sca:
+(!((chan3[1].cmd = invack) & (!(curcmd = empty))))
+(!((chan3[2].cmd = invack) & (!(curcmd = empty))))
+not inv: (!((Chan3[1].Cmd = invack) & (!(CurCmd = empty))))
+
+checking(!((!(Chan3[1].Data = AuxData)) & (ExGntd = TRUE) & (Chan3[1].Cmd = invack)))
+sca:
+(!((!(chan3[1].data = auxdata)) & (exgntd = true) & (chan3[1].cmd = invack)))
+(!((!(chan3[2].data = auxdata)) & (exgntd = true) & (chan3[2].cmd = invack)))
+inv: (!((!(Chan3[1].Data = AuxData)) & (ExGntd = TRUE) & (Chan3[1].Cmd = invack)))
+
+checking(!((ExGntd = FALSE)))
+sca:
+(!((exgntd = false)))
+not inv: (!((ExGntd = FALSE)))
+
+checking(!((!(MemData = 1))))
+sca:
+(!((!(memdata = 1))))
+(!((!(memdata = 2))))
+not inv: (!((!(MemData = 1))))
+
+checking(!((ExGntd = FALSE) & (!(MemData = 1))))
+sca:
+(!((exgntd = false) & (!(memdata = 1))))
+(!((exgntd = false) & (!(memdata = 2))))
+not inv: (!((ExGntd = FALSE) & (!(MemData = 1))))
+
+checking(!((ExGntd = FALSE) & (Cache[1].State = e)))
+sca:
+(!((exgntd = false) & (cache[1].state = e)))
+(!((exgntd = false) & (cache[2].state = e)))
+inv: (!((ExGntd = FALSE) & (Cache[1].State = e)))
+
+checking(!((!(Chan2[1].Data = AuxData))))
+sca:
+(!((!(chan2[1].data = auxdata))))
+(!((!(chan2[2].data = auxdata))))
+not inv: (!((!(Chan2[1].Data = AuxData))))
+
+checking(!((Chan2[1].Cmd = gnts)))
+sca:
+(!((chan2[1].cmd = gnts)))
+(!((chan2[2].cmd = gnts)))
+not inv: (!((Chan2[1].Cmd = gnts)))
+
+checking(!((!(Chan2[1].Data = AuxData)) & (Chan2[1].Cmd = gnts)))
+sca:
+(!((!(chan2[1].data = auxdata)) & (chan2[1].cmd = gnts)))
+(!((!(chan2[2].data = auxdata)) & (chan2[2].cmd = gnts)))
+inv: (!((!(Chan2[1].Data = AuxData)) & (Chan2[1].Cmd = gnts)))
+
+checking(!((!(Chan2[1].Data = AuxData)) & (Chan2[1].Cmd = gnte)))
+sca:
+(!((!(chan2[1].data = auxdata)) & (chan2[1].cmd = gnte)))
+(!((!(chan2[2].data = auxdata)) & (chan2[2].cmd = gnte)))
+inv: (!((!(Chan2[1].Data = AuxData)) & (Chan2[1].Cmd = gnte)))
+
+checking(!((!(Cache[1].State = i))))
+sca:
+(!((!(cache[1].state = i))))
+(!((!(cache[2].state = i))))
+not inv: (!((!(Cache[1].State = i))))
+
+checking(!((!(Cache[1].Data = 1))))
+sca:
+(!((!(cache[1].data = 1))))
+(!((!(cache[2].data = 2))))
+not inv: (!((!(Cache[1].Data = 1))))
+
+checking(!((!(Cache[1].State = i)) & (!(Cache[1].Data = 1))))
+sca:
+(!((!(cache[1].state = i)) & (!(cache[1].data = 1))))
+(!((!(cache[2].state = i)) & (!(cache[2].data = 2))))
+not inv: (!((!(Cache[1].State = i)) & (!(Cache[1].Data = 1))))
+
+checking(!((!(Cache[1].State = i)) & (Cache[2].State = e)))
+sca:
+(!((!(cache[1].state = i)) & (cache[2].state = e)))
+(!((!(cache[2].state = i)) & (cache[1].state = e)))
+inv: (!((!(Cache[1].State = i)) & (Cache[2].State = e)))
+
+checking(!((Chan2[1].Cmd = empty)))
+sca:
+(!((chan2[1].cmd = empty)))
+(!((chan2[2].cmd = empty)))
+not inv: (!((Chan2[1].Cmd = empty)))
+
+checking(!((CurCmd = reqe)))
+sca:
+(!((curcmd = reqe)))
+not inv: (!((CurCmd = reqe)))
+
+checking(!((CurPtr = 1)))
+sca:
+(!((curptr = 1)))
+(!((curptr = 2)))
+not inv: (!((CurPtr = 1)))
+
+checking(!((ShrSet[1] = FALSE)))
+sca:
+(!((shrset[1] = false)))
+(!((shrset[2] = false)))
+not inv: (!((ShrSet[1] = FALSE)))
+
+checking(!((Cache[2].State = e) & (Chan2[1].Cmd = empty)))
+sca:
+(!((cache[2].state = e) & (chan2[1].cmd = empty)))
+(!((cache[1].state = e) & (chan2[2].cmd = empty)))
+not inv: (!((Cache[2].State = e) & (Chan2[1].Cmd = empty)))
+
+checking(!((Cache[1].State = e) & (CurCmd = reqe)))
+sca:
+(!((cache[1].state = e) & (curcmd = reqe)))
+(!((cache[2].state = e) & (curcmd = reqe)))
+not inv: (!((Cache[1].State = e) & (CurCmd = reqe)))
+
+checking(!((Cache[2].State = e) & (CurPtr = 1)))
+sca:
+(!((cache[2].state = e) & (curptr = 1)))
+(!((cache[1].state = e) & (curptr = 2)))
+not inv: (!((Cache[2].State = e) & (CurPtr = 1)))
+
+checking(!((Cache[1].State = e) & (ExGntd = FALSE)))
+inv: (!((Cache[1].State = e) & (ExGntd = FALSE)))
+
+checking(!((Chan2[1].Cmd = gnte) & (Chan2[2].Cmd = gnte)))
+sca:
+(!((chan2[1].cmd = gnte) & (chan2[2].cmd = gnte)))
+(!((chan2[2].cmd = gnte) & (chan2[1].cmd = gnte)))
+inv: (!((Chan2[1].Cmd = gnte) & (Chan2[2].Cmd = gnte)))
+
+checking(!((!(Cache[1].Data = AuxData))))
+sca:
+(!((!(cache[1].data = auxdata))))
+(!((!(cache[2].data = auxdata))))
+not inv: (!((!(Cache[1].Data = AuxData))))
+
+checking(!((Chan2[1].Cmd = inv)))
+sca:
+(!((chan2[1].cmd = inv)))
+(!((chan2[2].cmd = inv)))
+not inv: (!((Chan2[1].Cmd = inv)))
+
+checking(!((Chan3[1].Cmd = empty)))
+sca:
+(!((chan3[1].cmd = empty)))
+(!((chan3[2].cmd = empty)))
+not inv: (!((Chan3[1].Cmd = empty)))
+
+checking(!((!(Cache[1].Data = AuxData)) & (ExGntd = TRUE)))
+sca:
+(!((!(cache[1].data = auxdata)) & (exgntd = true)))
+(!((!(cache[2].data = auxdata)) & (exgntd = true)))
+not inv: (!((!(Cache[1].Data = AuxData)) & (ExGntd = TRUE)))
+
+checking(!((!(Cache[1].Data = AuxData)) & (Cache[1].State = e)))
+sca:
+(!((!(cache[1].data = auxdata)) & (cache[1].state = e)))
+(!((!(cache[2].data = auxdata)) & (cache[2].state = e)))
+inv: (!((!(Cache[1].Data = AuxData)) & (Cache[1].State = e)))
+
+checking(!((!(Cache[1].State = e))))
+sca:
+(!((!(cache[1].state = e))))
+(!((!(cache[2].state = e))))
+not inv: (!((!(Cache[1].State = e))))
+
+checking(!((!(Chan3[1].Data = AuxData)) & (!(Cache[1].State = e))))
+sca:
+(!((!(chan3[1].data = auxdata)) & (!(cache[1].state = e))))
+(!((!(chan3[2].data = auxdata)) & (!(cache[2].state = e))))
+not inv: (!((!(Chan3[1].Data = AuxData)) & (!(Cache[1].State = e))))
+
+checking(!((!(Chan3[1].Data = AuxData)) & (Chan2[1].Cmd = inv)))
+sca:
+(!((!(chan3[1].data = auxdata)) & (chan2[1].cmd = inv)))
+(!((!(chan3[2].data = auxdata)) & (chan2[2].cmd = inv)))
+not inv: (!((!(Chan3[1].Data = AuxData)) & (Chan2[1].Cmd = inv)))
+
+checking(!((!(Chan3[1].Data = AuxData)) & (Chan3[1].Cmd = empty)))
+sca:
+(!((!(chan3[1].data = auxdata)) & (chan3[1].cmd = empty)))
+(!((!(chan3[2].data = auxdata)) & (chan3[2].cmd = empty)))
+not inv: (!((!(Chan3[1].Data = AuxData)) & (Chan3[1].Cmd = empty)))
+
+checking(!((ExGntd = TRUE) & (!(Cache[1].State = e))))
+sca:
+(!((exgntd = true) & (!(cache[1].state = e))))
+(!((exgntd = true) & (!(cache[2].state = e))))
+not inv: (!((ExGntd = TRUE) & (!(Cache[1].State = e))))
+
+checking(!((ExGntd = TRUE) & (Chan2[1].Cmd = inv)))
+sca:
+(!((exgntd = true) & (chan2[1].cmd = inv)))
+(!((exgntd = true) & (chan2[2].cmd = inv)))
+not inv: (!((ExGntd = TRUE) & (Chan2[1].Cmd = inv)))
+
+checking(!((ExGntd = TRUE) & (Chan3[1].Cmd = empty)))
+sca:
+(!((exgntd = true) & (chan3[1].cmd = empty)))
+(!((exgntd = true) & (chan3[2].cmd = empty)))
+not inv: (!((ExGntd = TRUE) & (Chan3[1].Cmd = empty)))
+
+checking(!((!(Cache[1].State = e)) & (Chan2[1].Cmd = inv)))
+sca:
+(!((!(cache[1].state = e)) & (chan2[1].cmd = inv)))
+(!((!(cache[2].state = e)) & (chan2[2].cmd = inv)))
+not inv: (!((!(Cache[1].State = e)) & (Chan2[1].Cmd = inv)))
+
+checking(!((!(Cache[1].State = e)) & (Chan3[1].Cmd = empty)))
+sca:
+(!((!(cache[1].state = e)) & (chan3[1].cmd = empty)))
+(!((!(cache[2].state = e)) & (chan3[2].cmd = empty)))
+not inv: (!((!(Cache[1].State = e)) & (Chan3[1].Cmd = empty)))
+
+checking(!((Chan2[1].Cmd = inv) & (Chan3[1].Cmd = empty)))
+sca:
+(!((chan2[1].cmd = inv) & (chan3[1].cmd = empty)))
+(!((chan2[2].cmd = inv) & (chan3[2].cmd = empty)))
+not inv: (!((Chan2[1].Cmd = inv) & (Chan3[1].Cmd = empty)))
+
+checking(!((!(Chan3[1].Data = AuxData)) & (ExGntd = TRUE) & (!(Cache[1].State = e))))
+sca:
+(!((!(chan3[1].data = auxdata)) & (exgntd = true) & (!(cache[1].state = e))))
+(!((!(chan3[2].data = auxdata)) & (exgntd = true) & (!(cache[2].state = e))))
+not inv: (!((!(Chan3[1].Data = AuxData)) & (ExGntd = TRUE) & (!(Cache[1].State = e))))
+
+checking(!((!(Chan3[1].Data = AuxData)) & (ExGntd = TRUE) & (Chan2[1].Cmd = inv)))
+sca:
+(!((!(chan3[1].data = auxdata)) & (exgntd = true) & (chan2[1].cmd = inv)))
+(!((!(chan3[2].data = auxdata)) & (exgntd = true) & (chan2[2].cmd = inv)))
+not inv: (!((!(Chan3[1].Data = AuxData)) & (ExGntd = TRUE) & (Chan2[1].Cmd = inv)))
+
+checking(!((!(Chan3[1].Data = AuxData)) & (ExGntd = TRUE) & (Chan3[1].Cmd = empty)))
+sca:
+(!((!(chan3[1].data = auxdata)) & (exgntd = true) & (chan3[1].cmd = empty)))
+(!((!(chan3[2].data = auxdata)) & (exgntd = true) & (chan3[2].cmd = empty)))
+not inv: (!((!(Chan3[1].Data = AuxData)) & (ExGntd = TRUE) & (Chan3[1].Cmd = empty)))
+
+checking(!((!(Chan3[1].Data = AuxData)) & (!(Cache[1].State = e)) & (Chan2[1].Cmd = inv)))
+sca:
+(!((!(chan3[1].data = auxdata)) & (!(cache[1].state = e)) & (chan2[1].cmd = inv)))
+(!((!(chan3[2].data = auxdata)) & (!(cache[2].state = e)) & (chan2[2].cmd = inv)))
+not inv: (!((!(Chan3[1].Data = AuxData)) & (!(Cache[1].State = e)) & (Chan2[1].Cmd = inv)))
+
+checking(!((!(Chan3[1].Data = AuxData)) & (!(Cache[1].State = e)) & (Chan3[1].Cmd = empty)))
+sca:
+(!((!(chan3[1].data = auxdata)) & (!(cache[1].state = e)) & (chan3[1].cmd = empty)))
+(!((!(chan3[2].data = auxdata)) & (!(cache[2].state = e)) & (chan3[2].cmd = empty)))
+not inv: (!((!(Chan3[1].Data = AuxData)) & (!(Cache[1].State = e)) & (Chan3[1].Cmd = empty)))
+
+checking(!((!(Chan3[1].Data = AuxData)) & (Chan2[1].Cmd = inv) & (Chan3[1].Cmd = empty)))
+sca:
+(!((!(chan3[1].data = auxdata)) & (chan2[1].cmd = inv) & (chan3[1].cmd = empty)))
+(!((!(chan3[2].data = auxdata)) & (chan2[2].cmd = inv) & (chan3[2].cmd = empty)))
+not inv: (!((!(Chan3[1].Data = AuxData)) & (Chan2[1].Cmd = inv) & (Chan3[1].Cmd = empty)))
+
+checking(!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (Chan2[1].Cmd = inv)))
+sca:
+(!((exgntd = true) & (!(cache[1].state = e)) & (chan2[1].cmd = inv)))
+(!((exgntd = true) & (!(cache[2].state = e)) & (chan2[2].cmd = inv)))
+inv: (!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (Chan2[1].Cmd = inv)))
+
+checking(!((!(Chan3[1].Data = AuxData)) & (Chan2[1].Cmd = empty)))
+sca:
+(!((!(chan3[1].data = auxdata)) & (chan2[1].cmd = empty)))
+(!((!(chan3[2].data = auxdata)) & (chan2[2].cmd = empty)))
+not inv: (!((!(Chan3[1].Data = AuxData)) & (Chan2[1].Cmd = empty)))
+
+checking(!((!(Chan3[1].Data = AuxData)) & (CurCmd = reqe)))
+sca:
+(!((!(chan3[1].data = auxdata)) & (curcmd = reqe)))
+(!((!(chan3[2].data = auxdata)) & (curcmd = reqe)))
+not inv: (!((!(Chan3[1].Data = AuxData)) & (CurCmd = reqe)))
+
+checking(!((!(Chan3[1].Data = AuxData)) & (CurPtr = 1)))
+sca:
+(!((!(chan3[1].data = auxdata)) & (curptr = 1)))
+(!((!(chan3[2].data = auxdata)) & (curptr = 2)))
+not inv: (!((!(Chan3[1].Data = AuxData)) & (CurPtr = 1)))
+
+checking(!((!(Chan3[1].Data = AuxData)) & (ExGntd = FALSE)))
+sca:
+(!((!(chan3[1].data = auxdata)) & (exgntd = false)))
+(!((!(chan3[2].data = auxdata)) & (exgntd = false)))
+not inv: (!((!(Chan3[1].Data = AuxData)) & (ExGntd = FALSE)))
+
+checking(!((!(Chan3[1].Data = AuxData)) & (ShrSet[1] = FALSE)))
+sca:
+(!((!(chan3[1].data = auxdata)) & (shrset[1] = false)))
+(!((!(chan3[2].data = auxdata)) & (shrset[2] = false)))
+not inv: (!((!(Chan3[1].Data = AuxData)) & (ShrSet[1] = FALSE)))
+
+checking(!((!(Chan3[1].Data = AuxData)) & (ShrSet[2] = FALSE)))
+sca:
+(!((!(chan3[1].data = auxdata)) & (shrset[2] = false)))
+(!((!(chan3[2].data = auxdata)) & (shrset[1] = false)))
+not inv: (!((!(Chan3[1].Data = AuxData)) & (ShrSet[2] = FALSE)))
+
+checking(!((Chan3[1].Cmd = invack) & (Chan2[1].Cmd = empty)))
+sca:
+(!((chan3[1].cmd = invack) & (chan2[1].cmd = empty)))
+(!((chan3[2].cmd = invack) & (chan2[2].cmd = empty)))
+not inv: (!((Chan3[1].Cmd = invack) & (Chan2[1].Cmd = empty)))
+
+checking(!((Chan3[1].Cmd = invack) & (CurCmd = reqe)))
+sca:
+(!((chan3[1].cmd = invack) & (curcmd = reqe)))
+(!((chan3[2].cmd = invack) & (curcmd = reqe)))
+not inv: (!((Chan3[1].Cmd = invack) & (CurCmd = reqe)))
+
+checking(!((Chan3[1].Cmd = invack) & (CurPtr = 1)))
+sca:
+(!((chan3[1].cmd = invack) & (curptr = 1)))
+(!((chan3[2].cmd = invack) & (curptr = 2)))
+not inv: (!((Chan3[1].Cmd = invack) & (CurPtr = 1)))
+
+checking(!((Chan3[1].Cmd = invack) & (ExGntd = FALSE)))
+sca:
+(!((chan3[1].cmd = invack) & (exgntd = false)))
+(!((chan3[2].cmd = invack) & (exgntd = false)))
+not inv: (!((Chan3[1].Cmd = invack) & (ExGntd = FALSE)))
+
+checking(!((Chan3[1].Cmd = invack) & (ShrSet[1] = FALSE)))
+sca:
+(!((chan3[1].cmd = invack) & (shrset[1] = false)))
+(!((chan3[2].cmd = invack) & (shrset[2] = false)))
+inv: (!((Chan3[1].Cmd = invack) & (ShrSet[1] = FALSE)))
+
+checking(!((!(Chan3[1].Data = AuxData)) & (Chan2[2].Cmd = empty)))
+sca:
+(!((!(chan3[1].data = auxdata)) & (chan2[2].cmd = empty)))
+(!((!(chan3[2].data = auxdata)) & (chan2[1].cmd = empty)))
+not inv: (!((!(Chan3[1].Data = AuxData)) & (Chan2[2].Cmd = empty)))
+
+checking(!((!(Chan3[1].Data = AuxData)) & (CurPtr = 2)))
+sca:
+(!((!(chan3[1].data = auxdata)) & (curptr = 2)))
+(!((!(chan3[2].data = auxdata)) & (curptr = 1)))
+not inv: (!((!(Chan3[1].Data = AuxData)) & (CurPtr = 2)))
+
+checking(!((Chan3[1].Cmd = invack) & (Chan2[2].Cmd = empty)))
+sca:
+(!((chan3[1].cmd = invack) & (chan2[2].cmd = empty)))
+(!((chan3[2].cmd = invack) & (chan2[1].cmd = empty)))
+not inv: (!((Chan3[1].Cmd = invack) & (Chan2[2].Cmd = empty)))
+
+checking(!((Chan3[1].Cmd = invack) & (CurPtr = 2)))
+sca:
+(!((chan3[1].cmd = invack) & (curptr = 2)))
+(!((chan3[2].cmd = invack) & (curptr = 1)))
+not inv: (!((Chan3[1].Cmd = invack) & (CurPtr = 2)))
+
+checking(!((!(Chan3[1].Data = 1))))
+sca:
+(!((!(chan3[1].data = 1))))
+(!((!(chan3[2].data = 2))))
+not inv: (!((!(Chan3[1].Data = 1))))
+
+checking(!((!(Chan3[1].Data = 1)) & (ExGntd = TRUE)))
+sca:
+(!((!(chan3[1].data = 1)) & (exgntd = true)))
+(!((!(chan3[2].data = 2)) & (exgntd = true)))
+not inv: (!((!(Chan3[1].Data = 1)) & (ExGntd = TRUE)))
+
+checking(!((!(Chan3[1].Data = 1)) & (Chan3[1].Cmd = invack)))
+sca:
+(!((!(chan3[1].data = 1)) & (chan3[1].cmd = invack)))
+(!((!(chan3[2].data = 2)) & (chan3[2].cmd = invack)))
+not inv: (!((!(Chan3[1].Data = 1)) & (Chan3[1].Cmd = invack)))
+
+checking(!((!(Chan3[1].Data = 1)) & (Cache[1].State = e)))
+sca:
+(!((!(chan3[1].data = 1)) & (cache[1].state = e)))
+(!((!(chan3[2].data = 2)) & (cache[2].state = e)))
+not inv: (!((!(Chan3[1].Data = 1)) & (Cache[1].State = e)))
+
+checking(!((ExGntd = TRUE) & (Cache[1].State = e)))
+sca:
+(!((exgntd = true) & (cache[1].state = e)))
+(!((exgntd = true) & (cache[2].state = e)))
+not inv: (!((ExGntd = TRUE) & (Cache[1].State = e)))
+
+checking(!((Chan3[1].Cmd = invack) & (Cache[1].State = e)))
+sca:
+(!((chan3[1].cmd = invack) & (cache[1].state = e)))
+(!((chan3[2].cmd = invack) & (cache[2].state = e)))
+inv: (!((Chan3[1].Cmd = invack) & (Cache[1].State = e)))
+
+checking(!((!(Chan3[1].Data = 1)) & (Cache[2].State = e)))
+sca:
+(!((!(chan3[1].data = 1)) & (cache[2].state = e)))
+(!((!(chan3[2].data = 2)) & (cache[1].state = e)))
+not inv: (!((!(Chan3[1].Data = 1)) & (Cache[2].State = e)))
+
+checking(!((Chan3[1].Cmd = invack) & (Cache[2].State = e)))
+sca:
+(!((chan3[1].cmd = invack) & (cache[2].state = e)))
+(!((chan3[2].cmd = invack) & (cache[1].state = e)))
+inv: (!((Chan3[1].Cmd = invack) & (Cache[2].State = e)))
+
+checking(!((Cache[1].State = e) & (ExGntd = TRUE)))
+not inv: (!((Cache[1].State = e) & (ExGntd = TRUE)))
+
+checking(!((Cache[1].State = e) & (Chan3[1].Cmd = invack)))
+inv: (!((Cache[1].State = e) & (Chan3[1].Cmd = invack)))
+
+checking(!((Cache[1].State = e) & (Chan3[2].Cmd = invack)))
+sca:
+(!((cache[1].state = e) & (chan3[2].cmd = invack)))
+(!((cache[2].state = e) & (chan3[1].cmd = invack)))
+inv: (!((Cache[1].State = e) & (Chan3[2].Cmd = invack)))
+
+checking(!((ExGntd = FALSE) & (Chan2[1].Cmd = gnte)))
+sca:
+(!((exgntd = false) & (chan2[1].cmd = gnte)))
+(!((exgntd = false) & (chan2[2].cmd = gnte)))
+inv: (!((ExGntd = FALSE) & (Chan2[1].Cmd = gnte)))
+
+checking(!((!(MemData = AuxData))))
+sca:
+(!((!(memdata = auxdata))))
+not inv: (!((!(MemData = AuxData))))
+
+checking(!((CurCmd = reqs)))
+sca:
+(!((curcmd = reqs)))
+not inv: (!((CurCmd = reqs)))
+
+checking(!((!(MemData = AuxData)) & (Chan2[1].Cmd = empty)))
+sca:
+(!((!(memdata = auxdata)) & (chan2[1].cmd = empty)))
+(!((!(memdata = auxdata)) & (chan2[2].cmd = empty)))
+not inv: (!((!(MemData = AuxData)) & (Chan2[1].Cmd = empty)))
+
+checking(!((!(MemData = AuxData)) & (CurCmd = reqs)))
+sca:
+(!((!(memdata = auxdata)) & (curcmd = reqs)))
+not inv: (!((!(MemData = AuxData)) & (CurCmd = reqs)))
+
+checking(!((!(MemData = AuxData)) & (CurPtr = 1)))
+sca:
+(!((!(memdata = auxdata)) & (curptr = 1)))
+(!((!(memdata = auxdata)) & (curptr = 2)))
+not inv: (!((!(MemData = AuxData)) & (CurPtr = 1)))
+
+checking(!((!(MemData = AuxData)) & (ExGntd = FALSE)))
+sca:
+(!((!(memdata = auxdata)) & (exgntd = false)))
+inv: (!((!(MemData = AuxData)) & (ExGntd = FALSE)))
+
+checking(!((!(Chan2[1].Data = 1))))
+sca:
+(!((!(chan2[1].data = 1))))
+(!((!(chan2[2].data = 2))))
+not inv: (!((!(Chan2[1].Data = 1))))
+
+checking(!((!(Chan2[1].Data = 1)) & (Chan2[1].Cmd = gnts)))
+sca:
+(!((!(chan2[1].data = 1)) & (chan2[1].cmd = gnts)))
+(!((!(chan2[2].data = 2)) & (chan2[2].cmd = gnts)))
+not inv: (!((!(Chan2[1].Data = 1)) & (Chan2[1].Cmd = gnts)))
+
+checking(!((!(Chan2[1].Data = 1)) & (Cache[1].State = e)))
+sca:
+(!((!(chan2[1].data = 1)) & (cache[1].state = e)))
+(!((!(chan2[2].data = 2)) & (cache[2].state = e)))
+not inv: (!((!(Chan2[1].Data = 1)) & (Cache[1].State = e)))
+
+checking(!((Chan2[1].Cmd = gnts) & (Cache[1].State = e)))
+sca:
+(!((chan2[1].cmd = gnts) & (cache[1].state = e)))
+(!((chan2[2].cmd = gnts) & (cache[2].state = e)))
+inv: (!((Chan2[1].Cmd = gnts) & (Cache[1].State = e)))
+
+checking(!((!(Chan2[1].Data = 1)) & (Cache[2].State = e)))
+sca:
+(!((!(chan2[1].data = 1)) & (cache[2].state = e)))
+(!((!(chan2[2].data = 2)) & (cache[1].state = e)))
+not inv: (!((!(Chan2[1].Data = 1)) & (Cache[2].State = e)))
+
+checking(!((Chan2[1].Cmd = gnts) & (Cache[2].State = e)))
+sca:
+(!((chan2[1].cmd = gnts) & (cache[2].state = e)))
+(!((chan2[2].cmd = gnts) & (cache[1].state = e)))
+inv: (!((Chan2[1].Cmd = gnts) & (Cache[2].State = e)))
+
+checking(!((!(MemData = AuxData)) & (CurCmd = reqe)))
+sca:
+(!((!(memdata = auxdata)) & (curcmd = reqe)))
+not inv: (!((!(MemData = AuxData)) & (CurCmd = reqe)))
+
+checking(!((!(Chan2[1].Data = 1)) & (Chan2[1].Cmd = gnte)))
+sca:
+(!((!(chan2[1].data = 1)) & (chan2[1].cmd = gnte)))
+(!((!(chan2[2].data = 2)) & (chan2[2].cmd = gnte)))
+not inv: (!((!(Chan2[1].Data = 1)) & (Chan2[1].Cmd = gnte)))
+
+checking(!((Chan2[1].Cmd = gnte) & (Cache[1].State = e)))
+sca:
+(!((chan2[1].cmd = gnte) & (cache[1].state = e)))
+(!((chan2[2].cmd = gnte) & (cache[2].state = e)))
+inv: (!((Chan2[1].Cmd = gnte) & (Cache[1].State = e)))
+
+checking(!((Chan2[1].Cmd = gnte) & (Cache[2].State = e)))
+inv: (!((Chan2[1].Cmd = gnte) & (Cache[2].State = e)))
+
+checking(!((Cache[2].State = e) & (Chan2[1].Cmd = gnts)))
+inv: (!((Cache[2].State = e) & (Chan2[1].Cmd = gnts)))
+
+checking(!((!(Cache[1].State = i)) & (Chan2[2].Cmd = gnte)))
+sca:
+(!((!(cache[1].state = i)) & (chan2[2].cmd = gnte)))
+(!((!(cache[2].state = i)) & (chan2[1].cmd = gnte)))
+inv: (!((!(Cache[1].State = i)) & (Chan2[2].Cmd = gnte)))
+
+checking(!((Chan2[2].Cmd = gnte) & (Chan2[1].Cmd = empty)))
+sca:
+(!((chan2[2].cmd = gnte) & (chan2[1].cmd = empty)))
+(!((chan2[1].cmd = gnte) & (chan2[2].cmd = empty)))
+not inv: (!((Chan2[2].Cmd = gnte) & (Chan2[1].Cmd = empty)))
+
+checking(!((Chan2[1].Cmd = gnte) & (CurCmd = reqe)))
+sca:
+(!((chan2[1].cmd = gnte) & (curcmd = reqe)))
+(!((chan2[2].cmd = gnte) & (curcmd = reqe)))
+not inv: (!((Chan2[1].Cmd = gnte) & (CurCmd = reqe)))
+
+checking(!((Chan2[2].Cmd = gnte) & (CurPtr = 1)))
+sca:
+(!((chan2[2].cmd = gnte) & (curptr = 1)))
+(!((chan2[1].cmd = gnte) & (curptr = 2)))
+not inv: (!((Chan2[2].Cmd = gnte) & (CurPtr = 1)))
+
+checking(!((Chan2[1].Cmd = gnte) & (ExGntd = FALSE)))
+inv: (!((Chan2[1].Cmd = gnte) & (ExGntd = FALSE)))
+
+checking(!((Chan2[1].Cmd = gnte) & (Chan2[2].Cmd = empty)))
+sca:
+(!((chan2[1].cmd = gnte) & (chan2[2].cmd = empty)))
+(!((chan2[2].cmd = gnte) & (chan2[1].cmd = empty)))
+not inv: (!((Chan2[1].Cmd = gnte) & (Chan2[2].Cmd = empty)))
+
+checking(!((Chan2[1].Cmd = gnte) & (CurPtr = 2)))
+sca:
+(!((chan2[1].cmd = gnte) & (curptr = 2)))
+(!((chan2[2].cmd = gnte) & (curptr = 1)))
+not inv: (!((Chan2[1].Cmd = gnte) & (CurPtr = 2)))
+
+checking(!((InvSet[1] = TRUE)))
+sca:
+(!((invset[1] = true)))
+(!((invset[2] = true)))
+not inv: (!((InvSet[1] = TRUE)))
+
+checking(!((ExGntd = TRUE) & (Chan2[1].Cmd = empty)))
+sca:
+(!((exgntd = true) & (chan2[1].cmd = empty)))
+(!((exgntd = true) & (chan2[2].cmd = empty)))
+not inv: (!((ExGntd = TRUE) & (Chan2[1].Cmd = empty)))
+
+checking(!((ExGntd = TRUE) & (CurCmd = reqe)))
+sca:
+(!((exgntd = true) & (curcmd = reqe)))
+not inv: (!((ExGntd = TRUE) & (CurCmd = reqe)))
+
+checking(!((ExGntd = TRUE) & (InvSet[1] = TRUE)))
+sca:
+(!((exgntd = true) & (invset[1] = true)))
+(!((exgntd = true) & (invset[2] = true)))
+not inv: (!((ExGntd = TRUE) & (InvSet[1] = TRUE)))
+
+checking(!((!(Cache[1].State = e)) & (Chan2[1].Cmd = empty)))
+sca:
+(!((!(cache[1].state = e)) & (chan2[1].cmd = empty)))
+(!((!(cache[2].state = e)) & (chan2[2].cmd = empty)))
+not inv: (!((!(Cache[1].State = e)) & (Chan2[1].Cmd = empty)))
+
+checking(!((!(Cache[1].State = e)) & (CurCmd = reqe)))
+sca:
+(!((!(cache[1].state = e)) & (curcmd = reqe)))
+(!((!(cache[2].state = e)) & (curcmd = reqe)))
+not inv: (!((!(Cache[1].State = e)) & (CurCmd = reqe)))
+
+checking(!((!(Cache[1].State = e)) & (InvSet[1] = TRUE)))
+sca:
+(!((!(cache[1].state = e)) & (invset[1] = true)))
+(!((!(cache[2].state = e)) & (invset[2] = true)))
+not inv: (!((!(Cache[1].State = e)) & (InvSet[1] = TRUE)))
+
+checking(!((Chan2[1].Cmd = empty) & (CurCmd = reqe)))
+sca:
+(!((chan2[1].cmd = empty) & (curcmd = reqe)))
+(!((chan2[2].cmd = empty) & (curcmd = reqe)))
+not inv: (!((Chan2[1].Cmd = empty) & (CurCmd = reqe)))
+
+checking(!((Chan2[1].Cmd = empty) & (InvSet[1] = TRUE)))
+sca:
+(!((chan2[1].cmd = empty) & (invset[1] = true)))
+(!((chan2[2].cmd = empty) & (invset[2] = true)))
+not inv: (!((Chan2[1].Cmd = empty) & (InvSet[1] = TRUE)))
+
+checking(!((CurCmd = reqe) & (InvSet[1] = TRUE)))
+sca:
+(!((curcmd = reqe) & (invset[1] = true)))
+(!((curcmd = reqe) & (invset[2] = true)))
+not inv: (!((CurCmd = reqe) & (InvSet[1] = TRUE)))
+
+checking(!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (Chan2[1].Cmd = empty)))
+sca:
+(!((exgntd = true) & (!(cache[1].state = e)) & (chan2[1].cmd = empty)))
+(!((exgntd = true) & (!(cache[2].state = e)) & (chan2[2].cmd = empty)))
+not inv: (!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (Chan2[1].Cmd = empty)))
+
+checking(!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (CurCmd = reqe)))
+sca:
+(!((exgntd = true) & (!(cache[1].state = e)) & (curcmd = reqe)))
+(!((exgntd = true) & (!(cache[2].state = e)) & (curcmd = reqe)))
+not inv: (!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (CurCmd = reqe)))
+
+checking(!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (InvSet[1] = TRUE)))
+sca:
+(!((exgntd = true) & (!(cache[1].state = e)) & (invset[1] = true)))
+(!((exgntd = true) & (!(cache[2].state = e)) & (invset[2] = true)))
+not inv: (!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (InvSet[1] = TRUE)))
+
+checking(!((ExGntd = TRUE) & (Chan2[1].Cmd = empty) & (CurCmd = reqe)))
+sca:
+(!((exgntd = true) & (chan2[1].cmd = empty) & (curcmd = reqe)))
+(!((exgntd = true) & (chan2[2].cmd = empty) & (curcmd = reqe)))
+not inv: (!((ExGntd = TRUE) & (Chan2[1].Cmd = empty) & (CurCmd = reqe)))
+
+checking(!((ExGntd = TRUE) & (Chan2[1].Cmd = empty) & (InvSet[1] = TRUE)))
+sca:
+(!((exgntd = true) & (chan2[1].cmd = empty) & (invset[1] = true)))
+(!((exgntd = true) & (chan2[2].cmd = empty) & (invset[2] = true)))
+not inv: (!((ExGntd = TRUE) & (Chan2[1].Cmd = empty) & (InvSet[1] = TRUE)))
+
+checking(!((ExGntd = TRUE) & (CurCmd = reqe) & (InvSet[1] = TRUE)))
+sca:
+(!((exgntd = true) & (curcmd = reqe) & (invset[1] = true)))
+(!((exgntd = true) & (curcmd = reqe) & (invset[2] = true)))
+not inv: (!((ExGntd = TRUE) & (CurCmd = reqe) & (InvSet[1] = TRUE)))
+
+checking(!((!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (CurCmd = reqe)))
+sca:
+(!((!(cache[1].state = e)) & (chan2[1].cmd = empty) & (curcmd = reqe)))
+(!((!(cache[2].state = e)) & (chan2[2].cmd = empty) & (curcmd = reqe)))
+not inv: (!((!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (CurCmd = reqe)))
+
+checking(!((!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (InvSet[1] = TRUE)))
+sca:
+(!((!(cache[1].state = e)) & (chan2[1].cmd = empty) & (invset[1] = true)))
+(!((!(cache[2].state = e)) & (chan2[2].cmd = empty) & (invset[2] = true)))
+not inv: (!((!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (InvSet[1] = TRUE)))
+
+checking(!((!(Cache[1].State = e)) & (CurCmd = reqe) & (InvSet[1] = TRUE)))
+sca:
+(!((!(cache[1].state = e)) & (curcmd = reqe) & (invset[1] = true)))
+(!((!(cache[2].state = e)) & (curcmd = reqe) & (invset[2] = true)))
+not inv: (!((!(Cache[1].State = e)) & (CurCmd = reqe) & (InvSet[1] = TRUE)))
+
+checking(!((Chan2[1].Cmd = empty) & (CurCmd = reqe) & (InvSet[1] = TRUE)))
+sca:
+(!((chan2[1].cmd = empty) & (curcmd = reqe) & (invset[1] = true)))
+(!((chan2[2].cmd = empty) & (curcmd = reqe) & (invset[2] = true)))
+not inv: (!((Chan2[1].Cmd = empty) & (CurCmd = reqe) & (InvSet[1] = TRUE)))
+
+checking(!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (CurCmd = reqe)))
+sca:
+(!((exgntd = true) & (!(cache[1].state = e)) & (chan2[1].cmd = empty) & (curcmd = reqe)))
+(!((exgntd = true) & (!(cache[2].state = e)) & (chan2[2].cmd = empty) & (curcmd = reqe)))
+not inv: (!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (CurCmd = reqe)))
+
+checking(!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (InvSet[1] = TRUE)))
+sca:
+(!((exgntd = true) & (!(cache[1].state = e)) & (chan2[1].cmd = empty) & (invset[1] = true)))
+(!((exgntd = true) & (!(cache[2].state = e)) & (chan2[2].cmd = empty) & (invset[2] = true)))
+inv: (!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (InvSet[1] = TRUE)))
+
+checking(!((ExGntd = TRUE) & (CurCmd = reqs)))
+sca:
+(!((exgntd = true) & (curcmd = reqs)))
+not inv: (!((ExGntd = TRUE) & (CurCmd = reqs)))
+
+checking(!((!(Cache[1].State = e)) & (CurCmd = reqs)))
+sca:
+(!((!(cache[1].state = e)) & (curcmd = reqs)))
+(!((!(cache[2].state = e)) & (curcmd = reqs)))
+not inv: (!((!(Cache[1].State = e)) & (CurCmd = reqs)))
+
+checking(!((Chan2[1].Cmd = empty) & (CurCmd = reqs)))
+sca:
+(!((chan2[1].cmd = empty) & (curcmd = reqs)))
+(!((chan2[2].cmd = empty) & (curcmd = reqs)))
+not inv: (!((Chan2[1].Cmd = empty) & (CurCmd = reqs)))
+
+checking(!((CurCmd = reqs) & (InvSet[1] = TRUE)))
+sca:
+(!((curcmd = reqs) & (invset[1] = true)))
+(!((curcmd = reqs) & (invset[2] = true)))
+not inv: (!((CurCmd = reqs) & (InvSet[1] = TRUE)))
+
+checking(!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (CurCmd = reqs)))
+sca:
+(!((exgntd = true) & (!(cache[1].state = e)) & (curcmd = reqs)))
+(!((exgntd = true) & (!(cache[2].state = e)) & (curcmd = reqs)))
+not inv: (!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (CurCmd = reqs)))
+
+checking(!((ExGntd = TRUE) & (Chan2[1].Cmd = empty) & (CurCmd = reqs)))
+sca:
+(!((exgntd = true) & (chan2[1].cmd = empty) & (curcmd = reqs)))
+(!((exgntd = true) & (chan2[2].cmd = empty) & (curcmd = reqs)))
+not inv: (!((ExGntd = TRUE) & (Chan2[1].Cmd = empty) & (CurCmd = reqs)))
+
+checking(!((ExGntd = TRUE) & (CurCmd = reqs) & (InvSet[1] = TRUE)))
+sca:
+(!((exgntd = true) & (curcmd = reqs) & (invset[1] = true)))
+(!((exgntd = true) & (curcmd = reqs) & (invset[2] = true)))
+not inv: (!((ExGntd = TRUE) & (CurCmd = reqs) & (InvSet[1] = TRUE)))
+
+checking(!((!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (CurCmd = reqs)))
+sca:
+(!((!(cache[1].state = e)) & (chan2[1].cmd = empty) & (curcmd = reqs)))
+(!((!(cache[2].state = e)) & (chan2[2].cmd = empty) & (curcmd = reqs)))
+not inv: (!((!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (CurCmd = reqs)))
+
+checking(!((!(Cache[1].State = e)) & (CurCmd = reqs) & (InvSet[1] = TRUE)))
+sca:
+(!((!(cache[1].state = e)) & (curcmd = reqs) & (invset[1] = true)))
+(!((!(cache[2].state = e)) & (curcmd = reqs) & (invset[2] = true)))
+not inv: (!((!(Cache[1].State = e)) & (CurCmd = reqs) & (InvSet[1] = TRUE)))
+
+checking(!((Chan2[1].Cmd = empty) & (CurCmd = reqs) & (InvSet[1] = TRUE)))
+sca:
+(!((chan2[1].cmd = empty) & (curcmd = reqs) & (invset[1] = true)))
+(!((chan2[2].cmd = empty) & (curcmd = reqs) & (invset[2] = true)))
+not inv: (!((Chan2[1].Cmd = empty) & (CurCmd = reqs) & (InvSet[1] = TRUE)))
+
+checking(!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (CurCmd = reqs)))
+sca:
+(!((exgntd = true) & (!(cache[1].state = e)) & (chan2[1].cmd = empty) & (curcmd = reqs)))
+(!((exgntd = true) & (!(cache[2].state = e)) & (chan2[2].cmd = empty) & (curcmd = reqs)))
+not inv: (!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (CurCmd = reqs)))
+
+checking(!((!(Cache[1].State = e)) & (Chan2[2].Cmd = empty)))
+sca:
+(!((!(cache[1].state = e)) & (chan2[2].cmd = empty)))
+(!((!(cache[2].state = e)) & (chan2[1].cmd = empty)))
+not inv: (!((!(Cache[1].State = e)) & (Chan2[2].Cmd = empty)))
+
+checking(!((!(Cache[1].State = e)) & (CurPtr = 2)))
+sca:
+(!((!(cache[1].state = e)) & (curptr = 2)))
+(!((!(cache[2].state = e)) & (curptr = 1)))
+not inv: (!((!(Cache[1].State = e)) & (CurPtr = 2)))
+
+checking(!((!(Cache[1].State = e)) & (ExGntd = FALSE)))
+sca:
+(!((!(cache[1].state = e)) & (exgntd = false)))
+(!((!(cache[2].state = e)) & (exgntd = false)))
+not inv: (!((!(Cache[1].State = e)) & (ExGntd = FALSE)))
+
+checking(!((!(Cache[1].State = e)) & (ShrSet[1] = FALSE)))
+sca:
+(!((!(cache[1].state = e)) & (shrset[1] = false)))
+(!((!(cache[2].state = e)) & (shrset[2] = false)))
+not inv: (!((!(Cache[1].State = e)) & (ShrSet[1] = FALSE)))
+
+checking(!((!(Cache[1].State = e)) & (ShrSet[2] = FALSE)))
+sca:
+(!((!(cache[1].state = e)) & (shrset[2] = false)))
+(!((!(cache[2].state = e)) & (shrset[1] = false)))
+not inv: (!((!(Cache[1].State = e)) & (ShrSet[2] = FALSE)))
+
+checking(!((Chan2[1].Cmd = inv) & (Chan2[2].Cmd = empty)))
+sca:
+(!((chan2[1].cmd = inv) & (chan2[2].cmd = empty)))
+(!((chan2[2].cmd = inv) & (chan2[1].cmd = empty)))
+not inv: (!((Chan2[1].Cmd = inv) & (Chan2[2].Cmd = empty)))
+
+checking(!((Chan2[1].Cmd = inv) & (CurCmd = reqe)))
+sca:
+(!((chan2[1].cmd = inv) & (curcmd = reqe)))
+(!((chan2[2].cmd = inv) & (curcmd = reqe)))
+not inv: (!((Chan2[1].Cmd = inv) & (CurCmd = reqe)))
+
+checking(!((Chan2[1].Cmd = inv) & (CurPtr = 2)))
+sca:
+(!((chan2[1].cmd = inv) & (curptr = 2)))
+(!((chan2[2].cmd = inv) & (curptr = 1)))
+not inv: (!((Chan2[1].Cmd = inv) & (CurPtr = 2)))
+
+checking(!((Chan2[1].Cmd = inv) & (ExGntd = FALSE)))
+sca:
+(!((chan2[1].cmd = inv) & (exgntd = false)))
+(!((chan2[2].cmd = inv) & (exgntd = false)))
+not inv: (!((Chan2[1].Cmd = inv) & (ExGntd = FALSE)))
+
+checking(!((Chan2[1].Cmd = inv) & (ShrSet[1] = FALSE)))
+sca:
+(!((chan2[1].cmd = inv) & (shrset[1] = false)))
+(!((chan2[2].cmd = inv) & (shrset[2] = false)))
+inv: (!((Chan2[1].Cmd = inv) & (ShrSet[1] = FALSE)))
+
+checking(!((ShrSet[1] = FALSE) & (Chan2[1].Cmd = inv)))
+inv: (!((ShrSet[1] = FALSE) & (Chan2[1].Cmd = inv)))
+
+checking(!((Chan3[1].Cmd = invack) & (Chan2[1].Cmd = gnte)))
+sca:
+(!((chan3[1].cmd = invack) & (chan2[1].cmd = gnte)))
+(!((chan3[2].cmd = invack) & (chan2[2].cmd = gnte)))
+inv: (!((Chan3[1].Cmd = invack) & (Chan2[1].Cmd = gnte)))
+
+checking(!((Cache[2].State = e) & (Chan2[1].Cmd = inv)))
+sca:
+(!((cache[2].state = e) & (chan2[1].cmd = inv)))
+(!((cache[1].state = e) & (chan2[2].cmd = inv)))
+inv: (!((Cache[2].State = e) & (Chan2[1].Cmd = inv)))
+
+checking(!((Chan3[1].Cmd = invack) & (Chan2[2].Cmd = gnte)))
+sca:
+(!((chan3[1].cmd = invack) & (chan2[2].cmd = gnte)))
+(!((chan3[2].cmd = invack) & (chan2[1].cmd = gnte)))
+inv: (!((Chan3[1].Cmd = invack) & (Chan2[2].Cmd = gnte)))
+
+checking(!((Chan2[1].Cmd = gnte) & (ExGntd = TRUE)))
+sca:
+(!((chan2[1].cmd = gnte) & (exgntd = true)))
+(!((chan2[2].cmd = gnte) & (exgntd = true)))
+not inv: (!((Chan2[1].Cmd = gnte) & (ExGntd = TRUE)))
+
+checking(!((Chan2[1].Cmd = gnte) & (Chan3[1].Cmd = invack)))
+inv: (!((Chan2[1].Cmd = gnte) & (Chan3[1].Cmd = invack)))
+
+checking(!((Chan2[1].Cmd = gnte) & (Chan3[2].Cmd = invack)))
+sca:
+(!((chan2[1].cmd = gnte) & (chan3[2].cmd = invack)))
+(!((chan2[2].cmd = gnte) & (chan3[1].cmd = invack)))
+inv: (!((Chan2[1].Cmd = gnte) & (Chan3[2].Cmd = invack)))
+
+checking(!((Cache[1].State = e) & (Chan2[1].Cmd = empty)))
+sca:
+(!((cache[1].state = e) & (chan2[1].cmd = empty)))
+(!((cache[2].state = e) & (chan2[2].cmd = empty)))
+not inv: (!((Cache[1].State = e) & (Chan2[1].Cmd = empty)))
+
+checking(!((Cache[1].State = e) & (CurCmd = reqs)))
+sca:
+(!((cache[1].state = e) & (curcmd = reqs)))
+(!((cache[2].state = e) & (curcmd = reqs)))
+not inv: (!((Cache[1].State = e) & (CurCmd = reqs)))
+
+checking(!((Cache[1].State = e) & (CurPtr = 1)))
+sca:
+(!((cache[1].state = e) & (curptr = 1)))
+(!((cache[2].state = e) & (curptr = 2)))
+not inv: (!((Cache[1].State = e) & (CurPtr = 1)))
+
+checking(!((Chan2[1].Cmd = gnts) & (Chan2[2].Cmd = gnte)))
+sca:
+(!((chan2[1].cmd = gnts) & (chan2[2].cmd = gnte)))
+(!((chan2[2].cmd = gnts) & (chan2[1].cmd = gnte)))
+inv: (!((Chan2[1].Cmd = gnts) & (Chan2[2].Cmd = gnte)))
+
+checking(!((!(Cache[1].State = i)) & (Chan2[2].Cmd = empty)))
+sca:
+(!((!(cache[1].state = i)) & (chan2[2].cmd = empty)))
+(!((!(cache[2].state = i)) & (chan2[1].cmd = empty)))
+not inv: (!((!(Cache[1].State = i)) & (Chan2[2].Cmd = empty)))
+
+checking(!((!(Cache[1].State = i)) & (CurCmd = reqe)))
+sca:
+(!((!(cache[1].state = i)) & (curcmd = reqe)))
+(!((!(cache[2].state = i)) & (curcmd = reqe)))
+not inv: (!((!(Cache[1].State = i)) & (CurCmd = reqe)))
+
+checking(!((!(Cache[1].State = i)) & (CurPtr = 2)))
+sca:
+(!((!(cache[1].state = i)) & (curptr = 2)))
+(!((!(cache[2].state = i)) & (curptr = 1)))
+not inv: (!((!(Cache[1].State = i)) & (CurPtr = 2)))
+
+checking(!((!(Cache[1].State = i)) & (ExGntd = FALSE)))
+sca:
+(!((!(cache[1].state = i)) & (exgntd = false)))
+(!((!(cache[2].state = i)) & (exgntd = false)))
+not inv: (!((!(Cache[1].State = i)) & (ExGntd = FALSE)))
+
+checking(!((!(Cache[1].State = i)) & (ShrSet[1] = FALSE)))
+sca:
+(!((!(cache[1].state = i)) & (shrset[1] = false)))
+(!((!(cache[2].state = i)) & (shrset[2] = false)))
+inv: (!((!(Cache[1].State = i)) & (ShrSet[1] = FALSE)))
+
+checking(!((Chan2[2].Cmd = gnte) & (Chan2[1].Cmd = gnts)))
+inv: (!((Chan2[2].Cmd = gnte) & (Chan2[1].Cmd = gnts)))
+
+checking(!((Chan2[2].Cmd = gnte) & (Chan2[1].Cmd = gnte)))
+inv: (!((Chan2[2].Cmd = gnte) & (Chan2[1].Cmd = gnte)))
+
+checking(!((ShrSet[1] = TRUE)))
+sca:
+(!((shrset[1] = true)))
+(!((shrset[2] = true)))
+not inv: (!((ShrSet[1] = TRUE)))
+
+checking(!((CurCmd = empty)))
+sca:
+(!((curcmd = empty)))
+not inv: (!((CurCmd = empty)))
+
+checking(!((!(Chan1[1].Cmd = empty))))
+sca:
+(!((!(chan1[1].cmd = empty))))
+(!((!(chan1[2].cmd = empty))))
+not inv: (!((!(Chan1[1].Cmd = empty))))
+
+checking(!((ExGntd = TRUE) & (ShrSet[1] = TRUE)))
+sca:
+(!((exgntd = true) & (shrset[1] = true)))
+(!((exgntd = true) & (shrset[2] = true)))
+not inv: (!((ExGntd = TRUE) & (ShrSet[1] = TRUE)))
+
+checking(!((ExGntd = TRUE) & (CurCmd = empty)))
+sca:
+(!((exgntd = true) & (curcmd = empty)))
+not inv: (!((ExGntd = TRUE) & (CurCmd = empty)))
+
+checking(!((ExGntd = TRUE) & (!(Chan1[1].Cmd = empty))))
+sca:
+(!((exgntd = true) & (!(chan1[1].cmd = empty))))
+(!((exgntd = true) & (!(chan1[2].cmd = empty))))
+not inv: (!((ExGntd = TRUE) & (!(Chan1[1].Cmd = empty))))
+
+checking(!((!(Cache[1].State = e)) & (ShrSet[1] = TRUE)))
+sca:
+(!((!(cache[1].state = e)) & (shrset[1] = true)))
+(!((!(cache[2].state = e)) & (shrset[2] = true)))
+not inv: (!((!(Cache[1].State = e)) & (ShrSet[1] = TRUE)))
+
+checking(!((!(Cache[1].State = e)) & (CurCmd = empty)))
+sca:
+(!((!(cache[1].state = e)) & (curcmd = empty)))
+(!((!(cache[2].state = e)) & (curcmd = empty)))
+not inv: (!((!(Cache[1].State = e)) & (CurCmd = empty)))
+
+checking(!((!(Cache[1].State = e)) & (!(Chan1[1].Cmd = empty))))
+sca:
+(!((!(cache[1].state = e)) & (!(chan1[1].cmd = empty))))
+(!((!(cache[2].state = e)) & (!(chan1[2].cmd = empty))))
+not inv: (!((!(Cache[1].State = e)) & (!(Chan1[1].Cmd = empty))))
+
+checking(!((Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE)))
+sca:
+(!((chan2[1].cmd = empty) & (shrset[1] = true)))
+(!((chan2[2].cmd = empty) & (shrset[2] = true)))
+not inv: (!((Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE)))
+
+checking(!((Chan2[1].Cmd = empty) & (CurCmd = empty)))
+sca:
+(!((chan2[1].cmd = empty) & (curcmd = empty)))
+(!((chan2[2].cmd = empty) & (curcmd = empty)))
+not inv: (!((Chan2[1].Cmd = empty) & (CurCmd = empty)))
+
+checking(!((Chan2[1].Cmd = empty) & (!(Chan1[1].Cmd = empty))))
+sca:
+(!((chan2[1].cmd = empty) & (!(chan1[1].cmd = empty))))
+(!((chan2[2].cmd = empty) & (!(chan1[2].cmd = empty))))
+not inv: (!((Chan2[1].Cmd = empty) & (!(Chan1[1].Cmd = empty))))
+
+checking(!((ShrSet[1] = TRUE) & (CurCmd = empty)))
+sca:
+(!((shrset[1] = true) & (curcmd = empty)))
+(!((shrset[2] = true) & (curcmd = empty)))
+not inv: (!((ShrSet[1] = TRUE) & (CurCmd = empty)))
+
+checking(!((ShrSet[1] = TRUE) & (!(Chan1[1].Cmd = empty))))
+sca:
+(!((shrset[1] = true) & (!(chan1[1].cmd = empty))))
+(!((shrset[2] = true) & (!(chan1[2].cmd = empty))))
+not inv: (!((ShrSet[1] = TRUE) & (!(Chan1[1].Cmd = empty))))
+
+checking(!((CurCmd = empty) & (!(Chan1[1].Cmd = empty))))
+sca:
+(!((curcmd = empty) & (!(chan1[1].cmd = empty))))
+(!((curcmd = empty) & (!(chan1[2].cmd = empty))))
+not inv: (!((CurCmd = empty) & (!(Chan1[1].Cmd = empty))))
+
+checking(!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (ShrSet[1] = TRUE)))
+sca:
+(!((exgntd = true) & (!(cache[1].state = e)) & (shrset[1] = true)))
+(!((exgntd = true) & (!(cache[2].state = e)) & (shrset[2] = true)))
+not inv: (!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (ShrSet[1] = TRUE)))
+
+checking(!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (CurCmd = empty)))
+sca:
+(!((exgntd = true) & (!(cache[1].state = e)) & (curcmd = empty)))
+(!((exgntd = true) & (!(cache[2].state = e)) & (curcmd = empty)))
+not inv: (!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (CurCmd = empty)))
+
+checking(!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (!(Chan1[1].Cmd = empty))))
+sca:
+(!((exgntd = true) & (!(cache[1].state = e)) & (!(chan1[1].cmd = empty))))
+(!((exgntd = true) & (!(cache[2].state = e)) & (!(chan1[2].cmd = empty))))
+not inv: (!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (!(Chan1[1].Cmd = empty))))
+
+checking(!((ExGntd = TRUE) & (Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE)))
+sca:
+(!((exgntd = true) & (chan2[1].cmd = empty) & (shrset[1] = true)))
+(!((exgntd = true) & (chan2[2].cmd = empty) & (shrset[2] = true)))
+not inv: (!((ExGntd = TRUE) & (Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE)))
+
+checking(!((ExGntd = TRUE) & (Chan2[1].Cmd = empty) & (CurCmd = empty)))
+sca:
+(!((exgntd = true) & (chan2[1].cmd = empty) & (curcmd = empty)))
+(!((exgntd = true) & (chan2[2].cmd = empty) & (curcmd = empty)))
+not inv: (!((ExGntd = TRUE) & (Chan2[1].Cmd = empty) & (CurCmd = empty)))
+
+checking(!((ExGntd = TRUE) & (Chan2[1].Cmd = empty) & (!(Chan1[1].Cmd = empty))))
+sca:
+(!((exgntd = true) & (chan2[1].cmd = empty) & (!(chan1[1].cmd = empty))))
+(!((exgntd = true) & (chan2[2].cmd = empty) & (!(chan1[2].cmd = empty))))
+not inv: (!((ExGntd = TRUE) & (Chan2[1].Cmd = empty) & (!(Chan1[1].Cmd = empty))))
+
+checking(!((ExGntd = TRUE) & (ShrSet[1] = TRUE) & (CurCmd = empty)))
+sca:
+(!((exgntd = true) & (shrset[1] = true) & (curcmd = empty)))
+(!((exgntd = true) & (shrset[2] = true) & (curcmd = empty)))
+not inv: (!((ExGntd = TRUE) & (ShrSet[1] = TRUE) & (CurCmd = empty)))
+
+checking(!((ExGntd = TRUE) & (ShrSet[1] = TRUE) & (!(Chan1[1].Cmd = empty))))
+sca:
+(!((exgntd = true) & (shrset[1] = true) & (!(chan1[1].cmd = empty))))
+(!((exgntd = true) & (shrset[2] = true) & (!(chan1[2].cmd = empty))))
+not inv: (!((ExGntd = TRUE) & (ShrSet[1] = TRUE) & (!(Chan1[1].Cmd = empty))))
+
+checking(!((ExGntd = TRUE) & (CurCmd = empty) & (!(Chan1[1].Cmd = empty))))
+sca:
+(!((exgntd = true) & (curcmd = empty) & (!(chan1[1].cmd = empty))))
+(!((exgntd = true) & (curcmd = empty) & (!(chan1[2].cmd = empty))))
+not inv: (!((ExGntd = TRUE) & (CurCmd = empty) & (!(Chan1[1].Cmd = empty))))
+
+checking(!((!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE)))
+sca:
+(!((!(cache[1].state = e)) & (chan2[1].cmd = empty) & (shrset[1] = true)))
+(!((!(cache[2].state = e)) & (chan2[2].cmd = empty) & (shrset[2] = true)))
+not inv: (!((!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE)))
+
+checking(!((!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (CurCmd = empty)))
+sca:
+(!((!(cache[1].state = e)) & (chan2[1].cmd = empty) & (curcmd = empty)))
+(!((!(cache[2].state = e)) & (chan2[2].cmd = empty) & (curcmd = empty)))
+not inv: (!((!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (CurCmd = empty)))
+
+checking(!((!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (!(Chan1[1].Cmd = empty))))
+sca:
+(!((!(cache[1].state = e)) & (chan2[1].cmd = empty) & (!(chan1[1].cmd = empty))))
+(!((!(cache[2].state = e)) & (chan2[2].cmd = empty) & (!(chan1[2].cmd = empty))))
+not inv: (!((!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (!(Chan1[1].Cmd = empty))))
+
+checking(!((!(Cache[1].State = e)) & (ShrSet[1] = TRUE) & (CurCmd = empty)))
+sca:
+(!((!(cache[1].state = e)) & (shrset[1] = true) & (curcmd = empty)))
+(!((!(cache[2].state = e)) & (shrset[2] = true) & (curcmd = empty)))
+not inv: (!((!(Cache[1].State = e)) & (ShrSet[1] = TRUE) & (CurCmd = empty)))
+
+checking(!((!(Cache[1].State = e)) & (ShrSet[1] = TRUE) & (!(Chan1[1].Cmd = empty))))
+sca:
+(!((!(cache[1].state = e)) & (shrset[1] = true) & (!(chan1[1].cmd = empty))))
+(!((!(cache[2].state = e)) & (shrset[2] = true) & (!(chan1[2].cmd = empty))))
+not inv: (!((!(Cache[1].State = e)) & (ShrSet[1] = TRUE) & (!(Chan1[1].Cmd = empty))))
+
+checking(!((!(Cache[1].State = e)) & (CurCmd = empty) & (!(Chan1[1].Cmd = empty))))
+sca:
+(!((!(cache[1].state = e)) & (curcmd = empty) & (!(chan1[1].cmd = empty))))
+(!((!(cache[2].state = e)) & (curcmd = empty) & (!(chan1[2].cmd = empty))))
+not inv: (!((!(Cache[1].State = e)) & (CurCmd = empty) & (!(Chan1[1].Cmd = empty))))
+
+checking(!((Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE) & (CurCmd = empty)))
+sca:
+(!((chan2[1].cmd = empty) & (shrset[1] = true) & (curcmd = empty)))
+(!((chan2[2].cmd = empty) & (shrset[2] = true) & (curcmd = empty)))
+not inv: (!((Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE) & (CurCmd = empty)))
+
+checking(!((Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE) & (!(Chan1[1].Cmd = empty))))
+sca:
+(!((chan2[1].cmd = empty) & (shrset[1] = true) & (!(chan1[1].cmd = empty))))
+(!((chan2[2].cmd = empty) & (shrset[2] = true) & (!(chan1[2].cmd = empty))))
+not inv: (!((Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE) & (!(Chan1[1].Cmd = empty))))
+
+checking(!((Chan2[1].Cmd = empty) & (CurCmd = empty) & (!(Chan1[1].Cmd = empty))))
+sca:
+(!((chan2[1].cmd = empty) & (curcmd = empty) & (!(chan1[1].cmd = empty))))
+(!((chan2[2].cmd = empty) & (curcmd = empty) & (!(chan1[2].cmd = empty))))
+not inv: (!((Chan2[1].Cmd = empty) & (CurCmd = empty) & (!(Chan1[1].Cmd = empty))))
+
+checking(!((ShrSet[1] = TRUE) & (CurCmd = empty) & (!(Chan1[1].Cmd = empty))))
+sca:
+(!((shrset[1] = true) & (curcmd = empty) & (!(chan1[1].cmd = empty))))
+(!((shrset[2] = true) & (curcmd = empty) & (!(chan1[2].cmd = empty))))
+not inv: (!((ShrSet[1] = TRUE) & (CurCmd = empty) & (!(Chan1[1].Cmd = empty))))
+
+checking(!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE)))
+sca:
+(!((exgntd = true) & (!(cache[1].state = e)) & (chan2[1].cmd = empty) & (shrset[1] = true)))
+(!((exgntd = true) & (!(cache[2].state = e)) & (chan2[2].cmd = empty) & (shrset[2] = true)))
+not inv: (!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE)))
+
+checking(!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (CurCmd = empty)))
+sca:
+(!((exgntd = true) & (!(cache[1].state = e)) & (chan2[1].cmd = empty) & (curcmd = empty)))
+(!((exgntd = true) & (!(cache[2].state = e)) & (chan2[2].cmd = empty) & (curcmd = empty)))
+not inv: (!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (CurCmd = empty)))
+
+checking(!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (!(Chan1[1].Cmd = empty))))
+sca:
+(!((exgntd = true) & (!(cache[1].state = e)) & (chan2[1].cmd = empty) & (!(chan1[1].cmd = empty))))
+(!((exgntd = true) & (!(cache[2].state = e)) & (chan2[2].cmd = empty) & (!(chan1[2].cmd = empty))))
+not inv: (!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (!(Chan1[1].Cmd = empty))))
+
+checking(!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (ShrSet[1] = TRUE) & (CurCmd = empty)))
+sca:
+(!((exgntd = true) & (!(cache[1].state = e)) & (shrset[1] = true) & (curcmd = empty)))
+(!((exgntd = true) & (!(cache[2].state = e)) & (shrset[2] = true) & (curcmd = empty)))
+not inv: (!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (ShrSet[1] = TRUE) & (CurCmd = empty)))
+
+checking(!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (ShrSet[1] = TRUE) & (!(Chan1[1].Cmd = empty))))
+sca:
+(!((exgntd = true) & (!(cache[1].state = e)) & (shrset[1] = true) & (!(chan1[1].cmd = empty))))
+(!((exgntd = true) & (!(cache[2].state = e)) & (shrset[2] = true) & (!(chan1[2].cmd = empty))))
+not inv: (!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (ShrSet[1] = TRUE) & (!(Chan1[1].Cmd = empty))))
+
+checking(!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (CurCmd = empty) & (!(Chan1[1].Cmd = empty))))
+sca:
+(!((exgntd = true) & (!(cache[1].state = e)) & (curcmd = empty) & (!(chan1[1].cmd = empty))))
+(!((exgntd = true) & (!(cache[2].state = e)) & (curcmd = empty) & (!(chan1[2].cmd = empty))))
+not inv: (!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (CurCmd = empty) & (!(Chan1[1].Cmd = empty))))
+
+checking(!((ExGntd = TRUE) & (Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE) & (CurCmd = empty)))
+sca:
+(!((exgntd = true) & (chan2[1].cmd = empty) & (shrset[1] = true) & (curcmd = empty)))
+(!((exgntd = true) & (chan2[2].cmd = empty) & (shrset[2] = true) & (curcmd = empty)))
+not inv: (!((ExGntd = TRUE) & (Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE) & (CurCmd = empty)))
+
+checking(!((ExGntd = TRUE) & (Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE) & (!(Chan1[1].Cmd = empty))))
+sca:
+(!((exgntd = true) & (chan2[1].cmd = empty) & (shrset[1] = true) & (!(chan1[1].cmd = empty))))
+(!((exgntd = true) & (chan2[2].cmd = empty) & (shrset[2] = true) & (!(chan1[2].cmd = empty))))
+not inv: (!((ExGntd = TRUE) & (Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE) & (!(Chan1[1].Cmd = empty))))
+
+checking(!((ExGntd = TRUE) & (Chan2[1].Cmd = empty) & (CurCmd = empty) & (!(Chan1[1].Cmd = empty))))
+sca:
+(!((exgntd = true) & (chan2[1].cmd = empty) & (curcmd = empty) & (!(chan1[1].cmd = empty))))
+(!((exgntd = true) & (chan2[2].cmd = empty) & (curcmd = empty) & (!(chan1[2].cmd = empty))))
+not inv: (!((ExGntd = TRUE) & (Chan2[1].Cmd = empty) & (CurCmd = empty) & (!(Chan1[1].Cmd = empty))))
+
+checking(!((ExGntd = TRUE) & (ShrSet[1] = TRUE) & (CurCmd = empty) & (!(Chan1[1].Cmd = empty))))
+sca:
+(!((exgntd = true) & (shrset[1] = true) & (curcmd = empty) & (!(chan1[1].cmd = empty))))
+(!((exgntd = true) & (shrset[2] = true) & (curcmd = empty) & (!(chan1[2].cmd = empty))))
+not inv: (!((ExGntd = TRUE) & (ShrSet[1] = TRUE) & (CurCmd = empty) & (!(Chan1[1].Cmd = empty))))
+
+checking(!((!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE) & (CurCmd = empty)))
+sca:
+(!((!(cache[1].state = e)) & (chan2[1].cmd = empty) & (shrset[1] = true) & (curcmd = empty)))
+(!((!(cache[2].state = e)) & (chan2[2].cmd = empty) & (shrset[2] = true) & (curcmd = empty)))
+not inv: (!((!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE) & (CurCmd = empty)))
+
+checking(!((!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE) & (!(Chan1[1].Cmd = empty))))
+sca:
+(!((!(cache[1].state = e)) & (chan2[1].cmd = empty) & (shrset[1] = true) & (!(chan1[1].cmd = empty))))
+(!((!(cache[2].state = e)) & (chan2[2].cmd = empty) & (shrset[2] = true) & (!(chan1[2].cmd = empty))))
+not inv: (!((!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE) & (!(Chan1[1].Cmd = empty))))
+
+checking(!((!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (CurCmd = empty) & (!(Chan1[1].Cmd = empty))))
+sca:
+(!((!(cache[1].state = e)) & (chan2[1].cmd = empty) & (curcmd = empty) & (!(chan1[1].cmd = empty))))
+(!((!(cache[2].state = e)) & (chan2[2].cmd = empty) & (curcmd = empty) & (!(chan1[2].cmd = empty))))
+not inv: (!((!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (CurCmd = empty) & (!(Chan1[1].Cmd = empty))))
+
+checking(!((!(Cache[1].State = e)) & (ShrSet[1] = TRUE) & (CurCmd = empty) & (!(Chan1[1].Cmd = empty))))
+sca:
+(!((!(cache[1].state = e)) & (shrset[1] = true) & (curcmd = empty) & (!(chan1[1].cmd = empty))))
+(!((!(cache[2].state = e)) & (shrset[2] = true) & (curcmd = empty) & (!(chan1[2].cmd = empty))))
+not inv: (!((!(Cache[1].State = e)) & (ShrSet[1] = TRUE) & (CurCmd = empty) & (!(Chan1[1].Cmd = empty))))
+
+checking(!((Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE) & (CurCmd = empty) & (!(Chan1[1].Cmd = empty))))
+sca:
+(!((chan2[1].cmd = empty) & (shrset[1] = true) & (curcmd = empty) & (!(chan1[1].cmd = empty))))
+(!((chan2[2].cmd = empty) & (shrset[2] = true) & (curcmd = empty) & (!(chan1[2].cmd = empty))))
+not inv: (!((Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE) & (CurCmd = empty) & (!(Chan1[1].Cmd = empty))))
+
+checking(!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE) & (CurCmd = empty)))
+sca:
+(!((exgntd = true) & (!(cache[1].state = e)) & (chan2[1].cmd = empty) & (shrset[1] = true) & (curcmd = empty)))
+(!((exgntd = true) & (!(cache[2].state = e)) & (chan2[2].cmd = empty) & (shrset[2] = true) & (curcmd = empty)))
+inv: (!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE) & (CurCmd = empty)))
+
+checking(!((!(Cache[1].State = e)) & (!(Chan1[2].Cmd = empty))))
+sca:
+(!((!(cache[1].state = e)) & (!(chan1[2].cmd = empty))))
+(!((!(cache[2].state = e)) & (!(chan1[1].cmd = empty))))
+not inv: (!((!(Cache[1].State = e)) & (!(Chan1[2].Cmd = empty))))
+
+checking(!((Chan2[1].Cmd = empty) & (!(Chan1[2].Cmd = empty))))
+sca:
+(!((chan2[1].cmd = empty) & (!(chan1[2].cmd = empty))))
+(!((chan2[2].cmd = empty) & (!(chan1[1].cmd = empty))))
+not inv: (!((Chan2[1].Cmd = empty) & (!(Chan1[2].Cmd = empty))))
+
+checking(!((ShrSet[1] = TRUE) & (!(Chan1[2].Cmd = empty))))
+sca:
+(!((shrset[1] = true) & (!(chan1[2].cmd = empty))))
+(!((shrset[2] = true) & (!(chan1[1].cmd = empty))))
+not inv: (!((ShrSet[1] = TRUE) & (!(Chan1[2].Cmd = empty))))
+
+checking(!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (!(Chan1[2].Cmd = empty))))
+sca:
+(!((exgntd = true) & (!(cache[1].state = e)) & (!(chan1[2].cmd = empty))))
+(!((exgntd = true) & (!(cache[2].state = e)) & (!(chan1[1].cmd = empty))))
+not inv: (!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (!(Chan1[2].Cmd = empty))))
+
+checking(!((ExGntd = TRUE) & (Chan2[1].Cmd = empty) & (!(Chan1[2].Cmd = empty))))
+sca:
+(!((exgntd = true) & (chan2[1].cmd = empty) & (!(chan1[2].cmd = empty))))
+(!((exgntd = true) & (chan2[2].cmd = empty) & (!(chan1[1].cmd = empty))))
+not inv: (!((ExGntd = TRUE) & (Chan2[1].Cmd = empty) & (!(Chan1[2].Cmd = empty))))
+
+checking(!((ExGntd = TRUE) & (ShrSet[1] = TRUE) & (!(Chan1[2].Cmd = empty))))
+sca:
+(!((exgntd = true) & (shrset[1] = true) & (!(chan1[2].cmd = empty))))
+(!((exgntd = true) & (shrset[2] = true) & (!(chan1[1].cmd = empty))))
+not inv: (!((ExGntd = TRUE) & (ShrSet[1] = TRUE) & (!(Chan1[2].Cmd = empty))))
+
+checking(!((!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (!(Chan1[2].Cmd = empty))))
+sca:
+(!((!(cache[1].state = e)) & (chan2[1].cmd = empty) & (!(chan1[2].cmd = empty))))
+(!((!(cache[2].state = e)) & (chan2[2].cmd = empty) & (!(chan1[1].cmd = empty))))
+not inv: (!((!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (!(Chan1[2].Cmd = empty))))
+
+checking(!((!(Cache[1].State = e)) & (ShrSet[1] = TRUE) & (!(Chan1[2].Cmd = empty))))
+sca:
+(!((!(cache[1].state = e)) & (shrset[1] = true) & (!(chan1[2].cmd = empty))))
+(!((!(cache[2].state = e)) & (shrset[2] = true) & (!(chan1[1].cmd = empty))))
+not inv: (!((!(Cache[1].State = e)) & (ShrSet[1] = TRUE) & (!(Chan1[2].Cmd = empty))))
+
+checking(!((!(Cache[1].State = e)) & (CurCmd = empty) & (!(Chan1[2].Cmd = empty))))
+sca:
+(!((!(cache[1].state = e)) & (curcmd = empty) & (!(chan1[2].cmd = empty))))
+(!((!(cache[2].state = e)) & (curcmd = empty) & (!(chan1[1].cmd = empty))))
+not inv: (!((!(Cache[1].State = e)) & (CurCmd = empty) & (!(Chan1[2].Cmd = empty))))
+
+checking(!((Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE) & (!(Chan1[2].Cmd = empty))))
+sca:
+(!((chan2[1].cmd = empty) & (shrset[1] = true) & (!(chan1[2].cmd = empty))))
+(!((chan2[2].cmd = empty) & (shrset[2] = true) & (!(chan1[1].cmd = empty))))
+not inv: (!((Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE) & (!(Chan1[2].Cmd = empty))))
+
+checking(!((Chan2[1].Cmd = empty) & (CurCmd = empty) & (!(Chan1[2].Cmd = empty))))
+sca:
+(!((chan2[1].cmd = empty) & (curcmd = empty) & (!(chan1[2].cmd = empty))))
+(!((chan2[2].cmd = empty) & (curcmd = empty) & (!(chan1[1].cmd = empty))))
+not inv: (!((Chan2[1].Cmd = empty) & (CurCmd = empty) & (!(Chan1[2].Cmd = empty))))
+
+checking(!((ShrSet[1] = TRUE) & (CurCmd = empty) & (!(Chan1[2].Cmd = empty))))
+sca:
+(!((shrset[1] = true) & (curcmd = empty) & (!(chan1[2].cmd = empty))))
+(!((shrset[2] = true) & (curcmd = empty) & (!(chan1[1].cmd = empty))))
+not inv: (!((ShrSet[1] = TRUE) & (CurCmd = empty) & (!(Chan1[2].Cmd = empty))))
+
+checking(!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (!(Chan1[2].Cmd = empty))))
+sca:
+(!((exgntd = true) & (!(cache[1].state = e)) & (chan2[1].cmd = empty) & (!(chan1[2].cmd = empty))))
+(!((exgntd = true) & (!(cache[2].state = e)) & (chan2[2].cmd = empty) & (!(chan1[1].cmd = empty))))
+not inv: (!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (!(Chan1[2].Cmd = empty))))
+
+checking(!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (ShrSet[1] = TRUE) & (!(Chan1[2].Cmd = empty))))
+sca:
+(!((exgntd = true) & (!(cache[1].state = e)) & (shrset[1] = true) & (!(chan1[2].cmd = empty))))
+(!((exgntd = true) & (!(cache[2].state = e)) & (shrset[2] = true) & (!(chan1[1].cmd = empty))))
+not inv: (!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (ShrSet[1] = TRUE) & (!(Chan1[2].Cmd = empty))))
+
+checking(!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (CurCmd = empty) & (!(Chan1[2].Cmd = empty))))
+sca:
+(!((exgntd = true) & (!(cache[1].state = e)) & (curcmd = empty) & (!(chan1[2].cmd = empty))))
+(!((exgntd = true) & (!(cache[2].state = e)) & (curcmd = empty) & (!(chan1[1].cmd = empty))))
+not inv: (!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (CurCmd = empty) & (!(Chan1[2].Cmd = empty))))
+
+checking(!((ExGntd = TRUE) & (Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE) & (!(Chan1[2].Cmd = empty))))
+sca:
+(!((exgntd = true) & (chan2[1].cmd = empty) & (shrset[1] = true) & (!(chan1[2].cmd = empty))))
+(!((exgntd = true) & (chan2[2].cmd = empty) & (shrset[2] = true) & (!(chan1[1].cmd = empty))))
+not inv: (!((ExGntd = TRUE) & (Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE) & (!(Chan1[2].Cmd = empty))))
+
+checking(!((ExGntd = TRUE) & (Chan2[1].Cmd = empty) & (CurCmd = empty) & (!(Chan1[2].Cmd = empty))))
+sca:
+(!((exgntd = true) & (chan2[1].cmd = empty) & (curcmd = empty) & (!(chan1[2].cmd = empty))))
+(!((exgntd = true) & (chan2[2].cmd = empty) & (curcmd = empty) & (!(chan1[1].cmd = empty))))
+not inv: (!((ExGntd = TRUE) & (Chan2[1].Cmd = empty) & (CurCmd = empty) & (!(Chan1[2].Cmd = empty))))
+
+checking(!((ExGntd = TRUE) & (ShrSet[1] = TRUE) & (CurCmd = empty) & (!(Chan1[2].Cmd = empty))))
+sca:
+(!((exgntd = true) & (shrset[1] = true) & (curcmd = empty) & (!(chan1[2].cmd = empty))))
+(!((exgntd = true) & (shrset[2] = true) & (curcmd = empty) & (!(chan1[1].cmd = empty))))
+not inv: (!((ExGntd = TRUE) & (ShrSet[1] = TRUE) & (CurCmd = empty) & (!(Chan1[2].Cmd = empty))))
+
+checking(!((!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE) & (!(Chan1[2].Cmd = empty))))
+sca:
+(!((!(cache[1].state = e)) & (chan2[1].cmd = empty) & (shrset[1] = true) & (!(chan1[2].cmd = empty))))
+(!((!(cache[2].state = e)) & (chan2[2].cmd = empty) & (shrset[2] = true) & (!(chan1[1].cmd = empty))))
+not inv: (!((!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE) & (!(Chan1[2].Cmd = empty))))
+
+checking(!((!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (CurCmd = empty) & (!(Chan1[2].Cmd = empty))))
+sca:
+(!((!(cache[1].state = e)) & (chan2[1].cmd = empty) & (curcmd = empty) & (!(chan1[2].cmd = empty))))
+(!((!(cache[2].state = e)) & (chan2[2].cmd = empty) & (curcmd = empty) & (!(chan1[1].cmd = empty))))
+not inv: (!((!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (CurCmd = empty) & (!(Chan1[2].Cmd = empty))))
+
+checking(!((!(Cache[1].State = e)) & (ShrSet[1] = TRUE) & (CurCmd = empty) & (!(Chan1[2].Cmd = empty))))
+sca:
+(!((!(cache[1].state = e)) & (shrset[1] = true) & (curcmd = empty) & (!(chan1[2].cmd = empty))))
+(!((!(cache[2].state = e)) & (shrset[2] = true) & (curcmd = empty) & (!(chan1[1].cmd = empty))))
+not inv: (!((!(Cache[1].State = e)) & (ShrSet[1] = TRUE) & (CurCmd = empty) & (!(Chan1[2].Cmd = empty))))
+
+checking(!((Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE) & (CurCmd = empty) & (!(Chan1[2].Cmd = empty))))
+sca:
+(!((chan2[1].cmd = empty) & (shrset[1] = true) & (curcmd = empty) & (!(chan1[2].cmd = empty))))
+(!((chan2[2].cmd = empty) & (shrset[2] = true) & (curcmd = empty) & (!(chan1[1].cmd = empty))))
+not inv: (!((Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE) & (CurCmd = empty) & (!(Chan1[2].Cmd = empty))))
+
+checking(!((InvSet[1] = TRUE) & (Chan2[1].Cmd = inv)))
+sca:
+(!((invset[1] = true) & (chan2[1].cmd = inv)))
+(!((invset[2] = true) & (chan2[2].cmd = inv)))
+inv: (!((InvSet[1] = TRUE) & (Chan2[1].Cmd = inv)))
+
+checking(!((Chan2[1].Cmd = empty) & (Chan2[2].Cmd = empty)))
+sca:
+(!((chan2[1].cmd = empty) & (chan2[2].cmd = empty)))
+(!((chan2[2].cmd = empty) & (chan2[1].cmd = empty)))
+not inv: (!((Chan2[1].Cmd = empty) & (Chan2[2].Cmd = empty)))
+
+checking(!((Chan2[1].Cmd = empty) & (CurPtr = 2)))
+sca:
+(!((chan2[1].cmd = empty) & (curptr = 2)))
+(!((chan2[2].cmd = empty) & (curptr = 1)))
+not inv: (!((Chan2[1].Cmd = empty) & (CurPtr = 2)))
+
+checking(!((Chan2[1].Cmd = empty) & (ExGntd = FALSE)))
+sca:
+(!((chan2[1].cmd = empty) & (exgntd = false)))
+(!((chan2[2].cmd = empty) & (exgntd = false)))
+not inv: (!((Chan2[1].Cmd = empty) & (ExGntd = FALSE)))
+
+checking(!((Chan2[1].Cmd = empty) & (ShrSet[1] = FALSE)))
+sca:
+(!((chan2[1].cmd = empty) & (shrset[1] = false)))
+(!((chan2[2].cmd = empty) & (shrset[2] = false)))
+not inv: (!((Chan2[1].Cmd = empty) & (ShrSet[1] = FALSE)))
+
+checking(!((Chan2[1].Cmd = empty) & (ShrSet[2] = FALSE)))
+sca:
+(!((chan2[1].cmd = empty) & (shrset[2] = false)))
+(!((chan2[2].cmd = empty) & (shrset[1] = false)))
+not inv: (!((Chan2[1].Cmd = empty) & (ShrSet[2] = FALSE)))
+
+checking(!((InvSet[1] = TRUE) & (Chan2[2].Cmd = empty)))
+sca:
+(!((invset[1] = true) & (chan2[2].cmd = empty)))
+(!((invset[2] = true) & (chan2[1].cmd = empty)))
+not inv: (!((InvSet[1] = TRUE) & (Chan2[2].Cmd = empty)))
+
+checking(!((InvSet[1] = TRUE) & (CurCmd = reqe)))
+not inv: (!((InvSet[1] = TRUE) & (CurCmd = reqe)))
+
+checking(!((InvSet[1] = TRUE) & (CurPtr = 2)))
+sca:
+(!((invset[1] = true) & (curptr = 2)))
+(!((invset[2] = true) & (curptr = 1)))
+not inv: (!((InvSet[1] = TRUE) & (CurPtr = 2)))
+
+checking(!((InvSet[1] = TRUE) & (ExGntd = FALSE)))
+sca:
+(!((invset[1] = true) & (exgntd = false)))
+(!((invset[2] = true) & (exgntd = false)))
+not inv: (!((InvSet[1] = TRUE) & (ExGntd = FALSE)))
+
+checking(!((InvSet[1] = TRUE) & (ShrSet[1] = FALSE)))
+sca:
+(!((invset[1] = true) & (shrset[1] = false)))
+(!((invset[2] = true) & (shrset[2] = false)))
+inv: (!((InvSet[1] = TRUE) & (ShrSet[1] = FALSE)))
+
+checking(!((ExGntd = TRUE) & (Chan2[1].Cmd = gnts)))
+sca:
+(!((exgntd = true) & (chan2[1].cmd = gnts)))
+(!((exgntd = true) & (chan2[2].cmd = gnts)))
+inv: (!((ExGntd = TRUE) & (Chan2[1].Cmd = gnts)))
+
+checking(!((ShrSet[1] = FALSE) & (Chan2[1].Cmd = empty)))
+not inv: (!((ShrSet[1] = FALSE) & (Chan2[1].Cmd = empty)))
+
+checking(!((ShrSet[1] = FALSE) & (CurCmd = reqe)))
+sca:
+(!((shrset[1] = false) & (curcmd = reqe)))
+(!((shrset[2] = false) & (curcmd = reqe)))
+not inv: (!((ShrSet[1] = FALSE) & (CurCmd = reqe)))
+
+checking(!((ShrSet[1] = FALSE) & (InvSet[1] = TRUE)))
+inv: (!((ShrSet[1] = FALSE) & (InvSet[1] = TRUE)))
+
+checking(!((ShrSet[1] = FALSE) & (CurCmd = reqs)))
+sca:
+(!((shrset[1] = false) & (curcmd = reqs)))
+(!((shrset[2] = false) & (curcmd = reqs)))
+not inv: (!((ShrSet[1] = FALSE) & (CurCmd = reqs)))
+
+checking(!((ShrSet[1] = FALSE) & (ExGntd = TRUE)))
+sca:
+(!((shrset[1] = false) & (exgntd = true)))
+(!((shrset[2] = false) & (exgntd = true)))
+not inv: (!((ShrSet[1] = FALSE) & (ExGntd = TRUE)))
+
+checking(!((Chan2[1].Cmd = inv) & (Chan3[1].Cmd = invack)))
+sca:
+(!((chan2[1].cmd = inv) & (chan3[1].cmd = invack)))
+(!((chan2[2].cmd = inv) & (chan3[2].cmd = invack)))
+inv: (!((Chan2[1].Cmd = inv) & (Chan3[1].Cmd = invack)))
+
+checking(!((Cache[2].State = e) & (InvSet[1] = TRUE)))
+sca:
+(!((cache[2].state = e) & (invset[1] = true)))
+(!((cache[1].state = e) & (invset[2] = true)))
+inv: (!((Cache[2].State = e) & (InvSet[1] = TRUE)))
+
+checking(!((Chan2[1].Cmd = inv) & (Chan2[2].Cmd = gnte)))
+sca:
+(!((chan2[1].cmd = inv) & (chan2[2].cmd = gnte)))
+(!((chan2[2].cmd = inv) & (chan2[1].cmd = gnte)))
+inv: (!((Chan2[1].Cmd = inv) & (Chan2[2].Cmd = gnte)))
+
+checking(!((Chan2[2].Cmd = gnte) & (Chan2[1].Cmd = inv)))
+inv: (!((Chan2[2].Cmd = gnte) & (Chan2[1].Cmd = inv)))
+
+checking(!((Chan2[1].Cmd = gnte) & (CurCmd = reqs)))
+sca:
+(!((chan2[1].cmd = gnte) & (curcmd = reqs)))
+(!((chan2[2].cmd = gnte) & (curcmd = reqs)))
+not inv: (!((Chan2[1].Cmd = gnte) & (CurCmd = reqs)))
+
+checking(!((Chan2[1].Cmd = gnts) & (Chan2[2].Cmd = empty)))
+sca:
+(!((chan2[1].cmd = gnts) & (chan2[2].cmd = empty)))
+(!((chan2[2].cmd = gnts) & (chan2[1].cmd = empty)))
+not inv: (!((Chan2[1].Cmd = gnts) & (Chan2[2].Cmd = empty)))
+
+checking(!((Chan2[1].Cmd = gnts) & (CurCmd = reqe)))
+sca:
+(!((chan2[1].cmd = gnts) & (curcmd = reqe)))
+(!((chan2[2].cmd = gnts) & (curcmd = reqe)))
+not inv: (!((Chan2[1].Cmd = gnts) & (CurCmd = reqe)))
+
+checking(!((Chan2[1].Cmd = gnts) & (CurPtr = 2)))
+sca:
+(!((chan2[1].cmd = gnts) & (curptr = 2)))
+(!((chan2[2].cmd = gnts) & (curptr = 1)))
+not inv: (!((Chan2[1].Cmd = gnts) & (CurPtr = 2)))
+
+checking(!((Chan2[1].Cmd = gnts) & (ExGntd = FALSE)))
+sca:
+(!((chan2[1].cmd = gnts) & (exgntd = false)))
+(!((chan2[2].cmd = gnts) & (exgntd = false)))
+not inv: (!((Chan2[1].Cmd = gnts) & (ExGntd = FALSE)))
+
+checking(!((Chan2[1].Cmd = gnts) & (ShrSet[1] = FALSE)))
+sca:
+(!((chan2[1].cmd = gnts) & (shrset[1] = false)))
+(!((chan2[2].cmd = gnts) & (shrset[2] = false)))
+inv: (!((Chan2[1].Cmd = gnts) & (ShrSet[1] = FALSE)))
+
+checking(!((!(Cache[1].State = i)) & (Chan3[1].Cmd = invack)))
+sca:
+(!((!(cache[1].state = i)) & (chan3[1].cmd = invack)))
+(!((!(cache[2].state = i)) & (chan3[2].cmd = invack)))
+inv: (!((!(Cache[1].State = i)) & (Chan3[1].Cmd = invack)))
+
+checking(!((ShrSet[1] = FALSE) & (Chan2[1].Cmd = gnts)))
+inv: (!((ShrSet[1] = FALSE) & (Chan2[1].Cmd = gnts)))
+
+checking(!((ShrSet[1] = FALSE) & (Chan2[1].Cmd = gnte)))
+sca:
+(!((shrset[1] = false) & (chan2[1].cmd = gnte)))
+(!((shrset[2] = false) & (chan2[2].cmd = gnte)))
+inv: (!((ShrSet[1] = FALSE) & (Chan2[1].Cmd = gnte)))
+
+checking(!((ShrSet[1] = TRUE) & (Chan2[1].Cmd = inv)))
+sca:
+(!((shrset[1] = true) & (chan2[1].cmd = inv)))
+(!((shrset[2] = true) & (chan2[2].cmd = inv)))
+not inv: (!((ShrSet[1] = TRUE) & (Chan2[1].Cmd = inv)))
+
+checking(!((ShrSet[1] = TRUE) & (Chan3[1].Cmd = empty)))
+sca:
+(!((shrset[1] = true) & (chan3[1].cmd = empty)))
+(!((shrset[2] = true) & (chan3[2].cmd = empty)))
+not inv: (!((ShrSet[1] = TRUE) & (Chan3[1].Cmd = empty)))
+
+checking(!((CurCmd = empty) & (Chan2[1].Cmd = inv)))
+sca:
+(!((curcmd = empty) & (chan2[1].cmd = inv)))
+(!((curcmd = empty) & (chan2[2].cmd = inv)))
+inv: (!((CurCmd = empty) & (Chan2[1].Cmd = inv)))
+
+checking(!((Chan2[1].Cmd = inv) & (CurCmd = empty)))
+inv: (!((Chan2[1].Cmd = inv) & (CurCmd = empty)))
+
+checking(!((InvSet[1] = TRUE) & (Chan3[1].Cmd = invack)))
+sca:
+(!((invset[1] = true) & (chan3[1].cmd = invack)))
+(!((invset[2] = true) & (chan3[2].cmd = invack)))
+inv: (!((InvSet[1] = TRUE) & (Chan3[1].Cmd = invack)))
+
+checking(!((Chan3[1].Cmd = invack) & (InvSet[1] = TRUE)))
+inv: (!((Chan3[1].Cmd = invack) & (InvSet[1] = TRUE)))
+
+checking(!((Chan3[1].Cmd = invack) & (CurCmd = reqs)))
+sca:
+(!((chan3[1].cmd = invack) & (curcmd = reqs)))
+(!((chan3[2].cmd = invack) & (curcmd = reqs)))
+not inv: (!((Chan3[1].Cmd = invack) & (CurCmd = reqs)))
+
+checking(!((Chan3[1].Cmd = invack) & (ExGntd = TRUE)))
+not inv: (!((Chan3[1].Cmd = invack) & (ExGntd = TRUE)))
+
+checking(!((Cache[2].State = e) & (ShrSet[1] = TRUE)))
+sca:
+(!((cache[2].state = e) & (shrset[1] = true)))
+(!((cache[1].state = e) & (shrset[2] = true)))
+inv: (!((Cache[2].State = e) & (ShrSet[1] = TRUE)))
+
+checking(!((InvSet[1] = TRUE) & (Chan2[2].Cmd = gnte)))
+sca:
+(!((invset[1] = true) & (chan2[2].cmd = gnte)))
+(!((invset[2] = true) & (chan2[1].cmd = gnte)))
+inv: (!((InvSet[1] = TRUE) & (Chan2[2].Cmd = gnte)))
+
+checking(!((Chan2[2].Cmd = gnte) & (InvSet[1] = TRUE)))
+inv: (!((Chan2[2].Cmd = gnte) & (InvSet[1] = TRUE)))
+
+checking(!((Chan2[1].Cmd = gnts) & (Chan3[1].Cmd = invack)))
+sca:
+(!((chan2[1].cmd = gnts) & (chan3[1].cmd = invack)))
+(!((chan2[2].cmd = gnts) & (chan3[2].cmd = invack)))
+inv: (!((Chan2[1].Cmd = gnts) & (Chan3[1].Cmd = invack)))
+
+checking(!((Chan3[1].Cmd = invack) & (Chan2[1].Cmd = gnts)))
+inv: (!((Chan3[1].Cmd = invack) & (Chan2[1].Cmd = gnts)))
+
+checking(!((Chan2[1].Cmd = inv) & (CurCmd = reqs)))
+sca:
+(!((chan2[1].cmd = inv) & (curcmd = reqs)))
+(!((chan2[2].cmd = inv) & (curcmd = reqs)))
+not inv: (!((Chan2[1].Cmd = inv) & (CurCmd = reqs)))
+
+checking(!((Chan2[1].Cmd = empty) & (CurPtr = 1)))
+sca:
+(!((chan2[1].cmd = empty) & (curptr = 1)))
+(!((chan2[2].cmd = empty) & (curptr = 2)))
+not inv: (!((Chan2[1].Cmd = empty) & (CurPtr = 1)))
+
+checking(!((CurCmd = reqs) & (CurPtr = 1)))
+sca:
+(!((curcmd = reqs) & (curptr = 1)))
+(!((curcmd = reqs) & (curptr = 2)))
+not inv: (!((CurCmd = reqs) & (CurPtr = 1)))
+
+checking(!((CurCmd = reqs) & (ExGntd = FALSE)))
+sca:
+(!((curcmd = reqs) & (exgntd = false)))
+not inv: (!((CurCmd = reqs) & (ExGntd = FALSE)))
+
+checking(!((CurPtr = 1) & (ExGntd = FALSE)))
+sca:
+(!((curptr = 1) & (exgntd = false)))
+(!((curptr = 2) & (exgntd = false)))
+not inv: (!((CurPtr = 1) & (ExGntd = FALSE)))
+
+checking(!((Chan2[1].Cmd = inv) & (Chan2[2].Cmd = empty) & (CurCmd = reqs)))
+sca:
+(!((chan2[1].cmd = inv) & (chan2[2].cmd = empty) & (curcmd = reqs)))
+(!((chan2[2].cmd = inv) & (chan2[1].cmd = empty) & (curcmd = reqs)))
+not inv: (!((Chan2[1].Cmd = inv) & (Chan2[2].Cmd = empty) & (CurCmd = reqs)))
+
+checking(!((Chan2[1].Cmd = inv) & (Chan2[2].Cmd = empty) & (CurPtr = 2)))
+sca:
+(!((chan2[1].cmd = inv) & (chan2[2].cmd = empty) & (curptr = 2)))
+(!((chan2[2].cmd = inv) & (chan2[1].cmd = empty) & (curptr = 1)))
+not inv: (!((Chan2[1].Cmd = inv) & (Chan2[2].Cmd = empty) & (CurPtr = 2)))
+
+checking(!((Chan2[1].Cmd = inv) & (Chan2[2].Cmd = empty) & (ExGntd = FALSE)))
+sca:
+(!((chan2[1].cmd = inv) & (chan2[2].cmd = empty) & (exgntd = false)))
+(!((chan2[2].cmd = inv) & (chan2[1].cmd = empty) & (exgntd = false)))
+not inv: (!((Chan2[1].Cmd = inv) & (Chan2[2].Cmd = empty) & (ExGntd = FALSE)))
+
+checking(!((Chan2[1].Cmd = inv) & (CurCmd = reqs) & (CurPtr = 2)))
+sca:
+(!((chan2[1].cmd = inv) & (curcmd = reqs) & (curptr = 2)))
+(!((chan2[2].cmd = inv) & (curcmd = reqs) & (curptr = 1)))
+not inv: (!((Chan2[1].Cmd = inv) & (CurCmd = reqs) & (CurPtr = 2)))
+
+checking(!((Chan2[1].Cmd = inv) & (CurCmd = reqs) & (ExGntd = FALSE)))
+sca:
+(!((chan2[1].cmd = inv) & (curcmd = reqs) & (exgntd = false)))
+(!((chan2[2].cmd = inv) & (curcmd = reqs) & (exgntd = false)))
+inv: (!((Chan2[1].Cmd = inv) & (CurCmd = reqs) & (ExGntd = FALSE)))
+
+checking(!((ShrSet[1] = TRUE) & (Chan3[1].Cmd = invack)))
+sca:
+(!((shrset[1] = true) & (chan3[1].cmd = invack)))
+(!((shrset[2] = true) & (chan3[2].cmd = invack)))
+not inv: (!((ShrSet[1] = TRUE) & (Chan3[1].Cmd = invack)))
+
+checking(!((Chan3[1].Cmd = invack) & (CurCmd = empty)))
+sca:
+(!((chan3[1].cmd = invack) & (curcmd = empty)))
+(!((chan3[2].cmd = invack) & (curcmd = empty)))
+inv: (!((Chan3[1].Cmd = invack) & (CurCmd = empty)))
+
+checking(!((ShrSet[1] = TRUE) & (Chan2[2].Cmd = gnte)))
+sca:
+(!((shrset[1] = true) & (chan2[2].cmd = gnte)))
+(!((shrset[2] = true) & (chan2[1].cmd = gnte)))
+inv: (!((ShrSet[1] = TRUE) & (Chan2[2].Cmd = gnte)))
+
+checking(!((Chan3[1].Cmd = invack) & (Chan2[1].Cmd = empty) & (CurCmd = reqs)))
+sca:
+(!((chan3[1].cmd = invack) & (chan2[1].cmd = empty) & (curcmd = reqs)))
+(!((chan3[2].cmd = invack) & (chan2[2].cmd = empty) & (curcmd = reqs)))
+not inv: (!((Chan3[1].Cmd = invack) & (Chan2[1].Cmd = empty) & (CurCmd = reqs)))
+
+checking(!((Chan3[1].Cmd = invack) & (Chan2[1].Cmd = empty) & (CurPtr = 1)))
+sca:
+(!((chan3[1].cmd = invack) & (chan2[1].cmd = empty) & (curptr = 1)))
+(!((chan3[2].cmd = invack) & (chan2[2].cmd = empty) & (curptr = 2)))
+not inv: (!((Chan3[1].Cmd = invack) & (Chan2[1].Cmd = empty) & (CurPtr = 1)))
+
+checking(!((Chan3[1].Cmd = invack) & (Chan2[1].Cmd = empty) & (ExGntd = FALSE)))
+sca:
+(!((chan3[1].cmd = invack) & (chan2[1].cmd = empty) & (exgntd = false)))
+(!((chan3[2].cmd = invack) & (chan2[2].cmd = empty) & (exgntd = false)))
+not inv: (!((Chan3[1].Cmd = invack) & (Chan2[1].Cmd = empty) & (ExGntd = FALSE)))
+
+checking(!((Chan3[1].Cmd = invack) & (CurCmd = reqs) & (CurPtr = 1)))
+sca:
+(!((chan3[1].cmd = invack) & (curcmd = reqs) & (curptr = 1)))
+(!((chan3[2].cmd = invack) & (curcmd = reqs) & (curptr = 2)))
+not inv: (!((Chan3[1].Cmd = invack) & (CurCmd = reqs) & (CurPtr = 1)))
+
+checking(!((Chan3[1].Cmd = invack) & (CurCmd = reqs) & (ExGntd = FALSE)))
+sca:
+(!((chan3[1].cmd = invack) & (curcmd = reqs) & (exgntd = false)))
+(!((chan3[2].cmd = invack) & (curcmd = reqs) & (exgntd = false)))
+inv: (!((Chan3[1].Cmd = invack) & (CurCmd = reqs) & (ExGntd = FALSE)))
+
+checking(!((Chan1[1].Cmd = reqs)))
+sca:
+(!((chan1[1].cmd = reqs)))
+(!((chan1[2].cmd = reqs)))
+not inv: (!((Chan1[1].Cmd = reqs)))
+
+checking(!((Chan2[1].Cmd = inv) & (Chan1[1].Cmd = reqs)))
+sca:
+(!((chan2[1].cmd = inv) & (chan1[1].cmd = reqs)))
+(!((chan2[2].cmd = inv) & (chan1[2].cmd = reqs)))
+not inv: (!((Chan2[1].Cmd = inv) & (Chan1[1].Cmd = reqs)))
+
+checking(!((Chan2[1].Cmd = inv) & (Chan1[2].Cmd = reqs)))
+sca:
+(!((chan2[1].cmd = inv) & (chan1[2].cmd = reqs)))
+(!((chan2[2].cmd = inv) & (chan1[1].cmd = reqs)))
+not inv: (!((Chan2[1].Cmd = inv) & (Chan1[2].Cmd = reqs)))
+
+checking(!((Chan2[1].Cmd = inv) & (ExGntd = TRUE)))
+not inv: (!((Chan2[1].Cmd = inv) & (ExGntd = TRUE)))
+
+checking(!((Chan2[1].Cmd = inv) & (Chan3[2].Cmd = invack)))
+sca:
+(!((chan2[1].cmd = inv) & (chan3[2].cmd = invack)))
+(!((chan2[2].cmd = inv) & (chan3[1].cmd = invack)))
+not inv: (!((Chan2[1].Cmd = inv) & (Chan3[2].Cmd = invack)))
+
+checking(!((Chan2[1].Cmd = inv) & (!(CurCmd = empty))))
+sca:
+(!((chan2[1].cmd = inv) & (!(curcmd = empty))))
+(!((chan2[2].cmd = inv) & (!(curcmd = empty))))
+not inv: (!((Chan2[1].Cmd = inv) & (!(CurCmd = empty))))
+
+checking(!((CurCmd = reqs) & (ExGntd = TRUE)))
+not inv: (!((CurCmd = reqs) & (ExGntd = TRUE)))
+
+checking(!((CurCmd = reqs) & (Chan3[1].Cmd = invack)))
+not inv: (!((CurCmd = reqs) & (Chan3[1].Cmd = invack)))
+
+checking(!((CurCmd = reqs) & (!(CurCmd = empty))))
+sca:
+(!((curcmd = reqs) & (!(curcmd = empty))))
+not inv: (!((CurCmd = reqs) & (!(CurCmd = empty))))
+
+checking(!((Chan2[1].Cmd = inv) & (CurCmd = reqs) & (ExGntd = TRUE)))
+sca:
+(!((chan2[1].cmd = inv) & (curcmd = reqs) & (exgntd = true)))
+(!((chan2[2].cmd = inv) & (curcmd = reqs) & (exgntd = true)))
+not inv: (!((Chan2[1].Cmd = inv) & (CurCmd = reqs) & (ExGntd = TRUE)))
+
+checking(!((Chan2[1].Cmd = inv) & (CurCmd = reqs) & (Chan3[2].Cmd = invack)))
+sca:
+(!((chan2[1].cmd = inv) & (curcmd = reqs) & (chan3[2].cmd = invack)))
+(!((chan2[2].cmd = inv) & (curcmd = reqs) & (chan3[1].cmd = invack)))
+inv: (!((Chan2[1].Cmd = inv) & (CurCmd = reqs) & (Chan3[2].Cmd = invack)))
+
+checking(!((Chan3[1].Cmd = invack) & (Chan2[2].Cmd = empty) & (CurCmd = reqs)))
+sca:
+(!((chan3[1].cmd = invack) & (chan2[2].cmd = empty) & (curcmd = reqs)))
+(!((chan3[2].cmd = invack) & (chan2[1].cmd = empty) & (curcmd = reqs)))
+not inv: (!((Chan3[1].Cmd = invack) & (Chan2[2].Cmd = empty) & (CurCmd = reqs)))
+
+checking(!((Chan3[1].Cmd = invack) & (Chan2[2].Cmd = empty) & (CurPtr = 2)))
+sca:
+(!((chan3[1].cmd = invack) & (chan2[2].cmd = empty) & (curptr = 2)))
+(!((chan3[2].cmd = invack) & (chan2[1].cmd = empty) & (curptr = 1)))
+not inv: (!((Chan3[1].Cmd = invack) & (Chan2[2].Cmd = empty) & (CurPtr = 2)))
+
+checking(!((Chan3[1].Cmd = invack) & (Chan2[2].Cmd = empty) & (ExGntd = FALSE)))
+sca:
+(!((chan3[1].cmd = invack) & (chan2[2].cmd = empty) & (exgntd = false)))
+(!((chan3[2].cmd = invack) & (chan2[1].cmd = empty) & (exgntd = false)))
+not inv: (!((Chan3[1].Cmd = invack) & (Chan2[2].Cmd = empty) & (ExGntd = FALSE)))
+
+checking(!((Chan3[1].Cmd = invack) & (CurCmd = reqs) & (CurPtr = 2)))
+sca:
+(!((chan3[1].cmd = invack) & (curcmd = reqs) & (curptr = 2)))
+(!((chan3[2].cmd = invack) & (curcmd = reqs) & (curptr = 1)))
+not inv: (!((Chan3[1].Cmd = invack) & (CurCmd = reqs) & (CurPtr = 2)))
+
+checking(!((Chan3[1].Cmd = invack) & (Chan1[1].Cmd = reqs)))
+sca:
+(!((chan3[1].cmd = invack) & (chan1[1].cmd = reqs)))
+(!((chan3[2].cmd = invack) & (chan1[2].cmd = reqs)))
+not inv: (!((Chan3[1].Cmd = invack) & (Chan1[1].Cmd = reqs)))
+
+checking(!((Chan3[1].Cmd = invack) & (Chan1[2].Cmd = reqs)))
+sca:
+(!((chan3[1].cmd = invack) & (chan1[2].cmd = reqs)))
+(!((chan3[2].cmd = invack) & (chan1[1].cmd = reqs)))
+not inv: (!((Chan3[1].Cmd = invack) & (Chan1[2].Cmd = reqs)))
+
+checking(!((CurCmd = reqs) & (Chan2[1].Cmd = inv)))
+not inv: (!((CurCmd = reqs) & (Chan2[1].Cmd = inv)))
+
+checking(!((CurCmd = reqs) & (Chan3[1].Cmd = empty)))
+sca:
+(!((curcmd = reqs) & (chan3[1].cmd = empty)))
+(!((curcmd = reqs) & (chan3[2].cmd = empty)))
+not inv: (!((CurCmd = reqs) & (Chan3[1].Cmd = empty)))
+
+checking(!((ExGntd = FALSE) & (Chan2[1].Cmd = inv)))
+not inv: (!((ExGntd = FALSE) & (Chan2[1].Cmd = inv)))
+
+checking(!((ExGntd = FALSE) & (Chan3[1].Cmd = empty)))
+sca:
+(!((exgntd = false) & (chan3[1].cmd = empty)))
+(!((exgntd = false) & (chan3[2].cmd = empty)))
+not inv: (!((ExGntd = FALSE) & (Chan3[1].Cmd = empty)))
+
+checking(!((CurCmd = reqs) & (ExGntd = FALSE) & (Chan2[1].Cmd = inv)))
+inv: (!((CurCmd = reqs) & (ExGntd = FALSE) & (Chan2[1].Cmd = inv)))
+
+checking(!((Chan3[1].Cmd = invack) & (Chan3[2].Cmd = invack)))
+sca:
+(!((chan3[1].cmd = invack) & (chan3[2].cmd = invack)))
+(!((chan3[2].cmd = invack) & (chan3[1].cmd = invack)))
+not inv: (!((Chan3[1].Cmd = invack) & (Chan3[2].Cmd = invack)))
+
+checking(!((Chan3[1].Cmd = invack) & (CurCmd = reqs) & (ExGntd = TRUE)))
+sca:
+(!((chan3[1].cmd = invack) & (curcmd = reqs) & (exgntd = true)))
+(!((chan3[2].cmd = invack) & (curcmd = reqs) & (exgntd = true)))
+not inv: (!((Chan3[1].Cmd = invack) & (CurCmd = reqs) & (ExGntd = TRUE)))
+
+checking(!((Chan3[1].Cmd = invack) & (CurCmd = reqs) & (Chan3[2].Cmd = invack)))
+sca:
+(!((chan3[1].cmd = invack) & (curcmd = reqs) & (chan3[2].cmd = invack)))
+(!((chan3[2].cmd = invack) & (curcmd = reqs) & (chan3[1].cmd = invack)))
+inv: (!((Chan3[1].Cmd = invack) & (CurCmd = reqs) & (Chan3[2].Cmd = invack)))
+
+checking(!((CurCmd = reqs) & (Chan2[1].Cmd = empty)))
+not inv: (!((CurCmd = reqs) & (Chan2[1].Cmd = empty)))
+
+checking(!((Chan3[2].Cmd = invack) & (Chan2[1].Cmd = empty)))
+sca:
+(!((chan3[2].cmd = invack) & (chan2[1].cmd = empty)))
+(!((chan3[1].cmd = invack) & (chan2[2].cmd = empty)))
+not inv: (!((Chan3[2].Cmd = invack) & (Chan2[1].Cmd = empty)))
+
+checking(!((Chan3[2].Cmd = invack) & (InvSet[1] = TRUE)))
+sca:
+(!((chan3[2].cmd = invack) & (invset[1] = true)))
+(!((chan3[1].cmd = invack) & (invset[2] = true)))
+not inv: (!((Chan3[2].Cmd = invack) & (InvSet[1] = TRUE)))
+
+checking(!((Chan2[1].Cmd = empty) & (ExGntd = TRUE)))
+not inv: (!((Chan2[1].Cmd = empty) & (ExGntd = TRUE)))
+
+checking(!((CurCmd = reqs) & (Chan3[2].Cmd = invack) & (Chan2[1].Cmd = empty)))
+sca:
+(!((curcmd = reqs) & (chan3[2].cmd = invack) & (chan2[1].cmd = empty)))
+(!((curcmd = reqs) & (chan3[1].cmd = invack) & (chan2[2].cmd = empty)))
+not inv: (!((CurCmd = reqs) & (Chan3[2].Cmd = invack) & (Chan2[1].Cmd = empty)))
+
+checking(!((CurCmd = reqs) & (Chan3[1].Cmd = invack) & (ExGntd = TRUE)))
+not inv: (!((CurCmd = reqs) & (Chan3[1].Cmd = invack) & (ExGntd = TRUE)))
+
+checking(!((CurCmd = reqs) & (Chan3[2].Cmd = invack) & (InvSet[1] = TRUE)))
+sca:
+(!((curcmd = reqs) & (chan3[2].cmd = invack) & (invset[1] = true)))
+(!((curcmd = reqs) & (chan3[1].cmd = invack) & (invset[2] = true)))
+inv: (!((CurCmd = reqs) & (Chan3[2].Cmd = invack) & (InvSet[1] = TRUE)))
+
+checking(!((Chan2[1].Cmd = inv) & (Chan2[2].Cmd = inv)))
+sca:
+(!((chan2[1].cmd = inv) & (chan2[2].cmd = inv)))
+(!((chan2[2].cmd = inv) & (chan2[1].cmd = inv)))
+not inv: (!((Chan2[1].Cmd = inv) & (Chan2[2].Cmd = inv)))
+
+checking(!((Chan2[1].Cmd = inv) & (Chan3[2].Cmd = empty)))
+sca:
+(!((chan2[1].cmd = inv) & (chan3[2].cmd = empty)))
+(!((chan2[2].cmd = inv) & (chan3[1].cmd = empty)))
+not inv: (!((Chan2[1].Cmd = inv) & (Chan3[2].Cmd = empty)))
+
+checking(!((Chan2[1].Cmd = inv) & (CurCmd = reqs) & (Chan2[2].Cmd = inv)))
+sca:
+(!((chan2[1].cmd = inv) & (curcmd = reqs) & (chan2[2].cmd = inv)))
+(!((chan2[2].cmd = inv) & (curcmd = reqs) & (chan2[1].cmd = inv)))
+inv: (!((Chan2[1].Cmd = inv) & (CurCmd = reqs) & (Chan2[2].Cmd = inv)))
+
+checking(!((Chan3[2].Cmd = invack) & (Chan2[1].Cmd = inv)))
+not inv: (!((Chan3[2].Cmd = invack) & (Chan2[1].Cmd = inv)))
+
+checking(!((Chan3[2].Cmd = invack) & (Chan3[1].Cmd = empty)))
+sca:
+(!((chan3[2].cmd = invack) & (chan3[1].cmd = empty)))
+(!((chan3[1].cmd = invack) & (chan3[2].cmd = empty)))
+not inv: (!((Chan3[2].Cmd = invack) & (Chan3[1].Cmd = empty)))
+
+checking(!((CurCmd = reqs) & (Chan3[2].Cmd = invack) & (Chan2[1].Cmd = inv)))
+inv: (!((CurCmd = reqs) & (Chan3[2].Cmd = invack) & (Chan2[1].Cmd = inv)))
+
+checking(!((Chan3[1].Cmd = invack) & (Chan2[2].Cmd = inv)))
+sca:
+(!((chan3[1].cmd = invack) & (chan2[2].cmd = inv)))
+(!((chan3[2].cmd = invack) & (chan2[1].cmd = inv)))
+not inv: (!((Chan3[1].Cmd = invack) & (Chan2[2].Cmd = inv)))
+
+checking(!((Chan3[1].Cmd = invack) & (Chan3[2].Cmd = empty)))
+sca:
+(!((chan3[1].cmd = invack) & (chan3[2].cmd = empty)))
+(!((chan3[2].cmd = invack) & (chan3[1].cmd = empty)))
+not inv: (!((Chan3[1].Cmd = invack) & (Chan3[2].Cmd = empty)))
+
+checking(!((Chan3[1].Cmd = invack) & (CurCmd = reqs) & (Chan2[2].Cmd = inv)))
+sca:
+(!((chan3[1].cmd = invack) & (curcmd = reqs) & (chan2[2].cmd = inv)))
+(!((chan3[2].cmd = invack) & (curcmd = reqs) & (chan2[1].cmd = inv)))
+inv: (!((Chan3[1].Cmd = invack) & (CurCmd = reqs) & (Chan2[2].Cmd = inv)))
+
+checking(!((Chan1[1].Cmd = reqs) & (Chan3[2].Cmd = invack)))
+sca:
+(!((chan1[1].cmd = reqs) & (chan3[2].cmd = invack)))
+(!((chan1[2].cmd = reqs) & (chan3[1].cmd = invack)))
+not inv: (!((Chan1[1].Cmd = reqs) & (Chan3[2].Cmd = invack)))
+
+checking(!((Chan1[1].Cmd = reqs) & (ShrSet[1] = TRUE)))
+sca:
+(!((chan1[1].cmd = reqs) & (shrset[1] = true)))
+(!((chan1[2].cmd = reqs) & (shrset[2] = true)))
+not inv: (!((Chan1[1].Cmd = reqs) & (ShrSet[1] = TRUE)))
+
+checking(!((Chan1[1].Cmd = reqs) & (CurCmd = empty)))
+sca:
+(!((chan1[1].cmd = reqs) & (curcmd = empty)))
+(!((chan1[2].cmd = reqs) & (curcmd = empty)))
+not inv: (!((Chan1[1].Cmd = reqs) & (CurCmd = empty)))
+
+checking(!((Chan1[1].Cmd = reqs) & (!(Chan1[1].Cmd = empty))))
+sca:
+(!((chan1[1].cmd = reqs) & (!(chan1[1].cmd = empty))))
+(!((chan1[2].cmd = reqs) & (!(chan1[2].cmd = empty))))
+not inv: (!((Chan1[1].Cmd = reqs) & (!(Chan1[1].Cmd = empty))))
+
+checking(!((Chan3[2].Cmd = invack) & (ShrSet[1] = TRUE)))
+sca:
+(!((chan3[2].cmd = invack) & (shrset[1] = true)))
+(!((chan3[1].cmd = invack) & (shrset[2] = true)))
+not inv: (!((Chan3[2].Cmd = invack) & (ShrSet[1] = TRUE)))
+
+checking(!((Chan1[1].Cmd = reqs) & (Chan3[1].Cmd = invack)))
+not inv: (!((Chan1[1].Cmd = reqs) & (Chan3[1].Cmd = invack)))
+
+checking(!((Chan1[2].Cmd = reqs) & (ShrSet[1] = TRUE)))
+sca:
+(!((chan1[2].cmd = reqs) & (shrset[1] = true)))
+(!((chan1[1].cmd = reqs) & (shrset[2] = true)))
+not inv: (!((Chan1[2].Cmd = reqs) & (ShrSet[1] = TRUE)))
+
+checking(!((Chan1[2].Cmd = reqs) & (Chan3[1].Cmd = invack)))
+not inv: (!((Chan1[2].Cmd = reqs) & (Chan3[1].Cmd = invack)))
+
+checking(!((InvSet[1] = TRUE) & (Chan2[2].Cmd = inv)))
+sca:
+(!((invset[1] = true) & (chan2[2].cmd = inv)))
+(!((invset[2] = true) & (chan2[1].cmd = inv)))
+not inv: (!((InvSet[1] = TRUE) & (Chan2[2].Cmd = inv)))
+
+checking(!((InvSet[1] = TRUE) & (Chan3[2].Cmd = empty)))
+sca:
+(!((invset[1] = true) & (chan3[2].cmd = empty)))
+(!((invset[2] = true) & (chan3[1].cmd = empty)))
+not inv: (!((InvSet[1] = TRUE) & (Chan3[2].Cmd = empty)))
+
+checking(!((CurCmd = reqs) & (InvSet[1] = TRUE) & (Chan2[2].Cmd = inv)))
+sca:
+(!((curcmd = reqs) & (invset[1] = true) & (chan2[2].cmd = inv)))
+(!((curcmd = reqs) & (invset[2] = true) & (chan2[1].cmd = inv)))
+inv: (!((CurCmd = reqs) & (InvSet[1] = TRUE) & (Chan2[2].Cmd = inv)))
+
+checking(!((Chan2[2].Cmd = inv) & (Chan2[1].Cmd = empty)))
+sca:
+(!((chan2[2].cmd = inv) & (chan2[1].cmd = empty)))
+(!((chan2[1].cmd = inv) & (chan2[2].cmd = empty)))
+not inv: (!((Chan2[2].Cmd = inv) & (Chan2[1].Cmd = empty)))
+
+checking(!((Chan2[2].Cmd = inv) & (InvSet[1] = TRUE)))
+not inv: (!((Chan2[2].Cmd = inv) & (InvSet[1] = TRUE)))
+
+checking(!((CurCmd = reqs) & (Chan2[2].Cmd = inv) & (Chan2[1].Cmd = empty)))
+sca:
+(!((curcmd = reqs) & (chan2[2].cmd = inv) & (chan2[1].cmd = empty)))
+(!((curcmd = reqs) & (chan2[1].cmd = inv) & (chan2[2].cmd = empty)))
+not inv: (!((CurCmd = reqs) & (Chan2[2].Cmd = inv) & (Chan2[1].Cmd = empty)))
+
+checking(!((CurCmd = reqs) & (Chan2[1].Cmd = inv) & (ExGntd = TRUE)))
+not inv: (!((CurCmd = reqs) & (Chan2[1].Cmd = inv) & (ExGntd = TRUE)))
+
+checking(!((CurCmd = reqs) & (Chan2[2].Cmd = inv) & (InvSet[1] = TRUE)))
+inv: (!((CurCmd = reqs) & (Chan2[2].Cmd = inv) & (InvSet[1] = TRUE)))
+
+checking(!((Chan2[1].Cmd = inv) & (InvSet[2] = TRUE)))
+sca:
+(!((chan2[1].cmd = inv) & (invset[2] = true)))
+(!((chan2[2].cmd = inv) & (invset[1] = true)))
+not inv: (!((Chan2[1].Cmd = inv) & (InvSet[2] = TRUE)))
+
+checking(!((Chan2[1].Cmd = inv) & (CurCmd = reqs) & (Chan2[2].Cmd = empty)))
+not inv: (!((Chan2[1].Cmd = inv) & (CurCmd = reqs) & (Chan2[2].Cmd = empty)))
+
+checking(!((Chan2[1].Cmd = inv) & (CurCmd = reqs) & (InvSet[2] = TRUE)))
+sca:
+(!((chan2[1].cmd = inv) & (curcmd = reqs) & (invset[2] = true)))
+(!((chan2[2].cmd = inv) & (curcmd = reqs) & (invset[1] = true)))
+inv: (!((Chan2[1].Cmd = inv) & (CurCmd = reqs) & (InvSet[2] = TRUE)))
+
+checking(!((Chan1[1].Cmd = reqs) & (Chan2[2].Cmd = inv)))
+sca:
+(!((chan1[1].cmd = reqs) & (chan2[2].cmd = inv)))
+(!((chan1[2].cmd = reqs) & (chan2[1].cmd = inv)))
+not inv: (!((Chan1[1].Cmd = reqs) & (Chan2[2].Cmd = inv)))
+
+checking(!((ShrSet[1] = TRUE) & (Chan2[2].Cmd = inv)))
+sca:
+(!((shrset[1] = true) & (chan2[2].cmd = inv)))
+(!((shrset[2] = true) & (chan2[1].cmd = inv)))
+not inv: (!((ShrSet[1] = TRUE) & (Chan2[2].Cmd = inv)))
+
+checking(!((Chan1[1].Cmd = reqs) & (Chan2[1].Cmd = inv)))
+not inv: (!((Chan1[1].Cmd = reqs) & (Chan2[1].Cmd = inv)))
+
+checking(!((Chan1[2].Cmd = reqs) & (Chan2[1].Cmd = inv)))
+not inv: (!((Chan1[2].Cmd = reqs) & (Chan2[1].Cmd = inv)))
+
+checking(!((InvSet[1] = TRUE) & (ExGntd = TRUE)))
+not inv: (!((InvSet[1] = TRUE) & (ExGntd = TRUE)))
+
+checking(!((InvSet[1] = TRUE) & (InvSet[2] = TRUE)))
+sca:
+(!((invset[1] = true) & (invset[2] = true)))
+(!((invset[2] = true) & (invset[1] = true)))
+not inv: (!((InvSet[1] = TRUE) & (InvSet[2] = TRUE)))
+
+checking(!((CurCmd = reqs) & (InvSet[1] = TRUE) & (Chan2[2].Cmd = empty)))
+sca:
+(!((curcmd = reqs) & (invset[1] = true) & (chan2[2].cmd = empty)))
+(!((curcmd = reqs) & (invset[2] = true) & (chan2[1].cmd = empty)))
+not inv: (!((CurCmd = reqs) & (InvSet[1] = TRUE) & (Chan2[2].Cmd = empty)))
+
+checking(!((CurCmd = reqs) & (InvSet[1] = TRUE) & (ExGntd = TRUE)))
+not inv: (!((CurCmd = reqs) & (InvSet[1] = TRUE) & (ExGntd = TRUE)))
+
+checking(!((CurCmd = reqs) & (InvSet[1] = TRUE) & (InvSet[2] = TRUE)))
+sca:
+(!((curcmd = reqs) & (invset[1] = true) & (invset[2] = true)))
+(!((curcmd = reqs) & (invset[2] = true) & (invset[1] = true)))
+not inv: (!((CurCmd = reqs) & (InvSet[1] = TRUE) & (InvSet[2] = TRUE)))
+
+checking(!((CurCmd = reqs) & (Chan2[1].Cmd = empty) & (ExGntd = TRUE)))
+not inv: (!((CurCmd = reqs) & (Chan2[1].Cmd = empty) & (ExGntd = TRUE)))
+
+checking(!((CurCmd = reqs) & (Chan2[1].Cmd = empty) & (InvSet[1] = TRUE)))
+not inv: (!((CurCmd = reqs) & (Chan2[1].Cmd = empty) & (InvSet[1] = TRUE)))
+
+checking(!((CurCmd = reqs) & (ExGntd = TRUE) & (InvSet[1] = TRUE)))
+not inv: (!((CurCmd = reqs) & (ExGntd = TRUE) & (InvSet[1] = TRUE)))
+
+checking(!((InvSet[1] = TRUE) & (Chan2[2].Cmd = empty) & (ExGntd = TRUE)))
+sca:
+(!((invset[1] = true) & (chan2[2].cmd = empty) & (exgntd = true)))
+(!((invset[2] = true) & (chan2[1].cmd = empty) & (exgntd = true)))
+not inv: (!((InvSet[1] = TRUE) & (Chan2[2].Cmd = empty) & (ExGntd = TRUE)))
+
+checking(!((InvSet[1] = TRUE) & (Chan2[2].Cmd = empty) & (InvSet[2] = TRUE)))
+sca:
+(!((invset[1] = true) & (chan2[2].cmd = empty) & (invset[2] = true)))
+(!((invset[2] = true) & (chan2[1].cmd = empty) & (invset[1] = true)))
+not inv: (!((InvSet[1] = TRUE) & (Chan2[2].Cmd = empty) & (InvSet[2] = TRUE)))
+
+checking(!((InvSet[1] = TRUE) & (ExGntd = TRUE) & (InvSet[2] = TRUE)))
+sca:
+(!((invset[1] = true) & (exgntd = true) & (invset[2] = true)))
+(!((invset[2] = true) & (exgntd = true) & (invset[1] = true)))
+inv: (!((InvSet[1] = TRUE) & (ExGntd = TRUE) & (InvSet[2] = TRUE)))
+
+checking(!((ShrSet[1] = TRUE) & (ExGntd = TRUE)))
+not inv: (!((ShrSet[1] = TRUE) & (ExGntd = TRUE)))
+
+checking(!((ShrSet[1] = TRUE) & (ShrSet[2] = TRUE)))
+sca:
+(!((shrset[1] = true) & (shrset[2] = true)))
+(!((shrset[2] = true) & (shrset[1] = true)))
+not inv: (!((ShrSet[1] = TRUE) & (ShrSet[2] = TRUE)))
+
+checking(!((ShrSet[2] = TRUE) & (!(Chan1[1].Cmd = empty))))
+sca:
+(!((shrset[2] = true) & (!(chan1[1].cmd = empty))))
+(!((shrset[1] = true) & (!(chan1[2].cmd = empty))))
+not inv: (!((ShrSet[2] = TRUE) & (!(Chan1[1].Cmd = empty))))
+
+checking(!((ShrSet[1] = TRUE) & (ExGntd = TRUE) & (ShrSet[2] = TRUE)))
+sca:
+(!((shrset[1] = true) & (exgntd = true) & (shrset[2] = true)))
+(!((shrset[2] = true) & (exgntd = true) & (shrset[1] = true)))
+inv: (!((ShrSet[1] = TRUE) & (ExGntd = TRUE) & (ShrSet[2] = TRUE)))
+
+checking(!((InvSet[1] = TRUE) & (Chan2[1].Cmd = empty)))
+not inv: (!((InvSet[1] = TRUE) & (Chan2[1].Cmd = empty)))
+
+checking(!((InvSet[1] = TRUE) & (CurPtr = 1)))
+sca:
+(!((invset[1] = true) & (curptr = 1)))
+(!((invset[2] = true) & (curptr = 2)))
+not inv: (!((InvSet[1] = TRUE) & (CurPtr = 1)))
+
+SET_SMT2_CONTEXT is running
+(declare-datatypes () ((CACHE_STATE I S E)))
+(declare-datatypes () ((MSG_CMD Empty ReqS ReqE Inv InvAck GntS GntE)))(declare-fun Cache.State (Int) CACHE_STATE)
+(declare-fun Cache.Data (Int) Int)
+(declare-fun Chan1.Cmd (Int) MSG_CMD)
+(declare-fun Chan1.Data (Int) Int)
+(declare-fun Chan2.Cmd (Int) MSG_CMD)
+(declare-fun Chan2.Data (Int) Int)
+(declare-fun Chan3.Cmd (Int) MSG_CMD)
+(declare-fun Chan3.Data (Int) Int)
+(declare-fun ShrSet (Int) Bool)
+(declare-fun InvSet (Int) Bool)
+(declare-fun ExGntd () Bool)
+(declare-fun CurCmd () MSG_CMD)
+(declare-fun CurPtr () Int)
+(declare-fun MemData () Int)
+(declare-fun AuxData () Int)
+SET_MU_CONTEXT is running
+复用协议：n_g2k
+QUERY_REACHABLE is running
+checking(!((Cache[1].State = e)))
+not inv: (!((Cache[1].State = e)))
+
+checking(!((Chan2[1].Cmd = gnte)))
+not inv: (!((Chan2[1].Cmd = gnte)))
+
+checking(!((Cache[2].State = e) & (Chan2[1].Cmd = gnte)))
+inv: (!((Cache[2].State = e) & (Chan2[1].Cmd = gnte)))
+
+checking(!((Cache[1].State = e) & (Chan2[2].Cmd = gnte)))
+inv: (!((Cache[1].State = e) & (Chan2[2].Cmd = gnte)))
+
+checking(!((!(Chan3[1].Data = AuxData))))
+not inv: (!((!(Chan3[1].Data = AuxData))))
+
+checking(!((ExGntd = TRUE)))
+not inv: (!((ExGntd = TRUE)))
+
+checking(!((Chan3[1].Cmd = invack)))
+not inv: (!((Chan3[1].Cmd = invack)))
+
+checking(!((!(CurCmd = empty))))
+not inv: (!((!(CurCmd = empty))))
+
+checking(!((!(Chan3[1].Data = AuxData)) & (ExGntd = TRUE)))
+not inv: (!((!(Chan3[1].Data = AuxData)) & (ExGntd = TRUE)))
+
+checking(!((!(Chan3[1].Data = AuxData)) & (Chan3[1].Cmd = invack)))
+not inv: (!((!(Chan3[1].Data = AuxData)) & (Chan3[1].Cmd = invack)))
+
+checking(!((!(Chan3[1].Data = AuxData)) & (!(CurCmd = empty))))
+not inv: (!((!(Chan3[1].Data = AuxData)) & (!(CurCmd = empty))))
+
+checking(!((ExGntd = TRUE) & (Chan3[1].Cmd = invack)))
+not inv: (!((ExGntd = TRUE) & (Chan3[1].Cmd = invack)))
+
+checking(!((ExGntd = TRUE) & (!(CurCmd = empty))))
+not inv: (!((ExGntd = TRUE) & (!(CurCmd = empty))))
+
+checking(!((Chan3[1].Cmd = invack) & (!(CurCmd = empty))))
+not inv: (!((Chan3[1].Cmd = invack) & (!(CurCmd = empty))))
+
+checking(!((!(Chan3[1].Data = AuxData)) & (ExGntd = TRUE) & (Chan3[1].Cmd = invack)))
+inv: (!((!(Chan3[1].Data = AuxData)) & (ExGntd = TRUE) & (Chan3[1].Cmd = invack)))
+
+checking(!((ExGntd = FALSE)))
+not inv: (!((ExGntd = FALSE)))
+
+checking(!((!(MemData = 1))))
+not inv: (!((!(MemData = 1))))
+
+checking(!((ExGntd = FALSE) & (!(MemData = 1))))
+not inv: (!((ExGntd = FALSE) & (!(MemData = 1))))
+
+checking(!((ExGntd = FALSE) & (Cache[1].State = e)))
+inv: (!((ExGntd = FALSE) & (Cache[1].State = e)))
+
+checking(!((!(Chan2[1].Data = AuxData))))
+not inv: (!((!(Chan2[1].Data = AuxData))))
+
+checking(!((Chan2[1].Cmd = gnts)))
+not inv: (!((Chan2[1].Cmd = gnts)))
+
+checking(!((!(Chan2[1].Data = AuxData)) & (Chan2[1].Cmd = gnts)))
+inv: (!((!(Chan2[1].Data = AuxData)) & (Chan2[1].Cmd = gnts)))
+
+checking(!((!(Chan2[1].Data = AuxData)) & (Chan2[1].Cmd = gnte)))
+inv: (!((!(Chan2[1].Data = AuxData)) & (Chan2[1].Cmd = gnte)))
+
+checking(!((!(Cache[1].State = i))))
+not inv: (!((!(Cache[1].State = i))))
+
+checking(!((!(Cache[1].Data = 1))))
+not inv: (!((!(Cache[1].Data = 1))))
+
+checking(!((!(Cache[1].State = i)) & (!(Cache[1].Data = 1))))
+not inv: (!((!(Cache[1].State = i)) & (!(Cache[1].Data = 1))))
+
+checking(!((!(Cache[1].State = i)) & (Cache[2].State = e)))
+inv: (!((!(Cache[1].State = i)) & (Cache[2].State = e)))
+
+checking(!((Chan2[1].Cmd = empty)))
+not inv: (!((Chan2[1].Cmd = empty)))
+
+checking(!((CurCmd = reqe)))
+not inv: (!((CurCmd = reqe)))
+
+checking(!((CurPtr = 1)))
+not inv: (!((CurPtr = 1)))
+
+checking(!((ShrSet[1] = FALSE)))
+not inv: (!((ShrSet[1] = FALSE)))
+
+checking(!((Cache[2].State = e) & (Chan2[1].Cmd = empty)))
+not inv: (!((Cache[2].State = e) & (Chan2[1].Cmd = empty)))
+
+checking(!((Cache[1].State = e) & (CurCmd = reqe)))
+not inv: (!((Cache[1].State = e) & (CurCmd = reqe)))
+
+checking(!((Cache[2].State = e) & (CurPtr = 1)))
+not inv: (!((Cache[2].State = e) & (CurPtr = 1)))
+
+checking(!((Cache[1].State = e) & (ExGntd = FALSE)))
+inv: (!((Cache[1].State = e) & (ExGntd = FALSE)))
+
+checking(!((Chan2[1].Cmd = gnte) & (Chan2[2].Cmd = gnte)))
+inv: (!((Chan2[1].Cmd = gnte) & (Chan2[2].Cmd = gnte)))
+
+checking(!((!(Cache[1].Data = AuxData))))
+not inv: (!((!(Cache[1].Data = AuxData))))
+
+checking(!((Chan2[1].Cmd = inv)))
+not inv: (!((Chan2[1].Cmd = inv)))
+
+checking(!((Chan3[1].Cmd = empty)))
+not inv: (!((Chan3[1].Cmd = empty)))
+
+checking(!((!(Cache[1].Data = AuxData)) & (ExGntd = TRUE)))
+not inv: (!((!(Cache[1].Data = AuxData)) & (ExGntd = TRUE)))
+
+checking(!((!(Cache[1].Data = AuxData)) & (Cache[1].State = e)))
+inv: (!((!(Cache[1].Data = AuxData)) & (Cache[1].State = e)))
+
+checking(!((!(Cache[1].State = e))))
+not inv: (!((!(Cache[1].State = e))))
+
+checking(!((!(Chan3[1].Data = AuxData)) & (!(Cache[1].State = e))))
+not inv: (!((!(Chan3[1].Data = AuxData)) & (!(Cache[1].State = e))))
+
+checking(!((!(Chan3[1].Data = AuxData)) & (Chan2[1].Cmd = inv)))
+not inv: (!((!(Chan3[1].Data = AuxData)) & (Chan2[1].Cmd = inv)))
+
+checking(!((!(Chan3[1].Data = AuxData)) & (Chan3[1].Cmd = empty)))
+not inv: (!((!(Chan3[1].Data = AuxData)) & (Chan3[1].Cmd = empty)))
+
+checking(!((ExGntd = TRUE) & (!(Cache[1].State = e))))
+not inv: (!((ExGntd = TRUE) & (!(Cache[1].State = e))))
+
+checking(!((ExGntd = TRUE) & (Chan2[1].Cmd = inv)))
+not inv: (!((ExGntd = TRUE) & (Chan2[1].Cmd = inv)))
+
+checking(!((ExGntd = TRUE) & (Chan3[1].Cmd = empty)))
+not inv: (!((ExGntd = TRUE) & (Chan3[1].Cmd = empty)))
+
+checking(!((!(Cache[1].State = e)) & (Chan2[1].Cmd = inv)))
+not inv: (!((!(Cache[1].State = e)) & (Chan2[1].Cmd = inv)))
+
+checking(!((!(Cache[1].State = e)) & (Chan3[1].Cmd = empty)))
+not inv: (!((!(Cache[1].State = e)) & (Chan3[1].Cmd = empty)))
+
+checking(!((Chan2[1].Cmd = inv) & (Chan3[1].Cmd = empty)))
+not inv: (!((Chan2[1].Cmd = inv) & (Chan3[1].Cmd = empty)))
+
+checking(!((!(Chan3[1].Data = AuxData)) & (ExGntd = TRUE) & (!(Cache[1].State = e))))
+not inv: (!((!(Chan3[1].Data = AuxData)) & (ExGntd = TRUE) & (!(Cache[1].State = e))))
+
+checking(!((!(Chan3[1].Data = AuxData)) & (ExGntd = TRUE) & (Chan2[1].Cmd = inv)))
+not inv: (!((!(Chan3[1].Data = AuxData)) & (ExGntd = TRUE) & (Chan2[1].Cmd = inv)))
+
+checking(!((!(Chan3[1].Data = AuxData)) & (ExGntd = TRUE) & (Chan3[1].Cmd = empty)))
+not inv: (!((!(Chan3[1].Data = AuxData)) & (ExGntd = TRUE) & (Chan3[1].Cmd = empty)))
+
+checking(!((!(Chan3[1].Data = AuxData)) & (!(Cache[1].State = e)) & (Chan2[1].Cmd = inv)))
+not inv: (!((!(Chan3[1].Data = AuxData)) & (!(Cache[1].State = e)) & (Chan2[1].Cmd = inv)))
+
+checking(!((!(Chan3[1].Data = AuxData)) & (!(Cache[1].State = e)) & (Chan3[1].Cmd = empty)))
+not inv: (!((!(Chan3[1].Data = AuxData)) & (!(Cache[1].State = e)) & (Chan3[1].Cmd = empty)))
+
+checking(!((!(Chan3[1].Data = AuxData)) & (Chan2[1].Cmd = inv) & (Chan3[1].Cmd = empty)))
+not inv: (!((!(Chan3[1].Data = AuxData)) & (Chan2[1].Cmd = inv) & (Chan3[1].Cmd = empty)))
+
+checking(!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (Chan2[1].Cmd = inv)))
+inv: (!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (Chan2[1].Cmd = inv)))
+
+checking(!((!(Chan3[1].Data = AuxData)) & (Chan2[1].Cmd = empty)))
+not inv: (!((!(Chan3[1].Data = AuxData)) & (Chan2[1].Cmd = empty)))
+
+checking(!((!(Chan3[1].Data = AuxData)) & (CurCmd = reqe)))
+not inv: (!((!(Chan3[1].Data = AuxData)) & (CurCmd = reqe)))
+
+checking(!((!(Chan3[1].Data = AuxData)) & (CurPtr = 1)))
+not inv: (!((!(Chan3[1].Data = AuxData)) & (CurPtr = 1)))
+
+checking(!((!(Chan3[1].Data = AuxData)) & (ExGntd = FALSE)))
+not inv: (!((!(Chan3[1].Data = AuxData)) & (ExGntd = FALSE)))
+
+checking(!((!(Chan3[1].Data = AuxData)) & (ShrSet[1] = FALSE)))
+not inv: (!((!(Chan3[1].Data = AuxData)) & (ShrSet[1] = FALSE)))
+
+checking(!((!(Chan3[1].Data = AuxData)) & (ShrSet[2] = FALSE)))
+not inv: (!((!(Chan3[1].Data = AuxData)) & (ShrSet[2] = FALSE)))
+
+checking(!((Chan3[1].Cmd = invack) & (Chan2[1].Cmd = empty)))
+not inv: (!((Chan3[1].Cmd = invack) & (Chan2[1].Cmd = empty)))
+
+checking(!((Chan3[1].Cmd = invack) & (CurCmd = reqe)))
+not inv: (!((Chan3[1].Cmd = invack) & (CurCmd = reqe)))
+
+checking(!((Chan3[1].Cmd = invack) & (CurPtr = 1)))
+not inv: (!((Chan3[1].Cmd = invack) & (CurPtr = 1)))
+
+checking(!((Chan3[1].Cmd = invack) & (ExGntd = FALSE)))
+not inv: (!((Chan3[1].Cmd = invack) & (ExGntd = FALSE)))
+
+checking(!((Chan3[1].Cmd = invack) & (ShrSet[1] = FALSE)))
+inv: (!((Chan3[1].Cmd = invack) & (ShrSet[1] = FALSE)))
+
+checking(!((!(Chan3[1].Data = AuxData)) & (Chan2[2].Cmd = empty)))
+not inv: (!((!(Chan3[1].Data = AuxData)) & (Chan2[2].Cmd = empty)))
+
+checking(!((!(Chan3[1].Data = AuxData)) & (CurPtr = 2)))
+not inv: (!((!(Chan3[1].Data = AuxData)) & (CurPtr = 2)))
+
+checking(!((Chan3[1].Cmd = invack) & (Chan2[2].Cmd = empty)))
+not inv: (!((Chan3[1].Cmd = invack) & (Chan2[2].Cmd = empty)))
+
+checking(!((Chan3[1].Cmd = invack) & (CurPtr = 2)))
+not inv: (!((Chan3[1].Cmd = invack) & (CurPtr = 2)))
+
+checking(!((!(Chan3[1].Data = 1))))
+not inv: (!((!(Chan3[1].Data = 1))))
+
+checking(!((!(Chan3[1].Data = 1)) & (ExGntd = TRUE)))
+not inv: (!((!(Chan3[1].Data = 1)) & (ExGntd = TRUE)))
+
+checking(!((!(Chan3[1].Data = 1)) & (Chan3[1].Cmd = invack)))
+not inv: (!((!(Chan3[1].Data = 1)) & (Chan3[1].Cmd = invack)))
+
+checking(!((!(Chan3[1].Data = 1)) & (Cache[1].State = e)))
+not inv: (!((!(Chan3[1].Data = 1)) & (Cache[1].State = e)))
+
+checking(!((ExGntd = TRUE) & (Cache[1].State = e)))
+not inv: (!((ExGntd = TRUE) & (Cache[1].State = e)))
+
+checking(!((Chan3[1].Cmd = invack) & (Cache[1].State = e)))
+inv: (!((Chan3[1].Cmd = invack) & (Cache[1].State = e)))
+
+checking(!((!(Chan3[1].Data = 1)) & (Cache[2].State = e)))
+not inv: (!((!(Chan3[1].Data = 1)) & (Cache[2].State = e)))
+
+checking(!((Chan3[1].Cmd = invack) & (Cache[2].State = e)))
+inv: (!((Chan3[1].Cmd = invack) & (Cache[2].State = e)))
+
+checking(!((Cache[1].State = e) & (ExGntd = TRUE)))
+not inv: (!((Cache[1].State = e) & (ExGntd = TRUE)))
+
+checking(!((Cache[1].State = e) & (Chan3[1].Cmd = invack)))
+inv: (!((Cache[1].State = e) & (Chan3[1].Cmd = invack)))
+
+checking(!((Cache[1].State = e) & (Chan3[2].Cmd = invack)))
+inv: (!((Cache[1].State = e) & (Chan3[2].Cmd = invack)))
+
+checking(!((ExGntd = FALSE) & (Chan2[1].Cmd = gnte)))
+inv: (!((ExGntd = FALSE) & (Chan2[1].Cmd = gnte)))
+
+checking(!((!(MemData = AuxData))))
+not inv: (!((!(MemData = AuxData))))
+
+checking(!((CurCmd = reqs)))
+not inv: (!((CurCmd = reqs)))
+
+checking(!((!(MemData = AuxData)) & (Chan2[1].Cmd = empty)))
+not inv: (!((!(MemData = AuxData)) & (Chan2[1].Cmd = empty)))
+
+checking(!((!(MemData = AuxData)) & (CurCmd = reqs)))
+not inv: (!((!(MemData = AuxData)) & (CurCmd = reqs)))
+
+checking(!((!(MemData = AuxData)) & (CurPtr = 1)))
+not inv: (!((!(MemData = AuxData)) & (CurPtr = 1)))
+
+checking(!((!(MemData = AuxData)) & (ExGntd = FALSE)))
+inv: (!((!(MemData = AuxData)) & (ExGntd = FALSE)))
+
+checking(!((!(Chan2[1].Data = 1))))
+not inv: (!((!(Chan2[1].Data = 1))))
+
+checking(!((!(Chan2[1].Data = 1)) & (Chan2[1].Cmd = gnts)))
+not inv: (!((!(Chan2[1].Data = 1)) & (Chan2[1].Cmd = gnts)))
+
+checking(!((!(Chan2[1].Data = 1)) & (Cache[1].State = e)))
+not inv: (!((!(Chan2[1].Data = 1)) & (Cache[1].State = e)))
+
+checking(!((Chan2[1].Cmd = gnts) & (Cache[1].State = e)))
+inv: (!((Chan2[1].Cmd = gnts) & (Cache[1].State = e)))
+
+checking(!((!(Chan2[1].Data = 1)) & (Cache[2].State = e)))
+not inv: (!((!(Chan2[1].Data = 1)) & (Cache[2].State = e)))
+
+checking(!((Chan2[1].Cmd = gnts) & (Cache[2].State = e)))
+inv: (!((Chan2[1].Cmd = gnts) & (Cache[2].State = e)))
+
+checking(!((!(MemData = AuxData)) & (CurCmd = reqe)))
+not inv: (!((!(MemData = AuxData)) & (CurCmd = reqe)))
+
+checking(!((!(Chan2[1].Data = 1)) & (Chan2[1].Cmd = gnte)))
+not inv: (!((!(Chan2[1].Data = 1)) & (Chan2[1].Cmd = gnte)))
+
+checking(!((Chan2[1].Cmd = gnte) & (Cache[1].State = e)))
+inv: (!((Chan2[1].Cmd = gnte) & (Cache[1].State = e)))
+
+checking(!((Chan2[1].Cmd = gnte) & (Cache[2].State = e)))
+inv: (!((Chan2[1].Cmd = gnte) & (Cache[2].State = e)))
+
+checking(!((Cache[2].State = e) & (Chan2[1].Cmd = gnts)))
+inv: (!((Cache[2].State = e) & (Chan2[1].Cmd = gnts)))
+
+checking(!((!(Cache[1].State = i)) & (Chan2[2].Cmd = gnte)))
+inv: (!((!(Cache[1].State = i)) & (Chan2[2].Cmd = gnte)))
+
+checking(!((Chan2[2].Cmd = gnte) & (Chan2[1].Cmd = empty)))
+not inv: (!((Chan2[2].Cmd = gnte) & (Chan2[1].Cmd = empty)))
+
+checking(!((Chan2[1].Cmd = gnte) & (CurCmd = reqe)))
+not inv: (!((Chan2[1].Cmd = gnte) & (CurCmd = reqe)))
+
+checking(!((Chan2[2].Cmd = gnte) & (CurPtr = 1)))
+not inv: (!((Chan2[2].Cmd = gnte) & (CurPtr = 1)))
+
+checking(!((Chan2[1].Cmd = gnte) & (ExGntd = FALSE)))
+inv: (!((Chan2[1].Cmd = gnte) & (ExGntd = FALSE)))
+
+checking(!((Chan2[1].Cmd = gnte) & (Chan2[2].Cmd = empty)))
+not inv: (!((Chan2[1].Cmd = gnte) & (Chan2[2].Cmd = empty)))
+
+checking(!((Chan2[1].Cmd = gnte) & (CurPtr = 2)))
+not inv: (!((Chan2[1].Cmd = gnte) & (CurPtr = 2)))
+
+checking(!((InvSet[1] = TRUE)))
+not inv: (!((InvSet[1] = TRUE)))
+
+checking(!((ExGntd = TRUE) & (Chan2[1].Cmd = empty)))
+not inv: (!((ExGntd = TRUE) & (Chan2[1].Cmd = empty)))
+
+checking(!((ExGntd = TRUE) & (CurCmd = reqe)))
+not inv: (!((ExGntd = TRUE) & (CurCmd = reqe)))
+
+checking(!((ExGntd = TRUE) & (InvSet[1] = TRUE)))
+not inv: (!((ExGntd = TRUE) & (InvSet[1] = TRUE)))
+
+checking(!((!(Cache[1].State = e)) & (Chan2[1].Cmd = empty)))
+not inv: (!((!(Cache[1].State = e)) & (Chan2[1].Cmd = empty)))
+
+checking(!((!(Cache[1].State = e)) & (CurCmd = reqe)))
+not inv: (!((!(Cache[1].State = e)) & (CurCmd = reqe)))
+
+checking(!((!(Cache[1].State = e)) & (InvSet[1] = TRUE)))
+not inv: (!((!(Cache[1].State = e)) & (InvSet[1] = TRUE)))
+
+checking(!((Chan2[1].Cmd = empty) & (CurCmd = reqe)))
+not inv: (!((Chan2[1].Cmd = empty) & (CurCmd = reqe)))
+
+checking(!((Chan2[1].Cmd = empty) & (InvSet[1] = TRUE)))
+not inv: (!((Chan2[1].Cmd = empty) & (InvSet[1] = TRUE)))
+
+checking(!((CurCmd = reqe) & (InvSet[1] = TRUE)))
+not inv: (!((CurCmd = reqe) & (InvSet[1] = TRUE)))
+
+checking(!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (Chan2[1].Cmd = empty)))
+not inv: (!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (Chan2[1].Cmd = empty)))
+
+checking(!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (CurCmd = reqe)))
+not inv: (!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (CurCmd = reqe)))
+
+checking(!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (InvSet[1] = TRUE)))
+not inv: (!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (InvSet[1] = TRUE)))
+
+checking(!((ExGntd = TRUE) & (Chan2[1].Cmd = empty) & (CurCmd = reqe)))
+not inv: (!((ExGntd = TRUE) & (Chan2[1].Cmd = empty) & (CurCmd = reqe)))
+
+checking(!((ExGntd = TRUE) & (Chan2[1].Cmd = empty) & (InvSet[1] = TRUE)))
+not inv: (!((ExGntd = TRUE) & (Chan2[1].Cmd = empty) & (InvSet[1] = TRUE)))
+
+checking(!((ExGntd = TRUE) & (CurCmd = reqe) & (InvSet[1] = TRUE)))
+not inv: (!((ExGntd = TRUE) & (CurCmd = reqe) & (InvSet[1] = TRUE)))
+
+checking(!((!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (CurCmd = reqe)))
+not inv: (!((!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (CurCmd = reqe)))
+
+checking(!((!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (InvSet[1] = TRUE)))
+not inv: (!((!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (InvSet[1] = TRUE)))
+
+checking(!((!(Cache[1].State = e)) & (CurCmd = reqe) & (InvSet[1] = TRUE)))
+not inv: (!((!(Cache[1].State = e)) & (CurCmd = reqe) & (InvSet[1] = TRUE)))
+
+checking(!((Chan2[1].Cmd = empty) & (CurCmd = reqe) & (InvSet[1] = TRUE)))
+not inv: (!((Chan2[1].Cmd = empty) & (CurCmd = reqe) & (InvSet[1] = TRUE)))
+
+checking(!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (CurCmd = reqe)))
+not inv: (!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (CurCmd = reqe)))
+
+checking(!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (InvSet[1] = TRUE)))
+inv: (!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (InvSet[1] = TRUE)))
+
+checking(!((ExGntd = TRUE) & (CurCmd = reqs)))
+not inv: (!((ExGntd = TRUE) & (CurCmd = reqs)))
+
+checking(!((!(Cache[1].State = e)) & (CurCmd = reqs)))
+not inv: (!((!(Cache[1].State = e)) & (CurCmd = reqs)))
+
+checking(!((Chan2[1].Cmd = empty) & (CurCmd = reqs)))
+not inv: (!((Chan2[1].Cmd = empty) & (CurCmd = reqs)))
+
+checking(!((CurCmd = reqs) & (InvSet[1] = TRUE)))
+not inv: (!((CurCmd = reqs) & (InvSet[1] = TRUE)))
+
+checking(!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (CurCmd = reqs)))
+not inv: (!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (CurCmd = reqs)))
+
+checking(!((ExGntd = TRUE) & (Chan2[1].Cmd = empty) & (CurCmd = reqs)))
+not inv: (!((ExGntd = TRUE) & (Chan2[1].Cmd = empty) & (CurCmd = reqs)))
+
+checking(!((ExGntd = TRUE) & (CurCmd = reqs) & (InvSet[1] = TRUE)))
+not inv: (!((ExGntd = TRUE) & (CurCmd = reqs) & (InvSet[1] = TRUE)))
+
+checking(!((!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (CurCmd = reqs)))
+not inv: (!((!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (CurCmd = reqs)))
+
+checking(!((!(Cache[1].State = e)) & (CurCmd = reqs) & (InvSet[1] = TRUE)))
+not inv: (!((!(Cache[1].State = e)) & (CurCmd = reqs) & (InvSet[1] = TRUE)))
+
+checking(!((Chan2[1].Cmd = empty) & (CurCmd = reqs) & (InvSet[1] = TRUE)))
+not inv: (!((Chan2[1].Cmd = empty) & (CurCmd = reqs) & (InvSet[1] = TRUE)))
+
+checking(!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (CurCmd = reqs)))
+not inv: (!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (CurCmd = reqs)))
+
+checking(!((!(Cache[1].State = e)) & (Chan2[2].Cmd = empty)))
+not inv: (!((!(Cache[1].State = e)) & (Chan2[2].Cmd = empty)))
+
+checking(!((!(Cache[1].State = e)) & (CurPtr = 2)))
+not inv: (!((!(Cache[1].State = e)) & (CurPtr = 2)))
+
+checking(!((!(Cache[1].State = e)) & (ExGntd = FALSE)))
+not inv: (!((!(Cache[1].State = e)) & (ExGntd = FALSE)))
+
+checking(!((!(Cache[1].State = e)) & (ShrSet[1] = FALSE)))
+not inv: (!((!(Cache[1].State = e)) & (ShrSet[1] = FALSE)))
+
+checking(!((!(Cache[1].State = e)) & (ShrSet[2] = FALSE)))
+not inv: (!((!(Cache[1].State = e)) & (ShrSet[2] = FALSE)))
+
+checking(!((Chan2[1].Cmd = inv) & (Chan2[2].Cmd = empty)))
+not inv: (!((Chan2[1].Cmd = inv) & (Chan2[2].Cmd = empty)))
+
+checking(!((Chan2[1].Cmd = inv) & (CurCmd = reqe)))
+not inv: (!((Chan2[1].Cmd = inv) & (CurCmd = reqe)))
+
+checking(!((Chan2[1].Cmd = inv) & (CurPtr = 2)))
+not inv: (!((Chan2[1].Cmd = inv) & (CurPtr = 2)))
+
+checking(!((Chan2[1].Cmd = inv) & (ExGntd = FALSE)))
+not inv: (!((Chan2[1].Cmd = inv) & (ExGntd = FALSE)))
+
+checking(!((Chan2[1].Cmd = inv) & (ShrSet[1] = FALSE)))
+inv: (!((Chan2[1].Cmd = inv) & (ShrSet[1] = FALSE)))
+
+checking(!((ShrSet[1] = FALSE) & (Chan2[1].Cmd = inv)))
+inv: (!((ShrSet[1] = FALSE) & (Chan2[1].Cmd = inv)))
+
+checking(!((Chan3[1].Cmd = invack) & (Chan2[1].Cmd = gnte)))
+inv: (!((Chan3[1].Cmd = invack) & (Chan2[1].Cmd = gnte)))
+
+checking(!((Cache[2].State = e) & (Chan2[1].Cmd = inv)))
+inv: (!((Cache[2].State = e) & (Chan2[1].Cmd = inv)))
+
+checking(!((Chan3[1].Cmd = invack) & (Chan2[2].Cmd = gnte)))
+inv: (!((Chan3[1].Cmd = invack) & (Chan2[2].Cmd = gnte)))
+
+checking(!((Chan2[1].Cmd = gnte) & (ExGntd = TRUE)))
+not inv: (!((Chan2[1].Cmd = gnte) & (ExGntd = TRUE)))
+
+checking(!((Chan2[1].Cmd = gnte) & (Chan3[1].Cmd = invack)))
+inv: (!((Chan2[1].Cmd = gnte) & (Chan3[1].Cmd = invack)))
+
+checking(!((Chan2[1].Cmd = gnte) & (Chan3[2].Cmd = invack)))
+inv: (!((Chan2[1].Cmd = gnte) & (Chan3[2].Cmd = invack)))
+
+checking(!((Cache[1].State = e) & (Chan2[1].Cmd = empty)))
+not inv: (!((Cache[1].State = e) & (Chan2[1].Cmd = empty)))
+
+checking(!((Cache[1].State = e) & (CurCmd = reqs)))
+not inv: (!((Cache[1].State = e) & (CurCmd = reqs)))
+
+checking(!((Cache[1].State = e) & (CurPtr = 1)))
+not inv: (!((Cache[1].State = e) & (CurPtr = 1)))
+
+checking(!((Chan2[1].Cmd = gnts) & (Chan2[2].Cmd = gnte)))
+inv: (!((Chan2[1].Cmd = gnts) & (Chan2[2].Cmd = gnte)))
+
+checking(!((!(Cache[1].State = i)) & (Chan2[2].Cmd = empty)))
+not inv: (!((!(Cache[1].State = i)) & (Chan2[2].Cmd = empty)))
+
+checking(!((!(Cache[1].State = i)) & (CurCmd = reqe)))
+not inv: (!((!(Cache[1].State = i)) & (CurCmd = reqe)))
+
+checking(!((!(Cache[1].State = i)) & (CurPtr = 2)))
+not inv: (!((!(Cache[1].State = i)) & (CurPtr = 2)))
+
+checking(!((!(Cache[1].State = i)) & (ExGntd = FALSE)))
+not inv: (!((!(Cache[1].State = i)) & (ExGntd = FALSE)))
+
+checking(!((!(Cache[1].State = i)) & (ShrSet[1] = FALSE)))
+inv: (!((!(Cache[1].State = i)) & (ShrSet[1] = FALSE)))
+
+checking(!((Chan2[2].Cmd = gnte) & (Chan2[1].Cmd = gnts)))
+inv: (!((Chan2[2].Cmd = gnte) & (Chan2[1].Cmd = gnts)))
+
+checking(!((Chan2[2].Cmd = gnte) & (Chan2[1].Cmd = gnte)))
+inv: (!((Chan2[2].Cmd = gnte) & (Chan2[1].Cmd = gnte)))
+
+checking(!((ShrSet[1] = TRUE)))
+not inv: (!((ShrSet[1] = TRUE)))
+
+checking(!((CurCmd = empty)))
+not inv: (!((CurCmd = empty)))
+
+checking(!((!(Chan1[1].Cmd = empty))))
+not inv: (!((!(Chan1[1].Cmd = empty))))
+
+checking(!((ExGntd = TRUE) & (ShrSet[1] = TRUE)))
+not inv: (!((ExGntd = TRUE) & (ShrSet[1] = TRUE)))
+
+checking(!((ExGntd = TRUE) & (CurCmd = empty)))
+not inv: (!((ExGntd = TRUE) & (CurCmd = empty)))
+
+checking(!((ExGntd = TRUE) & (!(Chan1[1].Cmd = empty))))
+not inv: (!((ExGntd = TRUE) & (!(Chan1[1].Cmd = empty))))
+
+checking(!((!(Cache[1].State = e)) & (ShrSet[1] = TRUE)))
+not inv: (!((!(Cache[1].State = e)) & (ShrSet[1] = TRUE)))
+
+checking(!((!(Cache[1].State = e)) & (CurCmd = empty)))
+not inv: (!((!(Cache[1].State = e)) & (CurCmd = empty)))
+
+checking(!((!(Cache[1].State = e)) & (!(Chan1[1].Cmd = empty))))
+not inv: (!((!(Cache[1].State = e)) & (!(Chan1[1].Cmd = empty))))
+
+checking(!((Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE)))
+not inv: (!((Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE)))
+
+checking(!((Chan2[1].Cmd = empty) & (CurCmd = empty)))
+not inv: (!((Chan2[1].Cmd = empty) & (CurCmd = empty)))
+
+checking(!((Chan2[1].Cmd = empty) & (!(Chan1[1].Cmd = empty))))
+not inv: (!((Chan2[1].Cmd = empty) & (!(Chan1[1].Cmd = empty))))
+
+checking(!((ShrSet[1] = TRUE) & (CurCmd = empty)))
+not inv: (!((ShrSet[1] = TRUE) & (CurCmd = empty)))
+
+checking(!((ShrSet[1] = TRUE) & (!(Chan1[1].Cmd = empty))))
+not inv: (!((ShrSet[1] = TRUE) & (!(Chan1[1].Cmd = empty))))
+
+checking(!((CurCmd = empty) & (!(Chan1[1].Cmd = empty))))
+not inv: (!((CurCmd = empty) & (!(Chan1[1].Cmd = empty))))
+
+checking(!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (ShrSet[1] = TRUE)))
+not inv: (!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (ShrSet[1] = TRUE)))
+
+checking(!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (CurCmd = empty)))
+not inv: (!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (CurCmd = empty)))
+
+checking(!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (!(Chan1[1].Cmd = empty))))
+not inv: (!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (!(Chan1[1].Cmd = empty))))
+
+checking(!((ExGntd = TRUE) & (Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE)))
+not inv: (!((ExGntd = TRUE) & (Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE)))
+
+checking(!((ExGntd = TRUE) & (Chan2[1].Cmd = empty) & (CurCmd = empty)))
+not inv: (!((ExGntd = TRUE) & (Chan2[1].Cmd = empty) & (CurCmd = empty)))
+
+checking(!((ExGntd = TRUE) & (Chan2[1].Cmd = empty) & (!(Chan1[1].Cmd = empty))))
+not inv: (!((ExGntd = TRUE) & (Chan2[1].Cmd = empty) & (!(Chan1[1].Cmd = empty))))
+
+checking(!((ExGntd = TRUE) & (ShrSet[1] = TRUE) & (CurCmd = empty)))
+not inv: (!((ExGntd = TRUE) & (ShrSet[1] = TRUE) & (CurCmd = empty)))
+
+checking(!((ExGntd = TRUE) & (ShrSet[1] = TRUE) & (!(Chan1[1].Cmd = empty))))
+not inv: (!((ExGntd = TRUE) & (ShrSet[1] = TRUE) & (!(Chan1[1].Cmd = empty))))
+
+checking(!((ExGntd = TRUE) & (CurCmd = empty) & (!(Chan1[1].Cmd = empty))))
+not inv: (!((ExGntd = TRUE) & (CurCmd = empty) & (!(Chan1[1].Cmd = empty))))
+
+checking(!((!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE)))
+not inv: (!((!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE)))
+
+checking(!((!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (CurCmd = empty)))
+not inv: (!((!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (CurCmd = empty)))
+
+checking(!((!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (!(Chan1[1].Cmd = empty))))
+not inv: (!((!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (!(Chan1[1].Cmd = empty))))
+
+checking(!((!(Cache[1].State = e)) & (ShrSet[1] = TRUE) & (CurCmd = empty)))
+not inv: (!((!(Cache[1].State = e)) & (ShrSet[1] = TRUE) & (CurCmd = empty)))
+
+checking(!((!(Cache[1].State = e)) & (ShrSet[1] = TRUE) & (!(Chan1[1].Cmd = empty))))
+not inv: (!((!(Cache[1].State = e)) & (ShrSet[1] = TRUE) & (!(Chan1[1].Cmd = empty))))
+
+checking(!((!(Cache[1].State = e)) & (CurCmd = empty) & (!(Chan1[1].Cmd = empty))))
+not inv: (!((!(Cache[1].State = e)) & (CurCmd = empty) & (!(Chan1[1].Cmd = empty))))
+
+checking(!((Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE) & (CurCmd = empty)))
+not inv: (!((Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE) & (CurCmd = empty)))
+
+checking(!((Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE) & (!(Chan1[1].Cmd = empty))))
+not inv: (!((Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE) & (!(Chan1[1].Cmd = empty))))
+
+checking(!((Chan2[1].Cmd = empty) & (CurCmd = empty) & (!(Chan1[1].Cmd = empty))))
+not inv: (!((Chan2[1].Cmd = empty) & (CurCmd = empty) & (!(Chan1[1].Cmd = empty))))
+
+checking(!((ShrSet[1] = TRUE) & (CurCmd = empty) & (!(Chan1[1].Cmd = empty))))
+not inv: (!((ShrSet[1] = TRUE) & (CurCmd = empty) & (!(Chan1[1].Cmd = empty))))
+
+checking(!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE)))
+not inv: (!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE)))
+
+checking(!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (CurCmd = empty)))
+not inv: (!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (CurCmd = empty)))
+
+checking(!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (!(Chan1[1].Cmd = empty))))
+not inv: (!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (!(Chan1[1].Cmd = empty))))
+
+checking(!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (ShrSet[1] = TRUE) & (CurCmd = empty)))
+not inv: (!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (ShrSet[1] = TRUE) & (CurCmd = empty)))
+
+checking(!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (ShrSet[1] = TRUE) & (!(Chan1[1].Cmd = empty))))
+not inv: (!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (ShrSet[1] = TRUE) & (!(Chan1[1].Cmd = empty))))
+
+checking(!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (CurCmd = empty) & (!(Chan1[1].Cmd = empty))))
+not inv: (!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (CurCmd = empty) & (!(Chan1[1].Cmd = empty))))
+
+checking(!((ExGntd = TRUE) & (Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE) & (CurCmd = empty)))
+not inv: (!((ExGntd = TRUE) & (Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE) & (CurCmd = empty)))
+
+checking(!((ExGntd = TRUE) & (Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE) & (!(Chan1[1].Cmd = empty))))
+not inv: (!((ExGntd = TRUE) & (Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE) & (!(Chan1[1].Cmd = empty))))
+
+checking(!((ExGntd = TRUE) & (Chan2[1].Cmd = empty) & (CurCmd = empty) & (!(Chan1[1].Cmd = empty))))
+not inv: (!((ExGntd = TRUE) & (Chan2[1].Cmd = empty) & (CurCmd = empty) & (!(Chan1[1].Cmd = empty))))
+
+checking(!((ExGntd = TRUE) & (ShrSet[1] = TRUE) & (CurCmd = empty) & (!(Chan1[1].Cmd = empty))))
+not inv: (!((ExGntd = TRUE) & (ShrSet[1] = TRUE) & (CurCmd = empty) & (!(Chan1[1].Cmd = empty))))
+
+checking(!((!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE) & (CurCmd = empty)))
+not inv: (!((!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE) & (CurCmd = empty)))
+
+checking(!((!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE) & (!(Chan1[1].Cmd = empty))))
+not inv: (!((!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE) & (!(Chan1[1].Cmd = empty))))
+
+checking(!((!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (CurCmd = empty) & (!(Chan1[1].Cmd = empty))))
+not inv: (!((!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (CurCmd = empty) & (!(Chan1[1].Cmd = empty))))
+
+checking(!((!(Cache[1].State = e)) & (ShrSet[1] = TRUE) & (CurCmd = empty) & (!(Chan1[1].Cmd = empty))))
+not inv: (!((!(Cache[1].State = e)) & (ShrSet[1] = TRUE) & (CurCmd = empty) & (!(Chan1[1].Cmd = empty))))
+
+checking(!((Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE) & (CurCmd = empty) & (!(Chan1[1].Cmd = empty))))
+not inv: (!((Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE) & (CurCmd = empty) & (!(Chan1[1].Cmd = empty))))
+
+checking(!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE) & (CurCmd = empty)))
+inv: (!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE) & (CurCmd = empty)))
+
+checking(!((!(Cache[1].State = e)) & (!(Chan1[2].Cmd = empty))))
+not inv: (!((!(Cache[1].State = e)) & (!(Chan1[2].Cmd = empty))))
+
+checking(!((Chan2[1].Cmd = empty) & (!(Chan1[2].Cmd = empty))))
+not inv: (!((Chan2[1].Cmd = empty) & (!(Chan1[2].Cmd = empty))))
+
+checking(!((ShrSet[1] = TRUE) & (!(Chan1[2].Cmd = empty))))
+not inv: (!((ShrSet[1] = TRUE) & (!(Chan1[2].Cmd = empty))))
+
+checking(!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (!(Chan1[2].Cmd = empty))))
+not inv: (!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (!(Chan1[2].Cmd = empty))))
+
+checking(!((ExGntd = TRUE) & (Chan2[1].Cmd = empty) & (!(Chan1[2].Cmd = empty))))
+not inv: (!((ExGntd = TRUE) & (Chan2[1].Cmd = empty) & (!(Chan1[2].Cmd = empty))))
+
+checking(!((ExGntd = TRUE) & (ShrSet[1] = TRUE) & (!(Chan1[2].Cmd = empty))))
+not inv: (!((ExGntd = TRUE) & (ShrSet[1] = TRUE) & (!(Chan1[2].Cmd = empty))))
+
+checking(!((!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (!(Chan1[2].Cmd = empty))))
+not inv: (!((!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (!(Chan1[2].Cmd = empty))))
+
+checking(!((!(Cache[1].State = e)) & (ShrSet[1] = TRUE) & (!(Chan1[2].Cmd = empty))))
+not inv: (!((!(Cache[1].State = e)) & (ShrSet[1] = TRUE) & (!(Chan1[2].Cmd = empty))))
+
+checking(!((!(Cache[1].State = e)) & (CurCmd = empty) & (!(Chan1[2].Cmd = empty))))
+not inv: (!((!(Cache[1].State = e)) & (CurCmd = empty) & (!(Chan1[2].Cmd = empty))))
+
+checking(!((Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE) & (!(Chan1[2].Cmd = empty))))
+not inv: (!((Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE) & (!(Chan1[2].Cmd = empty))))
+
+checking(!((Chan2[1].Cmd = empty) & (CurCmd = empty) & (!(Chan1[2].Cmd = empty))))
+not inv: (!((Chan2[1].Cmd = empty) & (CurCmd = empty) & (!(Chan1[2].Cmd = empty))))
+
+checking(!((ShrSet[1] = TRUE) & (CurCmd = empty) & (!(Chan1[2].Cmd = empty))))
+not inv: (!((ShrSet[1] = TRUE) & (CurCmd = empty) & (!(Chan1[2].Cmd = empty))))
+
+checking(!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (!(Chan1[2].Cmd = empty))))
+not inv: (!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (!(Chan1[2].Cmd = empty))))
+
+checking(!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (ShrSet[1] = TRUE) & (!(Chan1[2].Cmd = empty))))
+not inv: (!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (ShrSet[1] = TRUE) & (!(Chan1[2].Cmd = empty))))
+
+checking(!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (CurCmd = empty) & (!(Chan1[2].Cmd = empty))))
+not inv: (!((ExGntd = TRUE) & (!(Cache[1].State = e)) & (CurCmd = empty) & (!(Chan1[2].Cmd = empty))))
+
+checking(!((ExGntd = TRUE) & (Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE) & (!(Chan1[2].Cmd = empty))))
+not inv: (!((ExGntd = TRUE) & (Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE) & (!(Chan1[2].Cmd = empty))))
+
+checking(!((ExGntd = TRUE) & (Chan2[1].Cmd = empty) & (CurCmd = empty) & (!(Chan1[2].Cmd = empty))))
+not inv: (!((ExGntd = TRUE) & (Chan2[1].Cmd = empty) & (CurCmd = empty) & (!(Chan1[2].Cmd = empty))))
+
+checking(!((ExGntd = TRUE) & (ShrSet[1] = TRUE) & (CurCmd = empty) & (!(Chan1[2].Cmd = empty))))
+not inv: (!((ExGntd = TRUE) & (ShrSet[1] = TRUE) & (CurCmd = empty) & (!(Chan1[2].Cmd = empty))))
+
+checking(!((!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE) & (!(Chan1[2].Cmd = empty))))
+not inv: (!((!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE) & (!(Chan1[2].Cmd = empty))))
+
+checking(!((!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (CurCmd = empty) & (!(Chan1[2].Cmd = empty))))
+not inv: (!((!(Cache[1].State = e)) & (Chan2[1].Cmd = empty) & (CurCmd = empty) & (!(Chan1[2].Cmd = empty))))
+
+checking(!((!(Cache[1].State = e)) & (ShrSet[1] = TRUE) & (CurCmd = empty) & (!(Chan1[2].Cmd = empty))))
+not inv: (!((!(Cache[1].State = e)) & (ShrSet[1] = TRUE) & (CurCmd = empty) & (!(Chan1[2].Cmd = empty))))
+
+checking(!((Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE) & (CurCmd = empty) & (!(Chan1[2].Cmd = empty))))
+not inv: (!((Chan2[1].Cmd = empty) & (ShrSet[1] = TRUE) & (CurCmd = empty) & (!(Chan1[2].Cmd = empty))))
+
+checking(!((InvSet[1] = TRUE) & (Chan2[1].Cmd = inv)))
+inv: (!((InvSet[1] = TRUE) & (Chan2[1].Cmd = inv)))
+
+checking(!((Chan2[1].Cmd = empty) & (Chan2[2].Cmd = empty)))
+not inv: (!((Chan2[1].Cmd = empty) & (Chan2[2].Cmd = empty)))
+
+checking(!((Chan2[1].Cmd = empty) & (CurPtr = 2)))
+not inv: (!((Chan2[1].Cmd = empty) & (CurPtr = 2)))
+
+checking(!((Chan2[1].Cmd = empty) & (ExGntd = FALSE)))
+not inv: (!((Chan2[1].Cmd = empty) & (ExGntd = FALSE)))
+
+checking(!((Chan2[1].Cmd = empty) & (ShrSet[1] = FALSE)))
+not inv: (!((Chan2[1].Cmd = empty) & (ShrSet[1] = FALSE)))
+
+checking(!((Chan2[1].Cmd = empty) & (ShrSet[2] = FALSE)))
+not inv: (!((Chan2[1].Cmd = empty) & (ShrSet[2] = FALSE)))
+
+checking(!((InvSet[1] = TRUE) & (Chan2[2].Cmd = empty)))
+not inv: (!((InvSet[1] = TRUE) & (Chan2[2].Cmd = empty)))
+
+checking(!((InvSet[1] = TRUE) & (CurCmd = reqe)))
+not inv: (!((InvSet[1] = TRUE) & (CurCmd = reqe)))
+
+checking(!((InvSet[1] = TRUE) & (CurPtr = 2)))
+not inv: (!((InvSet[1] = TRUE) & (CurPtr = 2)))
+
+checking(!((InvSet[1] = TRUE) & (ExGntd = FALSE)))
+not inv: (!((InvSet[1] = TRUE) & (ExGntd = FALSE)))
+
+checking(!((InvSet[1] = TRUE) & (ShrSet[1] = FALSE)))
+inv: (!((InvSet[1] = TRUE) & (ShrSet[1] = FALSE)))
+
+checking(!((ExGntd = TRUE) & (Chan2[1].Cmd = gnts)))
+inv: (!((ExGntd = TRUE) & (Chan2[1].Cmd = gnts)))
+
+checking(!((ShrSet[1] = FALSE) & (Chan2[1].Cmd = empty)))
+not inv: (!((ShrSet[1] = FALSE) & (Chan2[1].Cmd = empty)))
+
+checking(!((ShrSet[1] = FALSE) & (CurCmd = reqe)))
+not inv: (!((ShrSet[1] = FALSE) & (CurCmd = reqe)))
+
+checking(!((ShrSet[1] = FALSE) & (InvSet[1] = TRUE)))
+inv: (!((ShrSet[1] = FALSE) & (InvSet[1] = TRUE)))
+
+checking(!((ShrSet[1] = FALSE) & (CurCmd = reqs)))
+not inv: (!((ShrSet[1] = FALSE) & (CurCmd = reqs)))
+
+checking(!((ShrSet[1] = FALSE) & (ExGntd = TRUE)))
+not inv: (!((ShrSet[1] = FALSE) & (ExGntd = TRUE)))
+
+checking(!((Chan2[1].Cmd = inv) & (Chan3[1].Cmd = invack)))
+inv: (!((Chan2[1].Cmd = inv) & (Chan3[1].Cmd = invack)))
+
+checking(!((Cache[2].State = e) & (InvSet[1] = TRUE)))
+inv: (!((Cache[2].State = e) & (InvSet[1] = TRUE)))
+
+checking(!((Chan2[1].Cmd = inv) & (Chan2[2].Cmd = gnte)))
+inv: (!((Chan2[1].Cmd = inv) & (Chan2[2].Cmd = gnte)))
+
+checking(!((Chan2[2].Cmd = gnte) & (Chan2[1].Cmd = inv)))
+inv: (!((Chan2[2].Cmd = gnte) & (Chan2[1].Cmd = inv)))
+
+checking(!((Chan2[1].Cmd = gnte) & (CurCmd = reqs)))
+not inv: (!((Chan2[1].Cmd = gnte) & (CurCmd = reqs)))
+
+checking(!((Chan2[1].Cmd = gnts) & (Chan2[2].Cmd = empty)))
+not inv: (!((Chan2[1].Cmd = gnts) & (Chan2[2].Cmd = empty)))
+
+checking(!((Chan2[1].Cmd = gnts) & (CurCmd = reqe)))
+not inv: (!((Chan2[1].Cmd = gnts) & (CurCmd = reqe)))
+
+checking(!((Chan2[1].Cmd = gnts) & (CurPtr = 2)))
+not inv: (!((Chan2[1].Cmd = gnts) & (CurPtr = 2)))
+
+checking(!((Chan2[1].Cmd = gnts) & (ExGntd = FALSE)))
+not inv: (!((Chan2[1].Cmd = gnts) & (ExGntd = FALSE)))
+
+checking(!((Chan2[1].Cmd = gnts) & (ShrSet[1] = FALSE)))
+inv: (!((Chan2[1].Cmd = gnts) & (ShrSet[1] = FALSE)))
+
+checking(!((!(Cache[1].State = i)) & (Chan3[1].Cmd = invack)))
+inv: (!((!(Cache[1].State = i)) & (Chan3[1].Cmd = invack)))
+
+checking(!((ShrSet[1] = FALSE) & (Chan2[1].Cmd = gnts)))
+inv: (!((ShrSet[1] = FALSE) & (Chan2[1].Cmd = gnts)))
+
+checking(!((ShrSet[1] = FALSE) & (Chan2[1].Cmd = gnte)))
+inv: (!((ShrSet[1] = FALSE) & (Chan2[1].Cmd = gnte)))
+
+checking(!((ShrSet[1] = TRUE) & (Chan2[1].Cmd = inv)))
+not inv: (!((ShrSet[1] = TRUE) & (Chan2[1].Cmd = inv)))
+
+checking(!((ShrSet[1] = TRUE) & (Chan3[1].Cmd = empty)))
+not inv: (!((ShrSet[1] = TRUE) & (Chan3[1].Cmd = empty)))
+
+checking(!((CurCmd = empty) & (Chan2[1].Cmd = inv)))
+inv: (!((CurCmd = empty) & (Chan2[1].Cmd = inv)))
+
+checking(!((Chan2[1].Cmd = inv) & (CurCmd = empty)))
+inv: (!((Chan2[1].Cmd = inv) & (CurCmd = empty)))
+
+checking(!((InvSet[1] = TRUE) & (Chan3[1].Cmd = invack)))
+inv: (!((InvSet[1] = TRUE) & (Chan3[1].Cmd = invack)))
+
+checking(!((Chan3[1].Cmd = invack) & (InvSet[1] = TRUE)))
+inv: (!((Chan3[1].Cmd = invack) & (InvSet[1] = TRUE)))
+
+checking(!((Chan3[1].Cmd = invack) & (CurCmd = reqs)))
+not inv: (!((Chan3[1].Cmd = invack) & (CurCmd = reqs)))
+
+checking(!((Chan3[1].Cmd = invack) & (ExGntd = TRUE)))
+not inv: (!((Chan3[1].Cmd = invack) & (ExGntd = TRUE)))
+
+checking(!((Cache[2].State = e) & (ShrSet[1] = TRUE)))
+inv: (!((Cache[2].State = e) & (ShrSet[1] = TRUE)))
+
+checking(!((InvSet[1] = TRUE) & (Chan2[2].Cmd = gnte)))
+inv: (!((InvSet[1] = TRUE) & (Chan2[2].Cmd = gnte)))
+
+checking(!((Chan2[2].Cmd = gnte) & (InvSet[1] = TRUE)))
+inv: (!((Chan2[2].Cmd = gnte) & (InvSet[1] = TRUE)))
+
+checking(!((Chan2[1].Cmd = gnts) & (Chan3[1].Cmd = invack)))
+inv: (!((Chan2[1].Cmd = gnts) & (Chan3[1].Cmd = invack)))
+
+checking(!((Chan3[1].Cmd = invack) & (Chan2[1].Cmd = gnts)))
+inv: (!((Chan3[1].Cmd = invack) & (Chan2[1].Cmd = gnts)))
+
+checking(!((Chan2[1].Cmd = inv) & (CurCmd = reqs)))
+not inv: (!((Chan2[1].Cmd = inv) & (CurCmd = reqs)))
+
+checking(!((Chan2[1].Cmd = empty) & (CurPtr = 1)))
+not inv: (!((Chan2[1].Cmd = empty) & (CurPtr = 1)))
+
+checking(!((CurCmd = reqs) & (CurPtr = 1)))
+not inv: (!((CurCmd = reqs) & (CurPtr = 1)))
+
+checking(!((CurCmd = reqs) & (ExGntd = FALSE)))
+not inv: (!((CurCmd = reqs) & (ExGntd = FALSE)))
+
+checking(!((CurPtr = 1) & (ExGntd = FALSE)))
+not inv: (!((CurPtr = 1) & (ExGntd = FALSE)))
+
+checking(!((Chan2[1].Cmd = inv) & (Chan2[2].Cmd = empty) & (CurCmd = reqs)))
+not inv: (!((Chan2[1].Cmd = inv) & (Chan2[2].Cmd = empty) & (CurCmd = reqs)))
+
+checking(!((Chan2[1].Cmd = inv) & (Chan2[2].Cmd = empty) & (CurPtr = 2)))
+not inv: (!((Chan2[1].Cmd = inv) & (Chan2[2].Cmd = empty) & (CurPtr = 2)))
+
+checking(!((Chan2[1].Cmd = inv) & (Chan2[2].Cmd = empty) & (ExGntd = FALSE)))
+not inv: (!((Chan2[1].Cmd = inv) & (Chan2[2].Cmd = empty) & (ExGntd = FALSE)))
+
+checking(!((Chan2[1].Cmd = inv) & (CurCmd = reqs) & (CurPtr = 2)))
+not inv: (!((Chan2[1].Cmd = inv) & (CurCmd = reqs) & (CurPtr = 2)))
+
+checking(!((Chan2[1].Cmd = inv) & (CurCmd = reqs) & (ExGntd = FALSE)))
+inv: (!((Chan2[1].Cmd = inv) & (CurCmd = reqs) & (ExGntd = FALSE)))
+
+checking(!((ShrSet[1] = TRUE) & (Chan3[1].Cmd = invack)))
+not inv: (!((ShrSet[1] = TRUE) & (Chan3[1].Cmd = invack)))
+
+checking(!((Chan3[1].Cmd = invack) & (CurCmd = empty)))
+inv: (!((Chan3[1].Cmd = invack) & (CurCmd = empty)))
+
+checking(!((ShrSet[1] = TRUE) & (Chan2[2].Cmd = gnte)))
+inv: (!((ShrSet[1] = TRUE) & (Chan2[2].Cmd = gnte)))
+
+checking(!((Chan3[1].Cmd = invack) & (Chan2[1].Cmd = empty) & (CurCmd = reqs)))
+not inv: (!((Chan3[1].Cmd = invack) & (Chan2[1].Cmd = empty) & (CurCmd = reqs)))
+
+checking(!((Chan3[1].Cmd = invack) & (Chan2[1].Cmd = empty) & (CurPtr = 1)))
+not inv: (!((Chan3[1].Cmd = invack) & (Chan2[1].Cmd = empty) & (CurPtr = 1)))
+
+checking(!((Chan3[1].Cmd = invack) & (Chan2[1].Cmd = empty) & (ExGntd = FALSE)))
+not inv: (!((Chan3[1].Cmd = invack) & (Chan2[1].Cmd = empty) & (ExGntd = FALSE)))
+
+checking(!((Chan3[1].Cmd = invack) & (CurCmd = reqs) & (CurPtr = 1)))
+not inv: (!((Chan3[1].Cmd = invack) & (CurCmd = reqs) & (CurPtr = 1)))
+
+checking(!((Chan3[1].Cmd = invack) & (CurCmd = reqs) & (ExGntd = FALSE)))
+inv: (!((Chan3[1].Cmd = invack) & (CurCmd = reqs) & (ExGntd = FALSE)))
+
+checking(!((Chan1[1].Cmd = reqs)))
+not inv: (!((Chan1[1].Cmd = reqs)))
+
+checking(!((Chan2[1].Cmd = inv) & (Chan1[1].Cmd = reqs)))
+not inv: (!((Chan2[1].Cmd = inv) & (Chan1[1].Cmd = reqs)))
+
+checking(!((Chan2[1].Cmd = inv) & (Chan1[2].Cmd = reqs)))
+not inv: (!((Chan2[1].Cmd = inv) & (Chan1[2].Cmd = reqs)))
+
+checking(!((Chan2[1].Cmd = inv) & (ExGntd = TRUE)))
+not inv: (!((Chan2[1].Cmd = inv) & (ExGntd = TRUE)))
+
+checking(!((Chan2[1].Cmd = inv) & (Chan3[2].Cmd = invack)))
+not inv: (!((Chan2[1].Cmd = inv) & (Chan3[2].Cmd = invack)))
+
+checking(!((Chan2[1].Cmd = inv) & (!(CurCmd = empty))))
+not inv: (!((Chan2[1].Cmd = inv) & (!(CurCmd = empty))))
+
+checking(!((CurCmd = reqs) & (ExGntd = TRUE)))
+not inv: (!((CurCmd = reqs) & (ExGntd = TRUE)))
+
+checking(!((CurCmd = reqs) & (Chan3[1].Cmd = invack)))
+not inv: (!((CurCmd = reqs) & (Chan3[1].Cmd = invack)))
+
+checking(!((CurCmd = reqs) & (!(CurCmd = empty))))
+not inv: (!((CurCmd = reqs) & (!(CurCmd = empty))))
+
+checking(!((Chan2[1].Cmd = inv) & (CurCmd = reqs) & (ExGntd = TRUE)))
+not inv: (!((Chan2[1].Cmd = inv) & (CurCmd = reqs) & (ExGntd = TRUE)))
+
+checking(!((Chan2[1].Cmd = inv) & (CurCmd = reqs) & (Chan3[2].Cmd = invack)))
+inv: (!((Chan2[1].Cmd = inv) & (CurCmd = reqs) & (Chan3[2].Cmd = invack)))
+
+checking(!((Chan3[1].Cmd = invack) & (Chan2[2].Cmd = empty) & (CurCmd = reqs)))
+not inv: (!((Chan3[1].Cmd = invack) & (Chan2[2].Cmd = empty) & (CurCmd = reqs)))
+
+checking(!((Chan3[1].Cmd = invack) & (Chan2[2].Cmd = empty) & (CurPtr = 2)))
+not inv: (!((Chan3[1].Cmd = invack) & (Chan2[2].Cmd = empty) & (CurPtr = 2)))
+
+checking(!((Chan3[1].Cmd = invack) & (Chan2[2].Cmd = empty) & (ExGntd = FALSE)))
+not inv: (!((Chan3[1].Cmd = invack) & (Chan2[2].Cmd = empty) & (ExGntd = FALSE)))
+
+checking(!((Chan3[1].Cmd = invack) & (CurCmd = reqs) & (CurPtr = 2)))
+not inv: (!((Chan3[1].Cmd = invack) & (CurCmd = reqs) & (CurPtr = 2)))
+
+checking(!((Chan3[1].Cmd = invack) & (Chan1[1].Cmd = reqs)))
+not inv: (!((Chan3[1].Cmd = invack) & (Chan1[1].Cmd = reqs)))
+
+checking(!((Chan3[1].Cmd = invack) & (Chan1[2].Cmd = reqs)))
+not inv: (!((Chan3[1].Cmd = invack) & (Chan1[2].Cmd = reqs)))
+
+checking(!((CurCmd = reqs) & (Chan2[1].Cmd = inv)))
+not inv: (!((CurCmd = reqs) & (Chan2[1].Cmd = inv)))
+
+checking(!((CurCmd = reqs) & (Chan3[1].Cmd = empty)))
+not inv: (!((CurCmd = reqs) & (Chan3[1].Cmd = empty)))
+
+checking(!((ExGntd = FALSE) & (Chan2[1].Cmd = inv)))
+not inv: (!((ExGntd = FALSE) & (Chan2[1].Cmd = inv)))
+
+checking(!((ExGntd = FALSE) & (Chan3[1].Cmd = empty)))
+not inv: (!((ExGntd = FALSE) & (Chan3[1].Cmd = empty)))
+
+checking(!((CurCmd = reqs) & (ExGntd = FALSE) & (Chan2[1].Cmd = inv)))
+inv: (!((CurCmd = reqs) & (ExGntd = FALSE) & (Chan2[1].Cmd = inv)))
+
+checking(!((Chan3[1].Cmd = invack) & (Chan3[2].Cmd = invack)))
+not inv: (!((Chan3[1].Cmd = invack) & (Chan3[2].Cmd = invack)))
+
+checking(!((Chan3[1].Cmd = invack) & (CurCmd = reqs) & (ExGntd = TRUE)))
+not inv: (!((Chan3[1].Cmd = invack) & (CurCmd = reqs) & (ExGntd = TRUE)))
+
+checking(!((Chan3[1].Cmd = invack) & (CurCmd = reqs) & (Chan3[2].Cmd = invack)))
+inv: (!((Chan3[1].Cmd = invack) & (CurCmd = reqs) & (Chan3[2].Cmd = invack)))
+
+checking(!((CurCmd = reqs) & (Chan2[1].Cmd = empty)))
+not inv: (!((CurCmd = reqs) & (Chan2[1].Cmd = empty)))
+
+checking(!((Chan3[2].Cmd = invack) & (Chan2[1].Cmd = empty)))
+not inv: (!((Chan3[2].Cmd = invack) & (Chan2[1].Cmd = empty)))
+
+checking(!((Chan3[2].Cmd = invack) & (InvSet[1] = TRUE)))
+not inv: (!((Chan3[2].Cmd = invack) & (InvSet[1] = TRUE)))
+
+checking(!((Chan2[1].Cmd = empty) & (ExGntd = TRUE)))
+not inv: (!((Chan2[1].Cmd = empty) & (ExGntd = TRUE)))
+
+checking(!((CurCmd = reqs) & (Chan3[2].Cmd = invack) & (Chan2[1].Cmd = empty)))
+not inv: (!((CurCmd = reqs) & (Chan3[2].Cmd = invack) & (Chan2[1].Cmd = empty)))
+
+checking(!((CurCmd = reqs) & (Chan3[1].Cmd = invack) & (ExGntd = TRUE)))
+not inv: (!((CurCmd = reqs) & (Chan3[1].Cmd = invack) & (ExGntd = TRUE)))
+
+checking(!((CurCmd = reqs) & (Chan3[2].Cmd = invack) & (InvSet[1] = TRUE)))
+inv: (!((CurCmd = reqs) & (Chan3[2].Cmd = invack) & (InvSet[1] = TRUE)))
+
+checking(!((Chan2[1].Cmd = inv) & (Chan2[2].Cmd = inv)))
+not inv: (!((Chan2[1].Cmd = inv) & (Chan2[2].Cmd = inv)))
+
+checking(!((Chan2[1].Cmd = inv) & (Chan3[2].Cmd = empty)))
+not inv: (!((Chan2[1].Cmd = inv) & (Chan3[2].Cmd = empty)))
+
+checking(!((Chan2[1].Cmd = inv) & (CurCmd = reqs) & (Chan2[2].Cmd = inv)))
+inv: (!((Chan2[1].Cmd = inv) & (CurCmd = reqs) & (Chan2[2].Cmd = inv)))
+
+checking(!((Chan3[2].Cmd = invack) & (Chan2[1].Cmd = inv)))
+not inv: (!((Chan3[2].Cmd = invack) & (Chan2[1].Cmd = inv)))
+
+checking(!((Chan3[2].Cmd = invack) & (Chan3[1].Cmd = empty)))
+not inv: (!((Chan3[2].Cmd = invack) & (Chan3[1].Cmd = empty)))
+
+checking(!((CurCmd = reqs) & (Chan3[2].Cmd = invack) & (Chan2[1].Cmd = inv)))
+inv: (!((CurCmd = reqs) & (Chan3[2].Cmd = invack) & (Chan2[1].Cmd = inv)))
+
+checking(!((Chan3[1].Cmd = invack) & (Chan2[2].Cmd = inv)))
+not inv: (!((Chan3[1].Cmd = invack) & (Chan2[2].Cmd = inv)))
+
+checking(!((Chan3[1].Cmd = invack) & (Chan3[2].Cmd = empty)))
+not inv: (!((Chan3[1].Cmd = invack) & (Chan3[2].Cmd = empty)))
+
+checking(!((Chan3[1].Cmd = invack) & (CurCmd = reqs) & (Chan2[2].Cmd = inv)))
+inv: (!((Chan3[1].Cmd = invack) & (CurCmd = reqs) & (Chan2[2].Cmd = inv)))
+
+checking(!((Chan1[1].Cmd = reqs) & (Chan3[2].Cmd = invack)))
+not inv: (!((Chan1[1].Cmd = reqs) & (Chan3[2].Cmd = invack)))
+
+checking(!((Chan1[1].Cmd = reqs) & (ShrSet[1] = TRUE)))
+not inv: (!((Chan1[1].Cmd = reqs) & (ShrSet[1] = TRUE)))
+
+checking(!((Chan1[1].Cmd = reqs) & (CurCmd = empty)))
+not inv: (!((Chan1[1].Cmd = reqs) & (CurCmd = empty)))
+
+checking(!((Chan1[1].Cmd = reqs) & (!(Chan1[1].Cmd = empty))))
+not inv: (!((Chan1[1].Cmd = reqs) & (!(Chan1[1].Cmd = empty))))
+
+checking(!((Chan3[2].Cmd = invack) & (ShrSet[1] = TRUE)))
+not inv: (!((Chan3[2].Cmd = invack) & (ShrSet[1] = TRUE)))
+
+checking(!((Chan1[1].Cmd = reqs) & (Chan3[1].Cmd = invack)))
+not inv: (!((Chan1[1].Cmd = reqs) & (Chan3[1].Cmd = invack)))
+
+checking(!((Chan1[2].Cmd = reqs) & (ShrSet[1] = TRUE)))
+not inv: (!((Chan1[2].Cmd = reqs) & (ShrSet[1] = TRUE)))
+
+checking(!((Chan1[2].Cmd = reqs) & (Chan3[1].Cmd = invack)))
+not inv: (!((Chan1[2].Cmd = reqs) & (Chan3[1].Cmd = invack)))
+
+checking(!((InvSet[1] = TRUE) & (Chan2[2].Cmd = inv)))
+not inv: (!((InvSet[1] = TRUE) & (Chan2[2].Cmd = inv)))
+
+checking(!((InvSet[1] = TRUE) & (Chan3[2].Cmd = empty)))
+not inv: (!((InvSet[1] = TRUE) & (Chan3[2].Cmd = empty)))
+
+checking(!((CurCmd = reqs) & (InvSet[1] = TRUE) & (Chan2[2].Cmd = inv)))
+inv: (!((CurCmd = reqs) & (InvSet[1] = TRUE) & (Chan2[2].Cmd = inv)))
+
+checking(!((Chan2[2].Cmd = inv) & (Chan2[1].Cmd = empty)))
+not inv: (!((Chan2[2].Cmd = inv) & (Chan2[1].Cmd = empty)))
+
+checking(!((Chan2[2].Cmd = inv) & (InvSet[1] = TRUE)))
+not inv: (!((Chan2[2].Cmd = inv) & (InvSet[1] = TRUE)))
+
+checking(!((CurCmd = reqs) & (Chan2[2].Cmd = inv) & (Chan2[1].Cmd = empty)))
+not inv: (!((CurCmd = reqs) & (Chan2[2].Cmd = inv) & (Chan2[1].Cmd = empty)))
+
+checking(!((CurCmd = reqs) & (Chan2[1].Cmd = inv) & (ExGntd = TRUE)))
+not inv: (!((CurCmd = reqs) & (Chan2[1].Cmd = inv) & (ExGntd = TRUE)))
+
+checking(!((CurCmd = reqs) & (Chan2[2].Cmd = inv) & (InvSet[1] = TRUE)))
+inv: (!((CurCmd = reqs) & (Chan2[2].Cmd = inv) & (InvSet[1] = TRUE)))
+
+checking(!((Chan2[1].Cmd = inv) & (InvSet[2] = TRUE)))
+not inv: (!((Chan2[1].Cmd = inv) & (InvSet[2] = TRUE)))
+
+checking(!((Chan2[1].Cmd = inv) & (CurCmd = reqs) & (Chan2[2].Cmd = empty)))
+not inv: (!((Chan2[1].Cmd = inv) & (CurCmd = reqs) & (Chan2[2].Cmd = empty)))
+
+checking(!((Chan2[1].Cmd = inv) & (CurCmd = reqs) & (InvSet[2] = TRUE)))
+inv: (!((Chan2[1].Cmd = inv) & (CurCmd = reqs) & (InvSet[2] = TRUE)))
+
+checking(!((Chan1[1].Cmd = reqs) & (Chan2[2].Cmd = inv)))
+not inv: (!((Chan1[1].Cmd = reqs) & (Chan2[2].Cmd = inv)))
+
+checking(!((ShrSet[1] = TRUE) & (Chan2[2].Cmd = inv)))
+not inv: (!((ShrSet[1] = TRUE) & (Chan2[2].Cmd = inv)))
+
+checking(!((Chan1[1].Cmd = reqs) & (Chan2[1].Cmd = inv)))
+not inv: (!((Chan1[1].Cmd = reqs) & (Chan2[1].Cmd = inv)))
+
+checking(!((Chan1[2].Cmd = reqs) & (Chan2[1].Cmd = inv)))
+not inv: (!((Chan1[2].Cmd = reqs) & (Chan2[1].Cmd = inv)))
+
+checking(!((InvSet[1] = TRUE) & (ExGntd = TRUE)))
+not inv: (!((InvSet[1] = TRUE) & (ExGntd = TRUE)))
+
+checking(!((InvSet[1] = TRUE) & (InvSet[2] = TRUE)))
+not inv: (!((InvSet[1] = TRUE) & (InvSet[2] = TRUE)))
+
+checking(!((CurCmd = reqs) & (InvSet[1] = TRUE) & (Chan2[2].Cmd = empty)))
+not inv: (!((CurCmd = reqs) & (InvSet[1] = TRUE) & (Chan2[2].Cmd = empty)))
+
+checking(!((CurCmd = reqs) & (InvSet[1] = TRUE) & (ExGntd = TRUE)))
+not inv: (!((CurCmd = reqs) & (InvSet[1] = TRUE) & (ExGntd = TRUE)))
+
+checking(!((CurCmd = reqs) & (InvSet[1] = TRUE) & (InvSet[2] = TRUE)))
+not inv: (!((CurCmd = reqs) & (InvSet[1] = TRUE) & (InvSet[2] = TRUE)))
+
+checking(!((CurCmd = reqs) & (Chan2[1].Cmd = empty) & (ExGntd = TRUE)))
+not inv: (!((CurCmd = reqs) & (Chan2[1].Cmd = empty) & (ExGntd = TRUE)))
+
+checking(!((CurCmd = reqs) & (Chan2[1].Cmd = empty) & (InvSet[1] = TRUE)))
+not inv: (!((CurCmd = reqs) & (Chan2[1].Cmd = empty) & (InvSet[1] = TRUE)))
+
+checking(!((CurCmd = reqs) & (ExGntd = TRUE) & (InvSet[1] = TRUE)))
+not inv: (!((CurCmd = reqs) & (ExGntd = TRUE) & (InvSet[1] = TRUE)))
+
+checking(!((InvSet[1] = TRUE) & (Chan2[2].Cmd = empty) & (ExGntd = TRUE)))
+not inv: (!((InvSet[1] = TRUE) & (Chan2[2].Cmd = empty) & (ExGntd = TRUE)))
+
+checking(!((InvSet[1] = TRUE) & (Chan2[2].Cmd = empty) & (InvSet[2] = TRUE)))
+not inv: (!((InvSet[1] = TRUE) & (Chan2[2].Cmd = empty) & (InvSet[2] = TRUE)))
+
+checking(!((InvSet[1] = TRUE) & (ExGntd = TRUE) & (InvSet[2] = TRUE)))
+inv: (!((InvSet[1] = TRUE) & (ExGntd = TRUE) & (InvSet[2] = TRUE)))
+
+checking(!((ShrSet[1] = TRUE) & (ExGntd = TRUE)))
+not inv: (!((ShrSet[1] = TRUE) & (ExGntd = TRUE)))
+
+checking(!((ShrSet[1] = TRUE) & (ShrSet[2] = TRUE)))
+not inv: (!((ShrSet[1] = TRUE) & (ShrSet[2] = TRUE)))
+
+checking(!((ShrSet[2] = TRUE) & (!(Chan1[1].Cmd = empty))))
+not inv: (!((ShrSet[2] = TRUE) & (!(Chan1[1].Cmd = empty))))
+
+checking(!((ShrSet[1] = TRUE) & (ExGntd = TRUE) & (ShrSet[2] = TRUE)))
+inv: (!((ShrSet[1] = TRUE) & (ExGntd = TRUE) & (ShrSet[2] = TRUE)))
+
+checking(!((InvSet[1] = TRUE) & (Chan2[1].Cmd = empty)))
+not inv: (!((InvSet[1] = TRUE) & (Chan2[1].Cmd = empty)))
+
+checking(!((InvSet[1] = TRUE) & (CurPtr = 1)))
+not inv: (!((InvSet[1] = TRUE) & (CurPtr = 1)))
+

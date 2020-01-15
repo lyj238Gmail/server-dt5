@@ -13,7 +13,7 @@ from settings import MU_PATH, MU_INCLUDE, GXX_PATH, MU_FILE_DIR, MU_CHECK_TIMEOU
 import dt.dt
 import dellast.lastcolumn
 
-
+SPLIT_CHAR=','
 ERROR = '-2'
 WAITING = '-1'
 OK = '0'

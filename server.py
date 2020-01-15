@@ -235,7 +235,7 @@ def serv(conn, addr):
 		"""
 		In this case, cmd should be [length, command, command_id, name, context]
 		"""
-		stm_2_new = SMT2(cmd[3].lower().replace('int','Int').replace('bool','Bool'))
+		stm_2_new = SMT2(cmd[3].lower().replace('int','Int').replace('bool','Bool').replace('array','Array'))
 		smt2_pool['new'] = stm_2_new
 		print "SET_SMT2_CONTEXT is running"#test 20180802
 		print cmd[3]

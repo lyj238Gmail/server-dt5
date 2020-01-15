@@ -774,7 +774,7 @@ def changeForm(str_target):
 		for i in range(len(str_target)):
 			if str_target[i] == '[':
 				value = str_target[i + 1]
-				result = 'select ' + str_target[:i] + str_target[i+3:] + ' ' + value
+				result = '(select ' + str_target[:i] + str_target[i+3:] + ' ' + value+')'
 				break
 		if '[' in result:
 			result = changeForm(result)

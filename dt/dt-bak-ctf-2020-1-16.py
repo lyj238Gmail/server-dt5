@@ -95,10 +95,9 @@ def DtModuleData2(candidate_inv,title,data_set,path_dict,sca_flag):
 	'''
 	candidate_inv_list = candidataInvConvert(candidate_inv_low,sca_flag)
 	
-	#print 'testing 98'
+	
 	#print candidate_inv_list
 	candidate_inv_attribute_dict = findInvAttribute(candidate_inv_list,title)#获得字典，键为候选不变式，值为对应的属性列表
-	#print 'testing 101'	
 	#print candidate_inv_attribute_dict
 	for member in candidate_inv_list:#遍历各个候选不变式
 		#print path_dict
@@ -315,8 +314,6 @@ def titleChange(title,sign):
 	
 #获得候选不变式
 def findJudgeAttribute(title,data_set,attribute_list):
-	#print 'testing 317'	
-	#print attribute_list
 	judge_attribute = attribute_list[0]
 	max_len = 0
 	for member in attribute_list:
@@ -593,8 +590,6 @@ def z3checker(inv,path_file_name,z3,path_content_dict):
 		print stm_test
 		res = z3.check(stm_test)
 		if res == 'sat':
-			print 'testing 596'
-			print member
 			return 'sat'
 	return 'unsat'
 

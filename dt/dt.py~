@@ -95,9 +95,10 @@ def DtModuleData2(candidate_inv,title,data_set,path_dict,sca_flag):
 	'''
 	candidate_inv_list = candidataInvConvert(candidate_inv_low,sca_flag)
 	
-	
+	#print 'testing 98'
 	#print candidate_inv_list
 	candidate_inv_attribute_dict = findInvAttribute(candidate_inv_list,title)#获得字典，键为候选不变式，值为对应的属性列表
+	#print 'testing 101'	
 	#print candidate_inv_attribute_dict
 	for member in candidate_inv_list:#遍历各个候选不变式
 		#print path_dict
@@ -314,6 +315,8 @@ def titleChange(title,sign):
 	
 #获得候选不变式
 def findJudgeAttribute(title,data_set,attribute_list):
+	#print 'testing 317'	
+	#print attribute_list
 	judge_attribute = attribute_list[0]
 	max_len = 0
 	for member in attribute_list:
@@ -655,7 +658,7 @@ def transForDTPath(dt_path): #用于处理来自于决策树的不变式，例�
 				result = '(' + 'and ' + result + ' ' + member + ')'
 	return result
 '''
-#新-2020.1.13
+#新-2020.1.15
 def transForDTPath(dt_path): #用于处理来自于决策树的不变式，例如"(x = TRUE & n[1] != C & n[1] != E & n[2] != C & n[2] != E)"
 	member_list = []
 	strsplit = dt_path[1:-1].split('&')
@@ -664,11 +667,11 @@ def transForDTPath(dt_path): #用于处理来自于决策树的不变式，例�
 		if '=' in member_temp and '!=' not in member_temp: #表达式为 a = b的形式
 			parameter_list = member_temp.split(' = ')
 			if '[' in parameter_list[0]:
-				part1 = '(' + changeForm(parameter_list[0]) + ')'
+				part1 = '(' + 'select ' + changeForm(parameter_list[0]) + ')'
 			else:
 				part1 = parameter_list[0]
 			if '[' in parameter_list[1]:
-				part2 = '(' + changeForm(parameter_list[1]) + ')'
+				part2 = '(' + 'select ' +changeForm(parameter_list[1]) + ')'
 			else:
 				part2 = parameter_list[1]
 			newform = '(' + ' ' + '=' + ' ' + part1 + ' ' + part2 + ')'
@@ -676,11 +679,11 @@ def transForDTPath(dt_path): #用于处理来自于决策树的不变式，例�
 		elif '!=' in member_temp: #表达式为 a != b的形式
 			parameter_list = member_temp.split(' != ')
 			if '[' in parameter_list[0]:
-				part1 = '(' + changeForm(parameter_list[0]) + ')'
+				part1 = '(' + 'select ' +changeForm(parameter_list[0]) + ')'
 			else:
 				part1 = parameter_list[0]
 			if '[' in parameter_list[1]:
-				part2 = '(' + changeForm(parameter_list[1]) + ')'
+				part2 = '(' + 'select ' +changeForm(parameter_list[1]) + ')'
 			else:
 				part2 = parameter_list[1]
 			newform = '(not ' + '(' + ' ' + '=' + ' ' + part1 + ' ' + part2 + ')' + ')'
@@ -695,6 +698,7 @@ def transForDTPath(dt_path): #用于处理来自于决策树的不变式，例�
 			else:
 				result = '(' + 'and ' + result + ' ' + member + ')'
 	return result
+
 
 
 
@@ -753,7 +757,7 @@ def checkDict(candidate_inv,candidate_dict):
 		candidate_result = ''
 	return candidate_mark,candidate_result
 
-#2020.1.13修改，用于将n[1] => (select n 1)，原n[1] => (n 1)
+#2020.1.15修改，用于将n[1] => (select n 1)，原n[1] => (n 1)
 #用于中缀转前缀将‘[]’中的值移出去
 '''
 def changeForm(str_target):
@@ -774,7 +778,7 @@ def changeForm(str_target):
 		for i in range(len(str_target)):
 			if str_target[i] == '[':
 				value = str_target[i + 1]
-				result = '(select ' + str_target[:i] + str_target[i+3:] + ' ' + value+')'
+				result = str_target[:i] + str_target[i+3:] + ' ' + value
 				break
 		if '[' in result:
 			result = changeForm(result)
